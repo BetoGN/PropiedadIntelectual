@@ -3,163 +3,553 @@
 // ============================================
 
 const courseContent = {
-    // Unidad 1: Fundamentos
+    // =============================================
+    // UNIDAD 1: PRINCIPIOS DEL DERECHO Y REGULACIÓN
+    // =============================================
+    
     'tema1-1': {
-        title: '1.1 Concepto de Propiedad Intelectual',
+        title: '1.1 Principios del Derecho',
         content: `
             <div class="content-section">
-                <h3><i class="fas fa-lightbulb"></i> ¿Qué es la Propiedad Intelectual?</h3>
-                <p>La <strong>Propiedad Intelectual (PI)</strong> se refiere al conjunto de derechos que protegen las creaciones del intelecto humano. Estas creaciones pueden ser invenciones, obras literarias y artísticas, diseños, símbolos, nombres e imágenes utilizados en el comercio.</p>
+                <h3><i class="fas fa-balance-scale"></i> Introducción al Derecho Informático</h3>
+                <p>La tecnología no existe en un vacío normativo, sino que se inscribe en el marco del <strong>Derecho</strong>, entendido como el conjunto de normas y principios que regulan las interacciones sociales para establecer un orden justo. La aplicación de estos principios a las tecnologías de la información da origen al <strong>Derecho Informático</strong>, una rama jurídica que se enfoca en regular las acciones, procesos, productos y relaciones jurídicas que emergen de la informática y sus diversas aplicaciones.</p>
                 
-                <p>La PI se divide en dos grandes categorías:</p>
+                <p>El Derecho Informático abarca ámbitos fundamentales como:</p>
                 <ul>
-                    <li><strong>Derechos de Autor:</strong> Protegen las obras literarias, artísticas, musicales, cinematográficas y científicas.</li>
-                    <li><strong>Propiedad Industrial:</strong> Incluye patentes, marcas, diseños industriales y secretos comerciales.</li>
+                    <li>El procesamiento de datos personales y corporativos</li>
+                    <li>La transmisión de contenidos digitales</li>
+                    <li>La comunicación a distancia</li>
+                    <li>La inteligencia artificial y sus implicaciones legales</li>
                 </ul>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-info-circle"></i> Importancia</h4>
+                    <p>Comprender los elementos primarios del derecho es un prerrequisito indispensable para analizar cualquier marco normativo tecnológico, especialmente en el campo de la Ingeniería en Inteligencia Artificial.</p>
+                </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-balance-scale"></i> Importancia de la Propiedad Intelectual</h3>
-                <p>La protección de la propiedad intelectual es fundamental porque:</p>
-                <ul>
-                    <li>Fomenta la creatividad y la innovación</li>
-                    <li>Protege las inversiones en investigación y desarrollo</li>
-                    <li>Promueve el comercio justo y la competencia leal</li>
-                    <li>Contribuye al desarrollo económico y cultural</li>
-                    <li>Garantiza el reconocimiento a los creadores e inventores</li>
-                </ul>
-            </div>
-            
-            <div class="highlight-box">
-                <h4><i class="fas fa-exclamation-triangle"></i> Importante</h4>
-                <p>La propiedad intelectual no protege las ideas en sí mismas, sino la expresión concreta de esas ideas. Una idea debe materializarse en una obra, invención o signo distintivo para poder ser protegida.</p>
+                <h3><i class="fas fa-gavel"></i> 1.1.1 La Norma Jurídica y el Derecho</h3>
+                <p>La <strong>norma jurídica</strong> es el enunciado formal que establece la conducta permitida, obligatoria o prohibida, y cuya inobservancia conlleva una sanción impuesta por el Estado. Las normas se clasifican típicamente en cuatro categorías esenciales que rigen la conducta en el entorno digital:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <h4>Normas Imperativas</h4>
+                        </div>
+                        <p>Aquellas que obligan a realizar una acción o abstenerse de ella, sin que la voluntad de los particulares pueda modificarlas.</p>
+                        <p class="example"><strong>Ejemplo:</strong> La obligación legal de implementar medidas de seguridad específicas para proteger los datos personales.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-ban"></i>
+                            <h4>Normas Prohibitivas</h4>
+                        </div>
+                        <p>Impiden categóricamente una conducta determinada.</p>
+                        <p class="example"><strong>Ejemplo:</strong> La prohibición de acceder a sistemas informáticos protegidos sin la debida autorización.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Normas Dispositivas</h4>
+                        </div>
+                        <p>Permiten a las partes regular una situación jurídica mediante su voluntad, operando solo en ausencia de un acuerdo explícito.</p>
+                        <p class="example"><strong>Ejemplo:</strong> Las cláusulas en contratos de software y licencias que las partes pueden negociar.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Normas Permisivas</h4>
+                        </div>
+                        <p>Conceden una facultad o permiten una acción específica.</p>
+                        <p class="example"><strong>Ejemplo:</strong> El derecho a la autodeterminación informativa, que faculta a las personas a controlar la información recogida sobre ellas.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-file-alt"></i> Legislación Aplicable</h4>
+                    <p>Un ejemplo práctico de la aplicación de la norma jurídica es la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong> en México y el <strong>Reglamento General de Protección de Datos (RGPD)</strong> de la Unión Europea, que imponen obligaciones imperativas sobre cómo deben recabarse y tratarse los datos personales.</p>
+                </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-globe"></i> Alcance de la Protección</h3>
-                <p>La protección de la PI es territorial, lo que significa que los derechos otorgados en un país no son automáticamente válidos en otros. Sin embargo, existen tratados internacionales que facilitan la protección en múltiples países.</p>
+                <h3><i class="fas fa-users"></i> 1.1.2 Sujetos y Objetos del Derecho</h3>
+                <p>Para que una norma jurídica se aplique, deben existir <strong>sujetos</strong> y <strong>objetos</strong> claramente definidos.</p>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-user-tie"></i> Sujetos del Derecho</h4>
+                        <p>Son los entes (personas físicas o morales/jurídicas) que tienen la capacidad de ser titulares de derechos y obligaciones. En el ámbito digital, estos pueden ser:</p>
+                        <ul>
+                            <li>El usuario individual de una red social</li>
+                            <li>El desarrollador de un algoritmo de IA</li>
+                            <li>Grandes corporaciones tecnológicas</li>
+                            <li>El propio Estado (como regulador y como entidad que posee datos)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-cube"></i> Objetos del Derecho</h4>
+                        <p>Son los bienes, valores o intereses sobre los cuales recaen las normas. En el Derecho Informático, el objeto se expande más allá de lo tangible para incluir:</p>
+                        <ul>
+                            <li>La información (datos personales, secretos industriales)</li>
+                            <li>El software y código fuente</li>
+                            <li>El espectro radioeléctrico</li>
+                            <li>Los sistemas informáticos mismos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-file-signature"></i> 1.1.3 El Contrato</h3>
+                <p>Un <strong>contrato</strong> es la manifestación de voluntad entre dos o más partes que, al generar derechos y obligaciones recíprocas, establece un marco legal para una relación específica. En la Ingeniería en Inteligencia Artificial, la <strong>contratación informática</strong> es omnipresente.</p>
+                
+                <div class="table-responsive">
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <th>Tipo de Contrato</th>
+                                <th>Descripción</th>
+                                <th>Ejemplo en IA/TI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Contratos Civiles</strong></td>
+                                <td>Regulan relaciones entre particulares. Pueden ser unilaterales o bilaterales.</td>
+                                <td>Contrato de licencia de software oneroso</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contratos Mercantiles</strong></td>
+                                <td>Aplican a actos de comercio entre comerciantes.</td>
+                                <td>Contrato de suministro de servicio de nube o Big Data</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contratos Laborales</strong></td>
+                                <td>Definen la relación entre el trabajador y la empresa.</td>
+                                <td>Contrato por obra determinada para desarrollo de módulo de IA</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contratos Públicos</strong></td>
+                                <td>Una de las partes es una institución pública.</td>
+                                <td>Licitación para implementar sistema de IA gubernamental</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-lightbulb"></i> Punto Clave</h4>
+                    <p>La validez y el cumplimiento de estos contratos son fundamentales para la <strong>transferencia de propiedad intelectual</strong> y la <strong>asignación de responsabilidades</strong> en el desarrollo de sistemas complejos de IA.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-skull-crossbones"></i> 1.1.4 El Delito</h3>
+                <p>Un <strong>delito</strong> es una acción u omisión que contraviene lo estipulado en la ley penal y que es susceptible de ser castigada por las autoridades. Su etimología latina, <em>delinquere</em>, denota el acto de apartarse del camino señalado por la ley.</p>
+                
+                <p>En la era digital, la tipificación de conductas ilícitas ha dado lugar a los <strong>delitos informáticos o cibernéticos</strong>, los cuales se cometen utilizando medios digitales, siendo la computadora tanto el instrumento como, en ocasiones, el fin de la acción criminal.</p>
+                
+                <div class="warning-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Delitos Tipificados en el Código Penal Federal</h4>
+                    <ul>
+                        <li><strong>Acceso no autorizado:</strong> Ingresar sin permiso a sistemas o equipos de informática protegidos, o exceder la autorización concedida.</li>
+                        <li><strong>Modificación o destrucción de información:</strong> Alterar, dañar o provocar la pérdida de información contenida en sistemas o bases de datos.</li>
+                        <li><strong>Fraude informático:</strong> Engañar o aprovechar el error para obtener un lucro indebido a través de medios informáticos (phishing, falsificación de tarjetas).</li>
+                        <li><strong>Uso de información confidencial:</strong> Utilizar indebidamente información sensible en provecho propio o ajeno, con agravantes para funcionarios públicos.</li>
+                    </ul>
+                </div>
             </div>
         `
     },
     
     'tema1-2': {
-        title: '1.2 Historia y Evolución',
+        title: '1.2 Regulación Jurídica en Materia Informática',
         content: `
             <div class="content-section">
-                <h3><i class="fas fa-history"></i> Orígenes de la Propiedad Intelectual</h3>
-                <p>El concepto de propiedad intelectual tiene raíces antiguas, aunque su desarrollo formal es relativamente reciente:</p>
-                
-                <ul>
-                    <li><strong>Antigüedad:</strong> Los artesanos marcaban sus productos para identificar su origen.</li>
-                    <li><strong>Siglo XV:</strong> La invención de la imprenta impulsó la necesidad de proteger los textos impresos.</li>
-                    <li><strong>1474:</strong> Venecia promulga la primera ley de patentes conocida.</li>
-                    <li><strong>1710:</strong> El Estatuto de la Reina Ana en Inglaterra, primera ley de derechos de autor.</li>
-                </ul>
+                <h3><i class="fas fa-laptop-code"></i> Introducción a la Regulación Informática</h3>
+                <p>La <strong>regulación jurídica en materia informática</strong> es esencial para garantizar un entorno digital confiable, protegiendo los derechos de los usuarios y la integridad de los sistemas. El derecho informático abarca aspectos cruciales para el desarrollo de la inteligencia artificial, entre ellos el derecho a la información, la confidencialidad y la seguridad.</p>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-landmark"></i> Desarrollo Internacional</h3>
-                <p>A finales del siglo XIX surgieron los primeros tratados internacionales:</p>
+                <h3><i class="fas fa-info-circle"></i> 1.2.1 Derecho a la Información</h3>
+                <p>El <strong>Derecho a la Información</strong> es una prerrogativa fundamental que faculta a toda persona a buscar, recibir y difundir información. En el contexto digital, una de sus vertientes más importantes es el <strong>Derecho de Acceso a la Información Pública</strong>.</p>
                 
-                <ul>
-                    <li><strong>1883:</strong> Convenio de París para la Protección de la Propiedad Industrial</li>
-                    <li><strong>1886:</strong> Convenio de Berna para la Protección de las Obras Literarias y Artísticas</li>
-                    <li><strong>1967:</strong> Creación de la Organización Mundial de la Propiedad Intelectual (OMPI)</li>
-                    <li><strong>1994:</strong> Acuerdo sobre los ADPIC (Aspectos de los Derechos de Propiedad Intelectual relacionados con el Comercio)</li>
-                </ul>
+                <div class="highlight-box">
+                    <h4><i class="fas fa-door-open"></i> Características del Derecho a la Información</h4>
+                    <ul>
+                        <li>Permite examinar datos y registros en poder de entidades públicas</li>
+                        <li>Es clave para la transparencia gubernamental</li>
+                        <li>Fundamental para la rendición de cuentas en una sociedad democrática</li>
+                        <li>Incluye el derecho a difundir información veraz</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-digital-tachograph"></i> La Era Digital</h3>
-                <p>La llegada de internet y las tecnologías digitales ha planteado nuevos desafíos para la propiedad intelectual:</p>
+                <h3><i class="fas fa-user-secret"></i> 1.2.2 Confidencialidad</h3>
+                <p>La <strong>confidencialidad</strong> es el principio que asegura que la información solo sea accesible por aquellos individuos, entidades o procesos que estén debidamente autorizados. En la Ingeniería en IA, este principio se aplica rigurosamente a:</p>
                 <ul>
-                    <li>Facilidad de copia y distribución de contenidos</li>
-                    <li>Nuevas formas de creación colaborativa</li>
-                    <li>Piratería digital</li>
-                    <li>Licencias alternativas como Creative Commons</li>
-                    <li>Protección de software y bases de datos</li>
+                    <li>Los datos personales de los usuarios</li>
+                    <li>La propiedad intelectual de la compañía</li>
+                    <li>Los secretos comerciales</li>
+                    <li>Los algoritmos propietarios</li>
                 </ul>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-key"></i>
+                            <h4>Controles de Acceso</h4>
+                        </div>
+                        <p>Uso de cifrados, contraseñas y esquemas de privilegios para que el usuario solo acceda a lo estrictamente necesario para sus funciones.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-file-contract"></i>
+                            <h4>Políticas de Confidencialidad</h4>
+                        </div>
+                        <p>Establecimiento de instrucciones claras sobre el manejo interno de la información por parte de los empleados.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Acuerdos de Confidencialidad (NDA)</h4>
+                        </div>
+                        <p>Contratos firmados con terceros (empleados, socios, inversores) para garantizar la no divulgación de datos sensibles.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-shield-alt"></i> Legislación de Datos Personales</h4>
+                    <p>La legislación de datos personales es la manifestación legal más clara de este principio, buscando proteger la <strong>privacidad</strong>, <strong>dignidad</strong> y <strong>autonomía</strong> de las personas, otorgándoles control sobre su información.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-lock"></i> 1.2.3 Seguridad</h3>
+                <p>La <strong>seguridad</strong> en el ámbito informático se refiere a la protección de los sistemas y la información contra amenazas. Legalmente, la regulación se enfoca en tres aspectos fundamentales esenciales para cualquier sistema de IA:</p>
+                
+                <div class="three-pillars">
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-shield-virus"></i></div>
+                        <h4>Ciberseguridad</h4>
+                        <p>Protección de la infraestructura tecnológica y los datos críticos, como lo establece la <strong>Estrategia Nacional de Ciberseguridad</strong> en México.</p>
+                    </div>
+                    
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-database"></i></div>
+                        <h4>Integridad de los Datos</h4>
+                        <p>Garantizar que los datos y la información sean precisos y completos, no habiendo sido alterados o destruidos de forma no autorizada.</p>
+                    </div>
+                    
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-server"></i></div>
+                        <h4>Disponibilidad</h4>
+                        <p>Asegurar que los usuarios autorizados tengan acceso a la información y a los sistemas cuando lo requieran.</p>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <h4><i class="fas fa-exclamation-circle"></i> Obligación Legal</h4>
+                    <p>Las <strong>políticas de seguridad</strong> definen los permisos (lectura, modificación) que tiene un usuario sobre la información o servicios. Las vulnerabilidades de seguridad que afecten significativamente los derechos de los titulares de datos deben ser <strong>informadas de inmediato</strong> por el responsable.</p>
+                </div>
             </div>
         `
     },
     
     'tema1-3': {
-        title: '1.3 Marco Legal Nacional',
+        title: '1.3 Regulación Jurídica en Materia de Telecomunicaciones',
         content: `
             <div class="content-section">
-                <h3><i class="fas fa-gavel"></i> Legislación Mexicana</h3>
-                <p>En México, la propiedad intelectual está regulada principalmente por las siguientes leyes:</p>
-                
-                <ul>
-                    <li><strong>Ley Federal del Derecho de Autor (LFDA):</strong> Protege los derechos de los creadores de obras literarias, artísticas y científicas.</li>
-                    <li><strong>Ley Federal de Protección a la Propiedad Industrial:</strong> Regula patentes, marcas, diseños industriales y secretos comerciales.</li>
-                    <li><strong>Constitución Política de los Estados Unidos Mexicanos:</strong> Artículo 28 establece las bases de la protección.</li>
-                </ul>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-building"></i> Instituciones Competentes</h3>
-                <p>Las principales instituciones encargadas de la PI en México son:</p>
+                <h3><i class="fas fa-broadcast-tower"></i> Importancia de las Telecomunicaciones</h3>
+                <p>La <strong>Regulación Jurídica en Materia de Telecomunicaciones</strong> es vital, ya que la Inteligencia Artificial se sustenta en la transmisión masiva de datos a través de redes y el uso del espectro radioeléctrico. En México, esta materia se rige principalmente por la <strong>Ley Federal de Telecomunicaciones y Radiodifusión (LFTR)</strong>.</p>
                 
                 <div class="highlight-box">
-                    <h4><i class="fas fa-university"></i> INDAUTOR</h4>
-                    <p>Instituto Nacional del Derecho de Autor. Se encarga del registro de obras protegidas por derechos de autor, contratos de licencia y la protección de los derechos morales y patrimoniales.</p>
-                </div>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-industry"></i> IMPI</h4>
-                    <p>Instituto Mexicano de la Propiedad Industrial. Administra el sistema de propiedad industrial, incluyendo patentes, marcas, diseños industriales y denominaciones de origen.</p>
+                    <h4><i class="fas fa-landmark"></i> Rectoría del Estado</h4>
+                    <p>El Estado ejerce la rectoría sobre las telecomunicaciones y mantiene el dominio sobre el <strong>espectro radioeléctrico</strong> y las <strong>posiciones orbitales</strong>. El espectro radioeléctrico y las redes públicas de telecomunicaciones son consideradas <strong>vías generales de comunicación</strong> y son de jurisdicción federal.</p>
                 </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-shield-alt"></i> Sanciones por Infracciones</h3>
-                <p>La ley mexicana contempla sanciones civiles, administrativas y penales para quienes violen los derechos de propiedad intelectual:</p>
+                <h3><i class="fas fa-satellite-dish"></i> El Espectro Radioeléctrico</h3>
+                <p>El uso, aprovechamiento y explotación de las bandas de frecuencia del espectro se otorga mediante <strong>concesiones</strong>, un acto administrativo que confiere el derecho a explotar estas bandas bajo los términos establecidos en la ley.</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-wifi"></i>
+                            <h4>Administración del Espectro</h4>
+                        </div>
+                        <p>Regulación y administración eficiente del espectro radioeléctrico como recurso escaso del Estado.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Fomento a la Competencia</h4>
+                        </div>
+                        <p>Requisitos y promoción de la competencia efectiva en las redes de telecomunicaciones.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-user-shield"></i>
+                            <h4>Derechos de los Usuarios</h4>
+                        </div>
+                        <p>Protección de los derechos de los usuarios y garantía de la calidad de los servicios prestados.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-building"></i> Instituto Federal de Telecomunicaciones (IFT)</h3>
+                <p>El <strong>Instituto Federal de Telecomunicaciones (IFT)</strong> es el órgano autónomo encargado de regular y promover la competencia en esta materia. Sus funciones principales incluyen:</p>
+                
                 <ul>
-                    <li>Multas económicas</li>
-                    <li>Clausura de establecimientos</li>
-                    <li>Decomiso de productos infractores</li>
-                    <li>Penas de prisión en casos graves</li>
+                    <li>Otorgar concesiones para el uso del espectro radioeléctrico</li>
+                    <li>Regular los servicios de telecomunicaciones y radiodifusión</li>
+                    <li>Promover la competencia efectiva en el sector</li>
+                    <li>Resolver controversias entre operadores</li>
+                    <li>Establecer tarifas de interconexión</li>
+                    <li>Vigilar el cumplimiento de obligaciones de los concesionarios</li>
                 </ul>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-robot"></i> Relevancia para la IA</h4>
+                    <p>La regulación de telecomunicaciones es fundamental para la IA porque los sistemas de inteligencia artificial dependen de la conectividad, el ancho de banda y la transmisión de grandes volúmenes de datos en tiempo real. Sin una infraestructura de telecomunicaciones robusta y bien regulada, el desarrollo y despliegue de sistemas de IA sería prácticamente imposible.</p>
+                </div>
             </div>
         `
     },
     
     'tema1-4': {
-        title: '1.4 Marco Legal Internacional',
+        title: '1.4 Regulación Administrativa en Materia Informática',
         content: `
             <div class="content-section">
-                <h3><i class="fas fa-globe-americas"></i> Tratados Internacionales</h3>
-                <p>México es parte de numerosos tratados internacionales en materia de propiedad intelectual:</p>
+                <h3><i class="fas fa-file-alt"></i> Marco Administrativo</h3>
+                <p>La <strong>Regulación Administrativa en Materia Informática</strong> se relaciona con las leyes que rigen la operación de las entidades públicas y privadas en el manejo de la información y los datos, con énfasis en la transparencia y la protección de datos personales.</p>
                 
-                <ul>
-                    <li><strong>Convenio de París (1883):</strong> Protección de la propiedad industrial.</li>
-                    <li><strong>Convenio de Berna (1886):</strong> Protección de obras literarias y artísticas.</li>
-                    <li><strong>Tratado de Cooperación en Materia de Patentes (PCT):</strong> Facilita la solicitud de patentes en múltiples países.</li>
-                    <li><strong>Protocolo de Madrid:</strong> Sistema internacional de registro de marcas.</li>
-                    <li><strong>Tratado de la OMPI sobre Derecho de Autor (WCT):</strong> Protección en el entorno digital.</li>
-                </ul>
+                <div class="highlight-box">
+                    <h4><i class="fas fa-scroll"></i> Fundamento Constitucional</h4>
+                    <p>Esta regulación se fundamenta en principios constitucionales, destacando el <strong>Artículo 16 Constitucional</strong> que protege la vida privada y los datos personales de toda persona.</p>
+                </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-handshake"></i> Acuerdos Comerciales</h3>
-                <p>Los acuerdos comerciales incluyen capítulos sobre propiedad intelectual:</p>
+                <h3><i class="fas fa-book-open"></i> Instrumentos Legales Esenciales</h3>
                 
-                <ul>
-                    <li><strong>T-MEC:</strong> Tratado entre México, Estados Unidos y Canadá, con estándares elevados de protección.</li>
-                    <li><strong>ADPIC:</strong> Acuerdo de la OMC que establece estándares mínimos de protección.</li>
-                    <li><strong>Tratados de Libre Comercio:</strong> Con la Unión Europea, Japón y otros países.</li>
-                </ul>
+                <div class="law-cards">
+                    <div class="law-card">
+                        <div class="law-card-header">
+                            <i class="fas fa-eye"></i>
+                            <h4>Ley General de Transparencia y Acceso a la Información Pública (LGTAIP)</h4>
+                        </div>
+                        <div class="law-card-body">
+                            <p>Esta ley tiene como objetivos fundamentales:</p>
+                            <ul>
+                                <li>Asegurar que todo solicitante tenga acceso a la información pública mediante procedimientos sencillos y expeditos</li>
+                                <li>Transparentar la gestión pública mediante la difusión de información oportuna, verificable y comprensible</li>
+                                <li>Promover la rendición de cuentas de los sujetos obligados</li>
+                                <li>Garantizar el derecho de acceso a la información de cualquier persona</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="law-card">
+                        <div class="law-card-header">
+                            <i class="fas fa-user-lock"></i>
+                            <h4>Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados (LGPDPPSO)</h4>
+                        </div>
+                        <div class="law-card-body">
+                            <p>Esta ley regula el tratamiento de datos personales por parte de las autoridades y entidades públicas:</p>
+                            <ul>
+                                <li>Obliga a establecer medidas de seguridad de nivel alto</li>
+                                <li>Garantiza la integridad, disponibilidad y confidencialidad de la información</li>
+                                <li>Protege los derechos ARCO de los titulares</li>
+                                <li>Establece sanciones por incumplimiento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="highlight-box">
-                <h4><i class="fas fa-info-circle"></i> OMPI</h4>
-                <p>La Organización Mundial de la Propiedad Intelectual (OMPI) es el organismo de las Naciones Unidas dedicado a desarrollar un sistema internacional de PI equilibrado y accesible que recompense la creatividad y estimule la innovación.</p>
+            <div class="content-section">
+                <h3><i class="fas fa-university"></i> Instituto Nacional de Transparencia (INAI)</h3>
+                <p>El <strong>Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI)</strong> es el organismo garante de estos derechos. Su función principal es conocer y resolver los recursos de inconformidad interpuestos por particulares.</p>
+                
+                <div class="table-responsive">
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <th>Actor</th>
+                                <th>Obligaciones</th>
+                                <th>Derechos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Instituciones Públicas</strong></td>
+                                <td>Publicar información actualizada y resguardar datos personales</td>
+                                <td>Clasificar información como reservada o confidencial cuando proceda</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ciudadanos</strong></td>
+                                <td>Usar la información de manera responsable</td>
+                                <td>Acceder a información pública y ejercer derechos ARCO</td>
+                            </tr>
+                            <tr>
+                                <td><strong>INAI</strong></td>
+                                <td>Garantizar el cumplimiento de la ley</td>
+                                <td>Resolver controversias y emitir sanciones</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="highlight-box arco-box">
+                    <h4><i class="fas fa-user-cog"></i> Derechos ARCO</h4>
+                    <p>Los derechos ARCO son fundamentales para la autodeterminación informativa:</p>
+                    <ul>
+                        <li><strong>A</strong>cceso: Conocer qué datos personales se tienen sobre uno</li>
+                        <li><strong>R</strong>ectificación: Corregir datos inexactos o incompletos</li>
+                        <li><strong>C</strong>ancelación: Solicitar la eliminación de datos cuando sea procedente</li>
+                        <li><strong>O</strong>posición: Oponerse al tratamiento de datos para fines específicos</li>
+                    </ul>
+                </div>
             </div>
         `
     },
     
-    // Unidad 2: Derechos de Autor
+    'tema1-5': {
+        title: '1.5 Regulación Penal en Materia Informática',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-gavel"></i> Marco Penal Informático</h3>
+                <p>La <strong>Regulación Penal en Materia Informática</strong> es la vertiente del derecho que define y sanciona las conductas delictivas cometidas utilizando sistemas informáticos. La creciente sofisticación de los sistemas de IA y la dependencia en los datos hacen que esta regulación sea fundamental.</p>
+                
+                <div class="warning-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Importancia para el Ingeniero en IA</h4>
+                    <p>El ingeniero en IA debe conocer estas tipificaciones, ya que su expertise lo sitúa en una posición de <strong>alta responsabilidad</strong>, pudiendo ser tanto víctima como potencial sujeto activo de estas conductas si no actúa con la debida diligencia y ética profesional.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-balance-scale-right"></i> Delitos Tipificados en el Código Penal Federal</h3>
+                <p>Las leyes penales en México, principalmente el <strong>Código Penal Federal</strong>, establecen penas de prisión y multas por diversos delitos informáticos:</p>
+                
+                <div class="crime-cards">
+                    <div class="crime-card">
+                        <div class="crime-icon"><i class="fas fa-door-open"></i></div>
+                        <h4>Acceso y Modificación Ilegales</h4>
+                        <p>Acceder sin autorización, modificar, destruir o provocar pérdida de información contenida en sistemas protegidos.</p>
+                        <div class="crime-penalty">
+                            <span class="penalty-label">Pena:</span> 3 meses a 2 años de prisión y multa
+                        </div>
+                    </div>
+                    
+                    <div class="crime-card">
+                        <div class="crime-icon"><i class="fas fa-file-invoice"></i></div>
+                        <h4>Uso de Datos Confidenciales</h4>
+                        <p>Obtener y utilizar información sensible para provecho propio o de un tercero sin autorización.</p>
+                        <div class="crime-penalty">
+                            <span class="penalty-label">Pena:</span> 6 meses a 4 años de prisión
+                        </div>
+                    </div>
+                    
+                    <div class="crime-card">
+                        <div class="crime-icon"><i class="fas fa-credit-card"></i></div>
+                        <h4>Fraude y Falsificación</h4>
+                        <p>Falsificar tarjetas de crédito o débito, o acceder indebidamente a sistemas financieros para realizar operaciones ilícitas.</p>
+                        <div class="crime-penalty">
+                            <span class="penalty-label">Pena:</span> 3 a 9 años de prisión
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-plus-circle"></i> Agravantes</h3>
+                <p>La pena se agrava significativamente en los siguientes casos:</p>
+                
+                <div class="aggravating-factors">
+                    <div class="factor">
+                        <i class="fas fa-user-graduate"></i>
+                        <div>
+                            <h5>Conocimiento Técnico</h5>
+                            <p>Si el responsable es un <strong>técnico o especialista</strong> en el manejo de los sistemas afectados.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="factor">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <div>
+                            <h5>Fines de Lucro</h5>
+                            <p>Si la información obtenida se usa con <strong>fines económicos</strong> o para obtener un beneficio indebido.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="factor">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h5>Función Pública</h5>
+                            <p>Si el responsable es un <strong>funcionario público</strong> que aprovecha su cargo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="factor">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h5>Afectación Masiva</h5>
+                            <p>Si el delito afecta a un <strong>gran número de personas</strong> o sistemas críticos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-shield-alt"></i> Recomendaciones para el Profesional en IA</h3>
+                <div class="recommendations-grid">
+                    <div class="recommendation">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Actuar siempre con la debida diligencia y ética profesional</p>
+                    </div>
+                    <div class="recommendation">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Documentar todas las autorizaciones de acceso a sistemas</p>
+                    </div>
+                    <div class="recommendation">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Respetar los acuerdos de confidencialidad</p>
+                    </div>
+                    <div class="recommendation">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Reportar vulnerabilidades de forma responsable</p>
+                    </div>
+                    <div class="recommendation">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Mantenerse actualizado sobre la legislación vigente</p>
+                    </div>
+                    <div class="recommendation">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Implementar medidas de seguridad robustas en los sistemas que se desarrollen</p>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    // =============================================
+    // UNIDAD 2: DERECHOS DE AUTOR
+    // =============================================
+    
     'tema2-1': {
         title: '2.1 Concepto y Objeto del Derecho de Autor',
         content: `
@@ -688,51 +1078,69 @@ const courseContent = {
         `
     },
     
-    // Actividades
+    // Actividades (Cuestionarios tipo examen)
     'actividad1': {
-        title: 'Actividad 1: Mapa Conceptual de Fundamentos de PI',
-        type: 'activity',
+        title: 'Cuestionario Unidad 1: Principios del Derecho y Regulación',
+        type: 'quiz',
         content: `
-            <div class="activity-content">
-                <div class="activity-header">
-                    <h3>Actividad 1</h3>
-                    <p>Unidad 1: Fundamentos de la Propiedad Intelectual</p>
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h3><i class="fas fa-clipboard-check"></i> Cuestionario - Unidad 1</h3>
+                    <p>Principios del Derecho y Regulación Jurídica en Materia Informática</p>
                 </div>
                 
-                <div class="activity-value">
+                <div class="quiz-value">
                     <div class="value-badge">15%</div>
                     <div>
-                        <strong>Valor de la actividad</strong>
-                        <p>Esta actividad representa el 15% de tu calificación final</p>
+                        <strong>Valor del cuestionario</strong>
+                        <p>Este cuestionario representa el 15% de tu calificación final</p>
                     </div>
                 </div>
                 
-                <div class="activity-instructions">
-                    <h4><i class="fas fa-clipboard-list"></i> Instrucciones</h4>
-                    <ol>
-                        <li>Revisa cuidadosamente los contenidos de la Unidad 1 (temas 1.1 al 1.4).</li>
-                        <li>Elabora un mapa conceptual que incluya:
-                            <ul>
-                                <li>Concepto de propiedad intelectual</li>
-                                <li>Diferencias entre derechos de autor y propiedad industrial</li>
-                                <li>Marco legal nacional (leyes e instituciones)</li>
-                                <li>Principales tratados internacionales</li>
-                            </ul>
-                        </li>
-                        <li>El mapa debe mostrar las relaciones entre los conceptos.</li>
-                        <li>Puedes utilizar herramientas digitales como Canva, Lucidchart o CmapTools.</li>
-                        <li>Guarda tu trabajo en formato PDF o imagen (PNG/JPG).</li>
-                        <li>Sube tu archivo antes de la fecha límite.</li>
-                    </ol>
+                <div class="quiz-info">
+                    <div class="info-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>10 preguntas</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="quiz1-time-limit">15 minutos</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-redo"></i>
+                        <span id="quiz1-max-attempts">2 intentos permitidos</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-percentage"></i>
+                        <span id="quiz1-passing-score">Calificación mínima: 60%</span>
+                    </div>
                 </div>
                 
-                <div class="activity-form">
-                    <h4><i class="fas fa-upload"></i> Entregar Actividad</h4>
-                    <input type="file" id="activity1File" accept=".pdf,.png,.jpg,.jpeg">
-                    <textarea placeholder="Comentarios adicionales (opcional)..."></textarea>
-                    <button class="btn-primary" onclick="submitActivity(1)">
-                        <i class="fas fa-paper-plane"></i> Enviar Actividad
+                <div class="quiz-instructions">
+                    <h4><i class="fas fa-info-circle"></i> Instrucciones</h4>
+                    <ul>
+                        <li>Lee cuidadosamente cada pregunta antes de responder.</li>
+                        <li>Selecciona la opción que consideres correcta para cada pregunta.</li>
+                        <li>Una vez iniciado el cuestionario, el tiempo comenzará a correr.</li>
+                        <li>Puedes revisar tus respuestas antes de enviar.</li>
+                        <li>Al finalizar, recibirás retroalimentación inmediata.</li>
+                    </ul>
+                </div>
+                
+                <div id="quiz1-container" class="quiz-questions" style="display: none;">
+                    <!-- Las preguntas se cargarán dinámicamente -->
+                </div>
+                
+                <div id="quiz1-start" class="quiz-start-section">
+                    <p>Asegúrate de haber revisado los temas 1.1 al 1.5 antes de iniciar.</p>
+                    <div class="quiz-attempts-info" id="quiz1-attempts-info"></div>
+                    <button class="btn-primary btn-large" id="quiz1-start-btn" onclick="startQuiz(1)">
+                        <i class="fas fa-play"></i> Iniciar Cuestionario
                     </button>
+                </div>
+                
+                <div id="quiz1-results" class="quiz-results" style="display: none;">
+                    <!-- Los resultados se mostrarán aquí -->
                 </div>
             </div>
         `

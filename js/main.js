@@ -105,6 +105,14 @@ function loadContent(contentId) {
     `;
     dynamicContent.classList.add('active');
     
+    // Si es un cuestionario, actualizar el botón de inicio
+    if (contentId.startsWith('quiz')) {
+        const unitNumber = parseInt(contentId.replace('quiz', ''));
+        if (window.updateQuizStartButton) {
+            setTimeout(() => window.updateQuizStartButton(unitNumber), 100);
+        }
+    }
+    
     // Scroll al inicio
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
