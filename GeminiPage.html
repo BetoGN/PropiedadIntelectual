@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso: Propiedad Intelectual - Ingeniería en IA</title>
+    <style>
+        /* --- ESTILOS GENERALES (CSS) --- */
+        :root {
+            --ipn-guinda: #6c1d45;
+            --ipn-gris: #333333;
+            --ipn-claro: #f5f5f5;
+            --accent: #00bfa5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        /* --- HEADER & TOP NAV --- */
+        header {
+            background-color: var(--ipn-guinda);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .top-nav button:hover, .top-nav button.active {
+            border-bottom: 3px solid var(--accent);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* --- LAYOUT PRINCIPAL --- */
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        /* --- SIDEBAR (Contenidos) --- */
+        aside {
+            width: 250px;
+            background-color: var(--ipn-gris);
+            color: white;
+            padding: 20px;
+            display: none; /* Se muestra solo en la pestaña de Unidades */
+            flex-direction: column;
+        }
+
+        aside h3 { margin-top: 0; border-bottom: 1px solid #555; padding-bottom: 10px; }
+        
+        .sidebar-btn {
+            background: none;
+            border: none;
+            color: #ddd;
+            text-align: left;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+        }
+
+        .sidebar-btn:hover, .sidebar-btn.active {
+            background-color: #444;
+            border-left: 3px solid var(--accent);
+            color: white;
+        }
+
+        /* --- MAIN CONTENT --- */
+        main {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .tab-content { display: none; animation: fadeIn 0.5s; }
+        .tab-content.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* --- COMPONENTES ESPECÍFICOS --- */
+        .search-box {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .activity-box {
+            border-left: 4px solid var(--ipn-guinda);
+            background-color: #fff0f5;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        /* --- ESTILOS DEL EXAMEN --- */
+        .exam-container { max-width: 800px; margin: 0 auto; }
+        .timer { font-size: 1.5rem; font-weight: bold; color: var(--ipn-guinda); text-align: right; }
+        .question { margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .feedback { display: none; padding: 10px; margin-top: 5px; border-radius: 4px; }
+        .feedback.correct { background-color: #d4edda; color: #155724; }
+        .feedback.incorrect { background-color: #f8d7da; color: #721c24; }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        .cc-license img { vertical-align: middle; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h2>Propiedad Intelectual (ESCOM/UPIIC)</h2>
+        </div>
+        <nav class="top-nav">
+            <button onclick="switchTab('bienvenida')" class="active">Bienvenida</button>
+            <button onclick="switchTab('metodologia')">Metodología</button>
+            <button onclick="switchTab('competencia')">Unidades de Competencia</button>
+            <button onclick="switchTab('evaluacion')">Evaluación</button>
+            <button onclick="switchTab('requerimientos')">Requerimientos</button>
+            <button onclick="switchTab('glosario')">Glosario</button>
+            <button onclick="switchTab('manual')">Manual</button>
+            <button onclick="switchTab('contacto')">Contacto</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside id="sidebar">
+            <h3>Contenidos</h3>
+            <input type="text" id="searchContent" class="search-box" placeholder="Buscar en temas..." onkeyup="filterContent()">
+            <nav id="unit-nav">
+                <button class="sidebar-btn" onclick="showUnit('u1')">Unidad I: Legislación Informática</button>
+                <button class="sidebar-btn" onclick="showUnit('u2')">Unidad II: Principios de PI</button>
+                <button class="sidebar-btn" onclick="showUnit('u3')">Unidad III: Legislación PI</button>
+                <button class="sidebar-btn" onclick="showUnit('u4')">Unidad IV: Derechos de Autor</button>
+                <button class="sidebar-btn" onclick="showUnit('u5')">Unidad V: Aplicación y Auditoría</button>
+            </nav>
+        </aside>
+
+        <main>
+            <section id="bienvenida" class="tab-content active">
+                <div class="card">
+                    <h1>Bienvenido al Curso</h1>
+                    <p><strong>Propósito de la Unidad de Aprendizaje:</strong> Aplica la propiedad intelectual en proyectos informáticos a partir de sus principios, práctica y la legislación vigente[cite: 11, 37].</p>
+                    <p>Esta unidad contribuye al perfil de egreso de la Ingeniería en Inteligencia Artificial con el desarrollo de habilidades de análisis, aplicación de derechos de autor, diseño de marca y patentes[cite: 33].</p>
+                </div>
+            </section>
+
+            <section id="metodologia" class="tab-content">
+                <div class="card">
+                    <h2>Estrategias de Aprendizaje</h2>
+                    <p>El curso sigue un enfoque teórico-práctico basado en:</p>
+                    <ul>
+                        <li><strong>Estudio de Casos:</strong> Análisis de situaciones reales de infracción y protección de software[cite: 12].</li>
+                        <li><strong>Aprendizaje Basado en Proyectos:</strong> Desarrollo de portafolios de evidencias y diagnósticos de PI[cite: 12].</li>
+                        <li><strong>Indagación Documental:</strong> Elaboración de mapas conceptuales y mentales sobre la legislación[cite: 88].</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="competencia" class="tab-content">
+                <div id="u1" class="unit-content">
+                    <h2>Unidad I: Legislación Informática</h2>
+                    <p><strong>Competencia:</strong> Distingue la legislación informática con base en su regulación y los principios del derecho[cite: 56].</p>
+                    <hr>
+                    <h3>1.1 Principios del Derecho</h3>
+                    <p>La norma jurídica es el enunciado formal que establece la conducta permitida, obligatoria o prohibida. En informática, esto abarca:</p>
+                    <ul>
+                        <li><strong>Normas Imperativas:</strong> Obligaciones ineludibles (ej. seguridad de datos).</li>
+                        <li><strong>Normas Prohibitivas:</strong> (ej. acceso no autorizado)[cite: 137].</li>
+                    </ul>
+                    <div class="activity-box">
+                        <h4>Actividad 1: Mapa Mental</h4>
+                        <p>Realizar un mapa mental sobre la clasificación de las normas jurídicas y su impacto en la IA.</p>
+                        <p><strong>Valor:</strong> 10% de la calificación parcial.</p>
+                    </div>
+                </div>
+
+                <div id="u2" class="unit-content" style="display:none">
+                    <h2>Unidad II: Principios de Propiedad Intelectual</h2>
+                    <p><strong>Competencia:</strong> Analiza la PI a partir de su panorama general y economía digital[cite: 59].</p>
+                    <h3>2.1 Teorías de Derechos</h3>
+                    <p>Se analizan teorías como la de <em>John Locke</em> (Derechos Naturales/Trabajo) donde la propiedad surge al mezclar el trabajo con recursos comunales[cite: 229, 290].</p>
+                    <h3>2.2 La PI en la Economía Digital</h3>
+                    <p>Protección de algoritmos de IA y la tensión con la transparencia algorítmica[cite: 374].</p>
+                </div>
+
+                <div id="u3" class="unit-content" style="display:none">
+                    <h2>Unidad III: Legislación de la PI</h2>
+                    <p>Comparativa entre Patentes y Modelos de Utilidad:</p>
+                    <ul>
+                        <li><strong>Patentes:</strong> 20 años de vigencia. Requiere novedad, actividad inventiva y aplicación industrial[cite: 470, 476].</li>
+                        <li><strong>Modelos de Utilidad:</strong> 15 años. Para mejoras en herramientas/objetos[cite: 471].</li>
+                    </ul>
+                </div>
+
+                <div id="u4" class="unit-content" style="display:none">
+                    <h2>Unidad IV: Derechos de Autor y Conexos</h2>
+                    <p>El software se protege primariamente como obra literaria bajo la LFDA[cite: 448]. Sin embargo, la funcionalidad técnica requiere patentes.</p>
+                </div>
+
+                <div id="u5" class="unit-content" style="display:none">
+                    <h2>Unidad V: Aplicación y Auditoría</h2>
+                    <p>El proceso de <em>Due Diligence</em> o auditoría de PI es crítico antes de fusiones o adquisiciones para verificar la titularidad del código[cite: 420].</p>
+                </div>
+            </section>
+
+            <section id="evaluacion" class="tab-content">
+                <div class="card exam-container">
+                    <h2>Evaluación de los Aprendizajes</h2>
+                    <p>Este cuestionario es obligatorio. Tiene un límite de tiempo y número de intentos.</p>
+                    
+                    <div id="exam-intro">
+                        <ul>
+                            <li><strong>Intentos permitidos:</strong> 2</li>
+                            <li><strong>Tiempo límite:</strong> 10 minutos</li>
+                            <li><strong>Tipo:</strong> Opción múltiple</li>
+                        </ul>
+                        <button onclick="startExam()" style="padding: 10px 20px; background: var(--ipn-guinda); color: white; border: none; cursor: pointer;">Comenzar Intento</button>
+                        <p id="attempts-display">Intentos restantes: <span id="attempts-count">2</span></p>
+                    </div>
+
+                    <div id="exam-area" style="display: none;">
+                        <div class="timer" id="timer">10:00</div>
+                        <form id="quiz-form">
+                            <div class="question" id="q1">
+                                <p>1. ¿Cuál es la vigencia de una patente en México según la LFPPI?</p>
+                                <input type="radio" name="q1" value="a"> a) 10 años renovables<br>
+                                <input type="radio" name="q1" value="b"> b) 20 años improrrogables [cite: 470]<br>
+                                <input type="radio" name="q1" value="c"> c) 70 años post-mortem<br>
+                                <div class="feedback" id="f1"></div>
+                            </div>
+
+                            <div class="question" id="q2">
+                                <p>2. ¿Qué organismo en México administra los Derechos de Autor?</p>
+                                <input type="radio" name="q2" value="a"> a) IMPI<br>
+                                <input type="radio" name="q2" value="b"> b) INDAUTOR [cite: 503]<br>
+                                <input type="radio" name="q2" value="c"> c) OMPI<br>
+                                <div class="feedback" id="f2"></div>
+                            </div>
+
+                            <div class="question" id="q3">
+                                <p>3. ¿Los algoritmos matemáticos puros son patentables en México?</p>
+                                <input type="radio" name="q3" value="a"> a) Sí, siempre.<br>
+                                <input type="radio" name="q3" value="b"> b) No, están excluidos[cite: 673].<br>
+                                <div class="feedback" id="f3"></div>
+                            </div>
+                        </form>
+                        <button onclick="submitExam()" style="margin-top:20px; padding: 10px;">Enviar y Revisar</button>
+                    </div>
+
+                    <div id="exam-results" style="display: none;">
+                        <h3>Resultados</h3>
+                        <p>Tu calificación: <span id="score"></span>/100</p>
+                        <button onclick="downloadResults()">Descargar Resultados</button>
+                        <button onclick="resetExam()">Revisar Respuestas</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="requerimientos" class="tab-content">
+                <div class="card">
+                    <h2>Requerimientos Técnicos y Previos</h2>
+                    <p>Para cursar esta unidad con éxito se requiere:</p>
+                    <ul>
+                        <li><strong>Saberes Previos:</strong> Ingeniería Ética y Sociedad[cite: 35].</li>
+                        <li><strong>Hardware:</strong> Computadora con acceso a internet para investigación en bases de datos de patentes (IMPI/WIPO).</li>
+                        <li><strong>Software:</strong> Navegador web actualizado, lector de PDF.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="glosario" class="tab-content">
+                <div class="card">
+                    <h2>Glosario de Términos</h2>
+                    <dl>
+                        <dt><strong>IMPI</strong></dt>
+                        <dd>Instituto Mexicano de la Propiedad Industrial. Organismo que administra patentes y marcas[cite: 500].</dd>
+                        <dt><strong>INDAUTOR</strong></dt>
+                        <dd>Instituto Nacional del Derecho de Autor. Administra el registro de obras[cite: 503].</dd>
+                        <dt><strong>Trade Dress</strong></dt>
+                        <dd>Imagen comercial. Protege el "look and feel" de una interfaz o producto[cite: 638].</dd>
+                    </dl>
+                </div>
+            </section>
+            
+            <section id="manual" class="tab-content">
+                <div class="card">
+                    <h2>Manual de Usuario</h2>
+                    <p>1. Navegue por las pestañas superiores para acceder a las secciones principales.</p>
+                    <p>2. En "Unidades de Competencia", use el menú lateral izquierdo para cambiar entre temas.</p>
+                    <p>3. En "Evaluación", asegúrese de tener tiempo estable (10 min) antes de iniciar.</p>
+                    <p>4. Use el botón "Descargar Resultados" al finalizar para obtener su comprobante.</p>
+                </div>
+            </section>
+
+            <section id="contacto" class="tab-content">
+                <div class="card">
+                    <h2>Contacto Docente</h2>
+                    <p><strong>Coordinador:</strong> Dr. Eric Manuel Rosales Peña Alfaro [cite: 120]</p>
+                    <p><strong>Dudas académicas:</strong> academia_ia@escom.ipn.mx</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="cc-license">
+            <p>Este material educativo se distribuye bajo licencia:</p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+            </a><br />
+            <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Curso PI</span> por <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">ESCOM/IPN</span>
+        </div>
+        <p>&copy; 2026 Instituto Politécnico Nacional.</p>
+    </footer>
+
+    <script>
+        /* --- LÓGICA DE JAVASCRIPT --- */
+
+        // 1. CONTROL DE PESTAÑAS (TABS)
+        function switchTab(tabId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.tab-content').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Quitar clase active de botones
+            document.querySelectorAll('.top-nav button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Mostrar la seleccionada
+            document.getElementById(tabId).classList.add('active');
+            
+            // Activar botón correspondiente (truco simple de búsqueda por texto onclick)
+            const buttons = Array.from(document.querySelectorAll('.top-nav button'));
+            const activeButton = buttons.find(b => b.getAttribute('onclick').includes(tabId));
+            if(activeButton) activeButton.classList.add('active');
+
+            // Lógica especial para Sidebar
+            const sidebar = document.getElementById('sidebar');
+            if (tabId === 'competencia') {
+                sidebar.style.display = 'flex';
+            } else {
+                sidebar.style.display = 'none';
+            }
+        }
+
+        // 2. CONTROL DE UNIDADES (SIDEBAR)
+        function showUnit(unitId) {
+            // Ocultar todas las unidades
+            document.querySelectorAll('.unit-content').forEach(div => {
+                div.style.display = 'none';
+            });
+            // Mostrar la seleccionada
+            document.getElementById(unitId).style.display = 'block';
+
+            // Actualizar estilo botones sidebar
+            document.querySelectorAll('.sidebar-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // 3. BUSCADOR DE CONTENIDO
+        function filterContent() {
+            let input = document.getElementById('searchContent').value.toLowerCase();
+            let units = document.getElementsByClassName('unit-content');
+            
+            // Búsqueda simple: si el texto está en el div, lo muestra, si no, trata de ocultarlo (o resaltar)
+            // Para simplicidad en este demo, buscaremos en el texto visible actual
+            // Una implementación robusta requeriría indexar todo el contenido.
+            alert("Función de búsqueda simulada: En un entorno real, esto filtraría los divs de contenido o resaltaría el texto '" + input + "'");
+        }
+
+        // 4. LÓGICA DE EXAMEN
+        let attempts = 2;
+        let timerInterval;
+        let timeLeft = 600; // 10 minutos en segundos
+
+        function startExam() {
+            if (attempts <= 0) {
+                alert("No te quedan intentos disponibles.");
+                return;
+            }
+            
+            attempts--;
+            document.getElementById('attempts-count').innerText = attempts;
+            document.getElementById('exam-intro').style.display = 'none';
+            document.getElementById('exam-area').style.display = 'block';
+            
+            // Iniciar Timer
+            timeLeft = 600;
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitExam();
+                    alert("El tiempo ha terminado. Se enviaron tus respuestas actuales.");
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            document.getElementById('timer').innerText = 
+                `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
+        function submitExam() {
+            clearInterval(timerInterval);
+            
+            // Lógica de calificación
+            let score = 0;
+            const answers = {
+                q1: 'b', // 20 años
+                q2: 'b', // INDAUTOR
+                q3: 'b'  // No, excluidos
+            };
+
+            // Verificar Q1
+            let q1Val = document.querySelector('input[name="q1"]:checked')?.value;
+            let f1 = document.getElementById('f1');
+            f1.style.display = 'block';
+            if(q1Val === answers.q1) {
+                score += 33.3;
+                f1.innerText = "Correcto. [cite: 470]";
+                f1.className = "feedback correct";
+            } else {
+                f1.innerText = "Incorrecto. La vigencia es de 20 años improrrogables.";
+                f1.className = "feedback incorrect";
+            }
+
+            // Verificar Q2
+            let q2Val = document.querySelector('input[name="q2"]:checked')?.value;
+            let f2 = document.getElementById('f2');
+            f2.style.display = 'block';
+            if(q2Val === answers.q2) {
+                score += 33.3;
+                f2.innerText = "Correcto. [cite: 503]";
+                f2.className = "feedback correct";
+            } else {
+                f2.innerText = "Incorrecto. INDAUTOR administra derechos de autor.";
+                f2.className = "feedback incorrect";
+            }
+
+            // Verificar Q3
+            let q3Val = document.querySelector('input[name="q3"]:checked')?.value;
+            let f3 = document.getElementById('f3');
+            f3.style.display = 'block';
+            if(q3Val === answers.q3) {
+                score += 33.4;
+                f3.innerText = "Correcto. Los algoritmos matemáticos puros no son patentables.";
+                f3.className = "feedback correct";
+            } else {
+                f3.innerText = "Incorrecto. Los métodos matemáticos están excluidos de patentabilidad.";
+                f3.className = "feedback incorrect";
+            }
+
+            // Mostrar resultados
+            document.getElementById('exam-area').style.display = 'none';
+            document.getElementById('exam-results').style.display = 'block';
+            document.getElementById('score').innerText = Math.round(score);
+        }
+
+        function resetExam() {
+            // Solo muestra el examen con feedback, pero deshabilita inputs (modo revisión)
+            document.getElementById('exam-results').style.display = 'none';
+            document.getElementById('exam-area').style.display = 'block';
+            document.getElementById('timer').style.display = 'none';
+            // Deshabilitar inputs
+            document.querySelectorAll('input[type="radio"]').forEach(el => el.disabled = true);
+        }
+
+        function downloadResults() {
+            const score = document.getElementById('score').innerText;
+            const date = new Date().toLocaleString();
+            const textContent = `
+            REPORTE DE EVALUACIÓN - PROPIEDAD INTELECTUAL
+            ---------------------------------------------
+            Fecha: ${date}
+            Calificación: ${score}/100
+            
+            Estado: ${score >= 60 ? 'APROBADO' : 'NO APROBADO'}
+            Institución: IPN - ESCOM
+            ---------------------------------------------
+            Este documento es un comprobante generado automáticamente.
+            `;
+
+            // Crear un blob y descargar
+            const blob = new Blob([textContent], { type: 'text/plain' });
+            const anchor = document.createElement('a');
+            anchor.download = 'Resultado_Examen_PI.txt';
+            anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
+            anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
+            anchor.click();
+        }
+    </script>
+</body>
+</html>

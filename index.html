@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad Intelectual - Curso en Línea</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-balance-scale"></i>
+                <h1>Propiedad Intelectual</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar en el curso...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="user-nav">
+                <a href="#" id="manualBtn" title="Manual de Usuario"><i class="fas fa-book"></i></a>
+                <a href="#" id="contactBtn" title="Contacto"><i class="fas fa-envelope"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="main-nav">
+        <ul class="nav-tabs">
+            <li class="nav-tab active" data-tab="bienvenida">
+                <i class="fas fa-home"></i> Bienvenida
+            </li>
+            <li class="nav-tab" data-tab="metodologia">
+                <i class="fas fa-cogs"></i> Metodología
+            </li>
+            <li class="nav-tab" data-tab="competencia">
+                <i class="fas fa-bullseye"></i> Unidad de Competencia
+            </li>
+            <li class="nav-tab" data-tab="evaluacion">
+                <i class="fas fa-clipboard-check"></i> Evaluación
+            </li>
+            <li class="nav-tab" data-tab="requerimientos">
+                <i class="fas fa-list-check"></i> Requerimientos
+            </li>
+            <li class="nav-tab" data-tab="glosario">
+                <i class="fas fa-spell-check"></i> Glosario
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-book-open"></i> Contenidos</h3>
+            </div>
+            <ul class="content-menu" id="contentMenu">
+                <li class="menu-section">
+                    <div class="section-title" data-section="unidad1">
+                        <i class="fas fa-chevron-right"></i> Unidad 1: Fundamentos
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="tema1-1">1.1 Concepto de Propiedad Intelectual</a></li>
+                        <li><a href="#" data-content="tema1-2">1.2 Historia y Evolución</a></li>
+                        <li><a href="#" data-content="tema1-3">1.3 Marco Legal Nacional</a></li>
+                        <li><a href="#" data-content="tema1-4">1.4 Marco Legal Internacional</a></li>
+                        <li><a href="#" data-content="actividad1" class="activity-link"><i class="fas fa-tasks"></i> Actividad 1</a></li>
+                    </ul>
+                </li>
+                <li class="menu-section">
+                    <div class="section-title" data-section="unidad2">
+                        <i class="fas fa-chevron-right"></i> Unidad 2: Derechos de Autor
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="tema2-1">2.1 Concepto y Objeto</a></li>
+                        <li><a href="#" data-content="tema2-2">2.2 Derechos Morales y Patrimoniales</a></li>
+                        <li><a href="#" data-content="tema2-3">2.3 Registro de Obras</a></li>
+                        <li><a href="#" data-content="tema2-4">2.4 Licencias y Cesión de Derechos</a></li>
+                        <li><a href="#" data-content="actividad2" class="activity-link"><i class="fas fa-tasks"></i> Actividad 2</a></li>
+                    </ul>
+                </li>
+                <li class="menu-section">
+                    <div class="section-title" data-section="unidad3">
+                        <i class="fas fa-chevron-right"></i> Unidad 3: Propiedad Industrial
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="tema3-1">3.1 Patentes y Modelos de Utilidad</a></li>
+                        <li><a href="#" data-content="tema3-2">3.2 Marcas y Signos Distintivos</a></li>
+                        <li><a href="#" data-content="tema3-3">3.3 Diseños Industriales</a></li>
+                        <li><a href="#" data-content="tema3-4">3.4 Secretos Industriales</a></li>
+                        <li><a href="#" data-content="actividad3" class="activity-link"><i class="fas fa-tasks"></i> Actividad 3</a></li>
+                    </ul>
+                </li>
+                <li class="menu-section">
+                    <div class="section-title" data-section="unidad4">
+                        <i class="fas fa-chevron-right"></i> Unidad 4: Protección y Aplicación
+                    </div>
+                    <ul class="submenu">
+                        <li><a href="#" data-content="tema4-1">4.1 Infracciones y Piratería</a></li>
+                        <li><a href="#" data-content="tema4-2">4.2 Medidas de Protección</a></li>
+                        <li><a href="#" data-content="tema4-3">4.3 Procedimientos Legales</a></li>
+                        <li><a href="#" data-content="tema4-4">4.4 Casos Prácticos</a></li>
+                        <li><a href="#" data-content="actividad4" class="activity-link"><i class="fas fa-tasks"></i> Actividad 4</a></li>
+                    </ul>
+                </li>
+                <li class="menu-section exam-section">
+                    <div class="section-title" data-section="examen">
+                        <i class="fas fa-file-alt"></i> Examen Final
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            <!-- Bienvenida Tab -->
+            <section class="tab-content active" id="bienvenida">
+                <div class="content-card">
+                    <h2><i class="fas fa-hand-wave"></i> Bienvenido al Curso de Propiedad Intelectual</h2>
+                    <div class="welcome-banner">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800" alt="Propiedad Intelectual" class="banner-img">
+                    </div>
+                    <div class="welcome-text">
+                        <p>Bienvenido(a) al curso de <strong>Propiedad Intelectual</strong>. Este espacio educativo está diseñado para proporcionarte los conocimientos fundamentales sobre los derechos de autor, la propiedad industrial y los mecanismos de protección legal que resguardan las creaciones del intelecto humano.</p>
+                        
+                        <div class="info-box">
+                            <h3><i class="fas fa-info-circle"></i> Objetivo del Curso</h3>
+                            <p>Al finalizar este curso, serás capaz de identificar, comprender y aplicar los principios fundamentales de la propiedad intelectual, reconociendo la importancia de proteger las creaciones intelectuales en el ámbito nacional e internacional.</p>
+                        </div>
+
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <i class="fas fa-clock"></i>
+                                <h4>Duración</h4>
+                                <p>40 horas</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-layer-group"></i>
+                                <h4>Unidades</h4>
+                                <p>4 Unidades Temáticas</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-tasks"></i>
+                                <h4>Actividades</h4>
+                                <p>4 Actividades Evaluables</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Evaluación</h4>
+                                <p>Examen Final Obligatorio</p>
+                            </div>
+                        </div>
+
+                        <div class="instructor-info">
+                            <h3><i class="fas fa-chalkboard-teacher"></i> Acerca del Curso</h3>
+                            <p>Este curso ha sido desarrollado como parte del programa académico de la institución, con el objetivo de formar profesionales conscientes de la importancia de la protección intelectual en la era digital.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Metodología Tab -->
+            <section class="tab-content" id="metodologia">
+                <div class="content-card">
+                    <h2><i class="fas fa-cogs"></i> Metodología del Curso</h2>
+                    
+                    <div class="methodology-section">
+                        <h3>Enfoque de Aprendizaje</h3>
+                        <p>Este curso utiliza una metodología de <strong>aprendizaje autónomo</strong> con acompañamiento virtual, combinando materiales teóricos, actividades prácticas y evaluaciones formativas.</p>
+                        
+                        <div class="method-cards">
+                            <div class="method-card">
+                                <div class="method-icon"><i class="fas fa-book-reader"></i></div>
+                                <h4>Estudio Individual</h4>
+                                <p>Revisa los contenidos teóricos de cada unidad a tu propio ritmo, consultando los materiales de apoyo disponibles.</p>
+                            </div>
+                            <div class="method-card">
+                                <div class="method-icon"><i class="fas fa-pencil-alt"></i></div>
+                                <h4>Actividades Prácticas</h4>
+                                <p>Realiza las actividades de cada unidad para aplicar los conocimientos adquiridos en situaciones reales.</p>
+                            </div>
+                            <div class="method-card">
+                                <div class="method-icon"><i class="fas fa-comments"></i></div>
+                                <h4>Retroalimentación</h4>
+                                <p>Recibe retroalimentación inmediata en tus actividades y evaluaciones para identificar áreas de mejora.</p>
+                            </div>
+                            <div class="method-card">
+                                <div class="method-icon"><i class="fas fa-award"></i></div>
+                                <h4>Evaluación Continua</h4>
+                                <p>Tu progreso se evalúa de manera continua a través de las actividades y el examen final.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="methodology-section">
+                        <h3>Estructura del Curso</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker">1</div>
+                                <div class="timeline-content">
+                                    <h4>Unidad 1: Fundamentos de la Propiedad Intelectual</h4>
+                                    <p>Introducción a los conceptos básicos y el marco legal.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">2</div>
+                                <div class="timeline-content">
+                                    <h4>Unidad 2: Derechos de Autor</h4>
+                                    <p>Protección de obras literarias, artísticas y científicas.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">3</div>
+                                <div class="timeline-content">
+                                    <h4>Unidad 3: Propiedad Industrial</h4>
+                                    <p>Patentes, marcas, diseños industriales y secretos comerciales.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">4</div>
+                                <div class="timeline-content">
+                                    <h4>Unidad 4: Protección y Aplicación</h4>
+                                    <p>Mecanismos de defensa y casos prácticos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="methodology-section">
+                        <h3>Recursos de Aprendizaje</h3>
+                        <ul class="resource-list">
+                            <li><i class="fas fa-file-pdf"></i> Materiales de lectura en PDF</li>
+                            <li><i class="fas fa-video"></i> Videos explicativos</li>
+                            <li><i class="fas fa-link"></i> Enlaces a recursos externos</li>
+                            <li><i class="fas fa-gavel"></i> Casos de estudio reales</li>
+                            <li><i class="fas fa-question-circle"></i> Cuestionarios de autoevaluación</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Unidad de Competencia Tab -->
+            <section class="tab-content" id="competencia">
+                <div class="content-card">
+                    <h2><i class="fas fa-bullseye"></i> Unidad de Competencia</h2>
+                    
+                    <div class="competence-section">
+                        <div class="main-competence">
+                            <h3>Competencia General</h3>
+                            <div class="competence-box">
+                                <p>Analiza y aplica los principios fundamentales de la propiedad intelectual para la protección de creaciones intelectuales, identificando los diferentes tipos de derechos, los procedimientos de registro y los mecanismos legales de defensa en el ámbito nacional e internacional.</p>
+                            </div>
+                        </div>
+
+                        <h3>Competencias Específicas</h3>
+                        <div class="competences-grid">
+                            <div class="competence-card">
+                                <div class="competence-number">1</div>
+                                <h4>Fundamentos Legales</h4>
+                                <p>Comprende el marco jurídico nacional e internacional que regula la propiedad intelectual, identificando las principales leyes, tratados y convenios aplicables.</p>
+                            </div>
+                            <div class="competence-card">
+                                <div class="competence-number">2</div>
+                                <h4>Derechos de Autor</h4>
+                                <p>Distingue los derechos morales y patrimoniales del autor, así como los procedimientos para el registro y protección de obras.</p>
+                            </div>
+                            <div class="competence-card">
+                                <div class="competence-number">3</div>
+                                <h4>Propiedad Industrial</h4>
+                                <p>Identifica las diferentes figuras de la propiedad industrial (patentes, marcas, diseños) y sus requisitos de protección.</p>
+                            </div>
+                            <div class="competence-card">
+                                <div class="competence-number">4</div>
+                                <h4>Aplicación Práctica</h4>
+                                <p>Aplica los conocimientos adquiridos en la resolución de casos prácticos relacionados con infracciones a la propiedad intelectual.</p>
+                            </div>
+                        </div>
+
+                        <h3>Indicadores de Desempeño</h3>
+                        <div class="indicators-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Indicador</th>
+                                        <th>Descripción</th>
+                                        <th>Evidencia</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Conocimiento teórico</td>
+                                        <td>Identifica correctamente los conceptos fundamentales de la PI</td>
+                                        <td>Examen teórico</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Análisis de casos</td>
+                                        <td>Analiza situaciones reales aplicando el marco legal</td>
+                                        <td>Actividades prácticas</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Procedimientos</td>
+                                        <td>Conoce los pasos para el registro de obras y patentes</td>
+                                        <td>Actividades de simulación</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Resolución de conflictos</td>
+                                        <td>Propone soluciones ante infracciones de PI</td>
+                                        <td>Casos prácticos</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Evaluación Tab -->
+            <section class="tab-content" id="evaluacion">
+                <div class="content-card">
+                    <h2><i class="fas fa-clipboard-check"></i> Evaluación de los Aprendizajes</h2>
+                    
+                    <div class="evaluation-section">
+                        <div class="eval-overview">
+                            <h3>Criterios de Evaluación</h3>
+                            <p>La evaluación del curso se realiza de manera integral, considerando tanto las actividades prácticas como el examen final.</p>
+                            
+                            <div class="eval-breakdown">
+                                <div class="eval-item">
+                                    <div class="eval-circle" style="--percentage: 60%;">
+                                        <span>60%</span>
+                                    </div>
+                                    <h4>Actividades</h4>
+                                    <p>4 actividades (15% c/u)</p>
+                                </div>
+                                <div class="eval-item">
+                                    <div class="eval-circle" style="--percentage: 40%;">
+                                        <span>40%</span>
+                                    </div>
+                                    <h4>Examen Final</h4>
+                                    <p>Cuestionario obligatorio</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="activities-eval">
+                            <h3>Detalle de Actividades</h3>
+                            <div class="activity-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Descripción</th>
+                                            <th>Valor</th>
+                                            <th>Fecha Límite</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Actividad 1</td>
+                                            <td>Mapa conceptual de fundamentos de PI</td>
+                                            <td>15%</td>
+                                            <td>Semana 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Actividad 2</td>
+                                            <td>Análisis de caso de derechos de autor</td>
+                                            <td>15%</td>
+                                            <td>Semana 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Actividad 3</td>
+                                            <td>Simulación de registro de marca</td>
+                                            <td>15%</td>
+                                            <td>Semana 6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Actividad 4</td>
+                                            <td>Resolución de caso práctico</td>
+                                            <td>15%</td>
+                                            <td>Semana 8</td>
+                                        </tr>
+                                        <tr class="highlight-row">
+                                            <td>Examen Final</td>
+                                            <td>Cuestionario de opción múltiple</td>
+                                            <td>40%</td>
+                                            <td>Semana 10</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="exam-info">
+                            <h3><i class="fas fa-file-alt"></i> Información del Examen Final</h3>
+                            <div class="exam-details">
+                                <div class="exam-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <h4>Tiempo</h4>
+                                        <p>60 minutos</p>
+                                    </div>
+                                </div>
+                                <div class="exam-detail">
+                                    <i class="fas fa-redo"></i>
+                                    <div>
+                                        <h4>Intentos</h4>
+                                        <p>2 intentos máximo</p>
+                                    </div>
+                                </div>
+                                <div class="exam-detail">
+                                    <i class="fas fa-question-circle"></i>
+                                    <div>
+                                        <h4>Preguntas</h4>
+                                        <p>20 preguntas</p>
+                                    </div>
+                                </div>
+                                <div class="exam-detail">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>
+                                        <h4>Calificación mínima</h4>
+                                        <p>70% para aprobar</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exam-features">
+                                <h4>Características del examen:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Retroalimentación inmediata al finalizar</li>
+                                    <li><i class="fas fa-check"></i> Opción de revisar respuestas</li>
+                                    <li><i class="fas fa-check"></i> Descarga de resultados en PDF</li>
+                                    <li><i class="fas fa-check"></i> El cuestionario es obligatorio para aprobar</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grading-scale">
+                            <h3>Escala de Calificación</h3>
+                            <div class="scale-items">
+                                <div class="scale-item excellent">
+                                    <span class="grade">90-100</span>
+                                    <span class="label">Excelente</span>
+                                </div>
+                                <div class="scale-item good">
+                                    <span class="grade">80-89</span>
+                                    <span class="label">Muy Bien</span>
+                                </div>
+                                <div class="scale-item acceptable">
+                                    <span class="grade">70-79</span>
+                                    <span class="label">Bien</span>
+                                </div>
+                                <div class="scale-item insufficient">
+                                    <span class="grade">0-69</span>
+                                    <span class="label">No Aprobado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Requerimientos Tab -->
+            <section class="tab-content" id="requerimientos">
+                <div class="content-card">
+                    <h2><i class="fas fa-list-check"></i> Requerimientos del Curso</h2>
+                    
+                    <div class="requirements-section">
+                        <div class="req-category">
+                            <h3><i class="fas fa-laptop"></i> Requerimientos Técnicos</h3>
+                            <div class="req-grid">
+                                <div class="req-card">
+                                    <i class="fas fa-desktop"></i>
+                                    <h4>Computadora</h4>
+                                    <p>PC o Mac con sistema operativo actualizado</p>
+                                </div>
+                                <div class="req-card">
+                                    <i class="fas fa-wifi"></i>
+                                    <h4>Internet</h4>
+                                    <p>Conexión estable de al menos 5 Mbps</p>
+                                </div>
+                                <div class="req-card">
+                                    <i class="fas fa-globe"></i>
+                                    <h4>Navegador</h4>
+                                    <p>Chrome, Firefox, Safari o Edge actualizado</p>
+                                </div>
+                                <div class="req-card">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <h4>Lector PDF</h4>
+                                    <p>Adobe Reader u otro visor de documentos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="req-category">
+                            <h3><i class="fas fa-user-graduate"></i> Requerimientos Académicos</h3>
+                            <ul class="req-list">
+                                <li><i class="fas fa-check-circle"></i> Estar inscrito en el programa académico correspondiente</li>
+                                <li><i class="fas fa-check-circle"></i> Conocimientos básicos de navegación en internet</li>
+                                <li><i class="fas fa-check-circle"></i> Capacidad de lectura y análisis de textos</li>
+                                <li><i class="fas fa-check-circle"></i> Disposición para el aprendizaje autónomo</li>
+                            </ul>
+                        </div>
+
+                        <div class="req-category">
+                            <h3><i class="fas fa-clock"></i> Requerimientos de Tiempo</h3>
+                            <div class="time-req">
+                                <div class="time-item">
+                                    <span class="time-value">40</span>
+                                    <span class="time-label">Horas totales del curso</span>
+                                </div>
+                                <div class="time-item">
+                                    <span class="time-value">10</span>
+                                    <span class="time-label">Horas por unidad (aprox.)</span>
+                                </div>
+                                <div class="time-item">
+                                    <span class="time-value">4-5</span>
+                                    <span class="time-label">Horas semanales recomendadas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="req-category">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Requisitos Obligatorios para Aprobar</h3>
+                            <div class="mandatory-req">
+                                <ul>
+                                    <li><i class="fas fa-asterisk"></i> Completar todas las actividades de cada unidad</li>
+                                    <li><i class="fas fa-asterisk"></i> Realizar el examen final obligatorio</li>
+                                    <li><i class="fas fa-asterisk"></i> Obtener una calificación mínima de 70%</li>
+                                    <li><i class="fas fa-asterisk"></i> Cumplir con las fechas límite establecidas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Glosario Tab -->
+            <section class="tab-content" id="glosario">
+                <div class="content-card">
+                    <h2><i class="fas fa-spell-check"></i> Glosario de Términos</h2>
+                    
+                    <div class="glossary-search">
+                        <input type="text" id="glossarySearch" placeholder="Buscar término...">
+                    </div>
+
+                    <div class="glossary-container" id="glossaryContainer">
+                        <div class="glossary-letter">A</div>
+                        <div class="glossary-item">
+                            <dt>Autor</dt>
+                            <dd>Persona física que realiza la creación intelectual de una obra literaria, artística o científica.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Aviso de Derechos</dt>
+                            <dd>Símbolo © seguido del nombre del titular y el año de primera publicación, que indica la protección de derechos de autor.</dd>
+                        </div>
+
+                        <div class="glossary-letter">C</div>
+                        <div class="glossary-item">
+                            <dt>Copyright</dt>
+                            <dd>Término anglosajón que se refiere a los derechos de autor, específicamente a los derechos patrimoniales sobre una obra.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Cesión de Derechos</dt>
+                            <dd>Transferencia total o parcial de los derechos patrimoniales de una obra a otra persona o entidad.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Creative Commons</dt>
+                            <dd>Sistema de licencias que permite a los autores otorgar permisos de uso de sus obras bajo ciertas condiciones.</dd>
+                        </div>
+
+                        <div class="glossary-letter">D</div>
+                        <div class="glossary-item">
+                            <dt>Derechos de Autor</dt>
+                            <dd>Conjunto de normas jurídicas que protegen las obras literarias, artísticas y científicas originales.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Derechos Morales</dt>
+                            <dd>Derechos inalienables e irrenunciables del autor, como el reconocimiento de autoría y la integridad de la obra.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Derechos Patrimoniales</dt>
+                            <dd>Derechos económicos derivados de la explotación de una obra, que pueden ser cedidos o licenciados.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Diseño Industrial</dt>
+                            <dd>Aspecto ornamental o estético de un producto que le confiere un carácter novedoso y original.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Dominio Público</dt>
+                            <dd>Estado jurídico de las obras cuyos derechos patrimoniales han expirado y pueden ser utilizadas libremente.</dd>
+                        </div>
+
+                        <div class="glossary-letter">I</div>
+                        <div class="glossary-item">
+                            <dt>IMPI</dt>
+                            <dd>Instituto Mexicano de la Propiedad Industrial, organismo encargado de la protección de la propiedad industrial en México.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>INDAUTOR</dt>
+                            <dd>Instituto Nacional del Derecho de Autor, organismo mexicano encargado del registro de obras y protección de derechos de autor.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Infracción</dt>
+                            <dd>Violación de los derechos de propiedad intelectual sin autorización del titular.</dd>
+                        </div>
+
+                        <div class="glossary-letter">L</div>
+                        <div class="glossary-item">
+                            <dt>Licencia</dt>
+                            <dd>Autorización otorgada por el titular de derechos para usar una obra o invención bajo ciertas condiciones.</dd>
+                        </div>
+
+                        <div class="glossary-letter">M</div>
+                        <div class="glossary-item">
+                            <dt>Marca</dt>
+                            <dd>Signo distintivo que identifica productos o servicios de una empresa y los diferencia de la competencia.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Modelo de Utilidad</dt>
+                            <dd>Invención que consiste en una mejora técnica a un objeto ya existente, con menor nivel inventivo que una patente.</dd>
+                        </div>
+
+                        <div class="glossary-letter">O</div>
+                        <div class="glossary-item">
+                            <dt>Obra</dt>
+                            <dd>Creación intelectual original expresada en cualquier forma o medio tangible.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>OMPI</dt>
+                            <dd>Organización Mundial de la Propiedad Intelectual, organismo de las Naciones Unidas dedicado a la PI.</dd>
+                        </div>
+
+                        <div class="glossary-letter">P</div>
+                        <div class="glossary-item">
+                            <dt>Patente</dt>
+                            <dd>Derecho exclusivo concedido por el Estado para explotar una invención durante un tiempo determinado.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Piratería</dt>
+                            <dd>Reproducción y distribución ilegal de obras protegidas por derechos de autor.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Propiedad Industrial</dt>
+                            <dd>Rama de la PI que protege invenciones, marcas, diseños industriales y signos distintivos.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Propiedad Intelectual</dt>
+                            <dd>Conjunto de derechos que protegen las creaciones del intelecto humano.</dd>
+                        </div>
+
+                        <div class="glossary-letter">R</div>
+                        <div class="glossary-item">
+                            <dt>Registro</dt>
+                            <dd>Procedimiento formal para inscribir una obra o invención ante la autoridad competente.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Regalías</dt>
+                            <dd>Pagos que recibe el titular de derechos por la explotación comercial de su obra o invención.</dd>
+                        </div>
+
+                        <div class="glossary-letter">S</div>
+                        <div class="glossary-item">
+                            <dt>Secreto Industrial</dt>
+                            <dd>Información confidencial que proporciona una ventaja competitiva a una empresa.</dd>
+                        </div>
+
+                        <div class="glossary-letter">T</div>
+                        <div class="glossary-item">
+                            <dt>Titular</dt>
+                            <dd>Persona física o jurídica que posee los derechos de propiedad intelectual sobre una obra o invención.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Tratado</dt>
+                            <dd>Acuerdo internacional que establece normas comunes de protección de la propiedad intelectual.</dd>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic Content Area (for sidebar content) -->
+            <section class="tab-content" id="dynamic-content">
+                <!-- Content will be loaded dynamically -->
+            </section>
+
+            <!-- Exam Section -->
+            <section class="tab-content" id="examen-section">
+                <div class="content-card">
+                    <h2><i class="fas fa-file-alt"></i> Examen Final</h2>
+                    
+                    <div id="exam-intro" class="exam-intro">
+                        <div class="exam-banner">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h3>Evaluación Final del Curso</h3>
+                        </div>
+                        
+                        <div class="exam-rules">
+                            <h4>Instrucciones:</h4>
+                            <ul>
+                                <li>El examen consta de 20 preguntas de opción múltiple</li>
+                                <li>Tienes un tiempo máximo de 60 minutos</li>
+                                <li>Dispones de 2 intentos para realizar el examen</li>
+                                <li>Se requiere un mínimo de 70% para aprobar</li>
+                                <li>Al finalizar podrás revisar tus respuestas y descargar los resultados</li>
+                                <li><strong>Este examen es obligatorio para aprobar el curso</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="exam-status">
+                            <div class="status-item">
+                                <span class="status-label">Intentos restantes:</span>
+                                <span class="status-value" id="attemptsLeft">2</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">Mejor calificación:</span>
+                                <span class="status-value" id="bestScore">-</span>
+                            </div>
+                        </div>
+
+                        <button id="startExamBtn" class="btn-primary btn-large">
+                            <i class="fas fa-play"></i> Iniciar Examen
+                        </button>
+                    </div>
+
+                    <div id="exam-container" class="exam-container" style="display: none;">
+                        <div class="exam-header">
+                            <div class="exam-timer">
+                                <i class="fas fa-clock"></i>
+                                <span id="timer">60:00</span>
+                            </div>
+                            <div class="exam-progress">
+                                <span>Pregunta <span id="currentQuestion">1</span> de 20</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="examProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="questions-container">
+                            <!-- Questions will be loaded dynamically -->
+                        </div>
+
+                        <div class="exam-navigation">
+                            <button id="prevQuestion" class="btn-secondary" disabled>
+                                <i class="fas fa-arrow-left"></i> Anterior
+                            </button>
+                            <button id="nextQuestion" class="btn-secondary">
+                                Siguiente <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button id="submitExam" class="btn-primary" style="display: none;">
+                                <i class="fas fa-paper-plane"></i> Enviar Examen
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="exam-results" class="exam-results" style="display: none;">
+                        <div class="results-header">
+                            <div id="results-icon" class="results-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3 id="results-title">¡Examen Completado!</h3>
+                        </div>
+
+                        <div class="results-score">
+                            <div class="score-circle" id="scoreCircle">
+                                <span id="finalScore">0</span>%
+                            </div>
+                            <p id="scoreMessage">Tu calificación</p>
+                        </div>
+
+                        <div class="results-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Respuestas correctas:</span>
+                                <span class="detail-value" id="correctAnswers">0</span>/20
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Tiempo utilizado:</span>
+                                <span class="detail-value" id="timeUsed">-</span>
+                            </div>
+                        </div>
+
+                        <div class="results-actions">
+                            <button id="reviewExamBtn" class="btn-secondary">
+                                <i class="fas fa-eye"></i> Revisar Respuestas
+                            </button>
+                            <button id="downloadResultsBtn" class="btn-primary">
+                                <i class="fas fa-download"></i> Descargar Resultados
+                            </button>
+                            <button id="retryExamBtn" class="btn-secondary">
+                                <i class="fas fa-redo"></i> Intentar de Nuevo
+                            </button>
+                        </div>
+
+                        <div id="exam-review" class="exam-review" style="display: none;">
+                            <h4>Revisión de Respuestas</h4>
+                            <div id="review-container">
+                                <!-- Review content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Propiedad Intelectual</h4>
+                <p>Curso desarrollado con fines educativos.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Licencia</h4>
+                <div class="license-info">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">
+                        <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons BY-NC-SA 4.0">
+                    </a>
+                    <p>Este obra está bajo una <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a></p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-envelope"></i> contacto@ejemplo.edu.mx</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Manual -->
+    <div id="manualModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-book"></i> Manual de Usuario</h2>
+            <div class="manual-content">
+                <section class="manual-section">
+                    <h3>1. Navegación General</h3>
+                    <p>El curso está organizado en pestañas principales ubicadas en la parte superior:</p>
+                    <ul>
+                        <li><strong>Bienvenida:</strong> Información general del curso</li>
+                        <li><strong>Metodología:</strong> Cómo se desarrollará el curso</li>
+                        <li><strong>Unidad de Competencia:</strong> Objetivos de aprendizaje</li>
+                        <li><strong>Evaluación:</strong> Criterios y porcentajes de calificación</li>
+                        <li><strong>Requerimientos:</strong> Requisitos técnicos y académicos</li>
+                        <li><strong>Glosario:</strong> Términos importantes del curso</li>
+                    </ul>
+                </section>
+
+                <section class="manual-section">
+                    <h3>2. Contenidos del Curso</h3>
+                    <p>En el panel lateral izquierdo encontrarás el menú de contenidos organizado por unidades. Haz clic en cada unidad para expandir los temas y actividades disponibles.</p>
+                </section>
+
+                <section class="manual-section">
+                    <h3>3. Actividades</h3>
+                    <p>Cada unidad incluye una actividad evaluable. Para completar una actividad:</p>
+                    <ol>
+                        <li>Lee las instrucciones cuidadosamente</li>
+                        <li>Realiza la actividad según lo solicitado</li>
+                        <li>Envía tu trabajo antes de la fecha límite</li>
+                    </ol>
+                </section>
+
+                <section class="manual-section">
+                    <h3>4. Examen Final</h3>
+                    <p>El examen final es obligatorio y cuenta con las siguientes características:</p>
+                    <ul>
+                        <li>20 preguntas de opción múltiple</li>
+                        <li>60 minutos de tiempo</li>
+                        <li>2 intentos disponibles</li>
+                        <li>Calificación mínima aprobatoria: 70%</li>
+                    </ul>
+                </section>
+
+                <section class="manual-section">
+                    <h3>5. Búsqueda</h3>
+                    <p>Utiliza la barra de búsqueda en la parte superior para encontrar contenido específico dentro del curso.</p>
+                </section>
+
+                <section class="manual-section">
+                    <h3>6. Soporte Técnico</h3>
+                    <p>Si tienes problemas técnicos, contacta al soporte a través del botón de contacto o envía un correo a soporte@ejemplo.edu.mx</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Contact -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-envelope"></i> Contacto</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="contactName">Nombre:</label>
+                    <input type="text" id="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Correo electrónico:</label>
+                    <input type="email" id="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactSubject">Asunto:</label>
+                    <select id="contactSubject" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="duda">Duda sobre el contenido</option>
+                        <option value="tecnico">Problema técnico</option>
+                        <option value="evaluacion">Consulta sobre evaluación</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Mensaje:</label>
+                    <textarea id="contactMessage" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Search Results Modal -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-search"></i> Resultados de Búsqueda</h2>
+            <div id="searchResults" class="search-results">
+                <!-- Search results will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/content.js"></script>
+    <script src="js/exam.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
