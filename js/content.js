@@ -547,6 +547,73 @@ const courseContent = {
         `
     },
     
+    'quiz1': {
+        title: 'Cuestionario Unidad 1: Legislación Informática',
+        type: 'quiz',
+        content: `
+            <div class="quiz-content">
+                <div class="quiz-header">
+                    <h3><i class="fas fa-clipboard-check"></i> Cuestionario de Evaluación</h3>
+                    <p>Unidad 1: Legislación Informática</p>
+                </div>
+                
+                <div class="quiz-value">
+                    <div class="value-badge">15%</div>
+                    <div>
+                        <strong>Valor del cuestionario</strong>
+                        <p>Este cuestionario representa el 15% de tu calificación final</p>
+                    </div>
+                </div>
+                
+                <div class="quiz-info">
+                    <div class="info-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>10 preguntas</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="quiz1-time-limit">15 minutos</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-redo"></i>
+                        <span id="quiz1-max-attempts">2 intentos permitidos</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-percentage"></i>
+                        <span id="quiz1-passing-score">Calificación mínima: 60%</span>
+                    </div>
+                </div>
+                
+                <div class="quiz-instructions">
+                    <h4><i class="fas fa-info-circle"></i> Instrucciones</h4>
+                    <ul>
+                        <li>Lee cuidadosamente cada pregunta antes de responder.</li>
+                        <li>Selecciona la opción que consideres correcta para cada pregunta.</li>
+                        <li>Una vez iniciado el cuestionario, el tiempo comenzará a correr.</li>
+                        <li>Puedes revisar tus respuestas antes de enviar.</li>
+                        <li>Al finalizar, recibirás retroalimentación inmediata.</li>
+                    </ul>
+                </div>
+                
+                <div id="quiz1-container" class="quiz-questions" style="display: none;">
+                    <!-- Las preguntas se cargarán dinámicamente -->
+                </div>
+                
+                <div id="quiz1-start" class="quiz-start-section">
+                    <p>Asegúrate de haber revisado los temas 1.1 al 1.5 antes de iniciar.</p>
+                    <div class="quiz-attempts-info" id="quiz1-attempts-info"></div>
+                    <button class="btn-primary btn-large" id="quiz1-start-btn" onclick="startQuiz(1)">
+                        <i class="fas fa-play"></i> Iniciar Cuestionario
+                    </button>
+                </div>
+                
+                <div id="quiz1-results" class="quiz-results" style="display: none;">
+                    <!-- Los resultados se mostrarán aquí -->
+                </div>
+            </div>
+        `
+    },
+    
     // =============================================
     // UNIDAD 2: PANORAMA GENERAL DE LA PROPIEDAD INTELECTUAL
     // =============================================
@@ -1168,82 +1235,1313 @@ const courseContent = {
     },
     
     // =============================================
-    // UNIDAD 3: PROPIEDAD INDUSTRIAL
+    // UNIDAD 3: LEGISLACIÓN DE LA PROPIEDAD INTELECTUAL
     // =============================================
     
     'tema3-1': {
-        title: '3.1 Panorama General de la Propiedad Industrial',
+        title: '3.1 Ley Federal del Derecho de Autor',
         content: `
             <div class="content-section">
-                <h3><i class="fas fa-industry"></i> Introducción a la Propiedad Industrial</h3>
-                <p>La <strong>Propiedad Industrial</strong> es la rama de la Propiedad Intelectual que protege las invenciones, los diseños y los signos distintivos utilizados en la industria y el comercio. Se enfoca en la protección de creaciones que tienen una <strong>aplicación técnica o comercial</strong>.</p>
+                <h3><i class="fas fa-copyright"></i> Introducción a la LFDA</h3>
+                <p>La <strong>Ley Federal del Derecho de Autor (LFDA)</strong> es el ordenamiento jurídico que regula la protección de las obras del intelecto humano en México. Publicada en el Diario Oficial de la Federación el 24 de diciembre de 1996, esta ley establece el marco legal para la salvaguarda, promoción y desarrollo de los derechos de los creadores.</p>
                 
-                <p>A diferencia del Derecho de Autor (que protege la expresión creativa), la Propiedad Industrial protege:</p>
+                <div class="highlight-box">
+                    <h4><i class="fas fa-bullseye"></i> Objeto de la Ley</h4>
+                    <p>La LFDA tiene por objeto la <strong>salvaguarda y promoción del acervo cultural de la Nación</strong>; protección de los derechos de los autores, de los artistas intérpretes o ejecutantes, así como de los editores, de los productores y de los organismos de radiodifusión, en relación con sus obras literarias o artísticas en todas sus manifestaciones.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-book-open"></i> Obras Protegidas</h3>
+                <p>La LFDA protege las obras en las siguientes ramas:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h4>Literarias</h4>
+                        </div>
+                        <p>Novelas, cuentos, poemas, ensayos, artículos, obras de consulta, compilaciones.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-music"></i>
+                            <h4>Musicales</h4>
+                        </div>
+                        <p>Composiciones con o sin letra, arreglos musicales.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-film"></i>
+                            <h4>Audiovisuales</h4>
+                        </div>
+                        <p>Películas, series, documentales, videoclips, animaciones.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Programas de Cómputo</h4>
+                        </div>
+                        <p>Software, aplicaciones, código fuente y objeto, bases de datos.</p>
+                    </div>
+                </div>
+                
+                <p>También se protegen: obras dramáticas, danza, pictóricas, escultóricas, caricaturas, arquitectónicas, fotográficas y obras de arte aplicado.</p>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-user-shield"></i> Derechos que Otorga</h3>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-heart"></i> Derechos Morales</h4>
+                        <p>Son <strong>perpetuos, inalienables, imprescriptibles e irrenunciables</strong>:</p>
+                        <ul>
+                            <li><strong>Divulgación:</strong> Decidir si la obra se da a conocer</li>
+                            <li><strong>Paternidad:</strong> Ser reconocido como autor</li>
+                            <li><strong>Integridad:</strong> Oponerse a modificaciones</li>
+                            <li><strong>Modificación:</strong> Alterar la propia obra</li>
+                            <li><strong>Retiro:</strong> Retirar la obra del comercio</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-coins"></i> Derechos Patrimoniales</h4>
+                        <p>Son <strong>transferibles y tienen vigencia limitada</strong>:</p>
+                        <ul>
+                            <li><strong>Reproducción:</strong> Copiar la obra</li>
+                            <li><strong>Distribución:</strong> Poner copias a disposición</li>
+                            <li><strong>Comunicación pública:</strong> Difundir la obra</li>
+                            <li><strong>Transformación:</strong> Traducir, adaptar</li>
+                            <li><strong>Vigencia:</strong> Vida del autor + 100 años</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-users"></i> Derechos Conexos</h3>
+                <p>La LFDA también protege los <strong>derechos conexos</strong> de:</p>
                 <ul>
-                    <li>Las <strong>invenciones técnicas</strong> (patentes, modelos de utilidad)</li>
-                    <li>Los <strong>aspectos estéticos</strong> de productos industriales (diseños industriales)</li>
-                    <li>Los <strong>signos distintivos</strong> (marcas, nombres comerciales)</li>
-                    <li>La <strong>información confidencial</strong> de valor comercial (secretos industriales)</li>
+                    <li><strong>Artistas intérpretes o ejecutantes:</strong> Cantantes, músicos, actores</li>
+                    <li><strong>Productores de fonogramas:</strong> Discográficas</li>
+                    <li><strong>Productores de videogramas:</strong> Productoras audiovisuales</li>
+                    <li><strong>Organismos de radiodifusión:</strong> Estaciones de radio y TV</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-clock"></i> Vigencia de Derechos Conexos</h4>
+                    <p>Los derechos conexos tienen una vigencia de <strong>75 años</strong> a partir de la primera fijación, interpretación, transmisión o publicación, según corresponda.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-bookmark"></i> Reservas de Derechos</h3>
+                <p>La LFDA establece el sistema de <strong>Reservas de Derechos al Uso Exclusivo</strong>, que protege:</p>
+                <ul>
+                    <li>Títulos de publicaciones periódicas (revistas, periódicos)</li>
+                    <li>Nombres de personas o grupos dedicados a actividades artísticas</li>
+                    <li>Nombres y características de personajes ficticios</li>
+                    <li>Nombres y características de personas de caracterización humana</li>
+                    <li>Promociones publicitarias</li>
+                </ul>
+            </div>
+        `
+    },
+    
+    'tema3-2': {
+        title: '3.2 Ley Federal de Protección a la Propiedad Industrial (LFPPI)',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-gavel"></i> ¿Qué es la LFPPI?</h3>
+                <p>La <strong>Ley Federal de Protección a la Propiedad Industrial (LFPPI)</strong> es el ordenamiento jurídico mexicano que regula la protección de los derechos de propiedad industrial. Fue publicada el <strong>1 de julio de 2020</strong>, sustituyendo a la anterior Ley de la Propiedad Industrial (LPI) de 1991.</p>
+                
+                <p>Esta ley tiene como objetivo <strong>proteger la creatividad e innovación tecnológica</strong> mediante el otorgamiento de derechos exclusivos de explotación, fomentando así la competitividad económica del país.</p>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-shield-alt"></i> Figuras que Protege la LFPPI</h3>
+                <p>La LFPPI regula la protección de las siguientes figuras de propiedad industrial:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Invenciones</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Patentes:</strong> 20 años de protección</li>
+                            <li><strong>Modelos de utilidad:</strong> 15 años</li>
+                            <li><strong>Diseños industriales:</strong> 25 años</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-trademark"></i>
+                            <h4>Signos Distintivos</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Marcas:</strong> 10 años renovables</li>
+                            <li><strong>Avisos comerciales:</strong> 10 años renovables</li>
+                            <li><strong>Nombres comerciales</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Indicaciones Geográficas</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Denominaciones de origen</strong></li>
+                            <li><strong>Indicaciones geográficas</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-user-secret"></i>
+                            <h4>Secretos Industriales</h4>
+                        </div>
+                        <p>Información confidencial que proporciona ventaja competitiva.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-plus-circle"></i> Novedades de la LFPPI (2020)</h3>
+                <p>La nueva ley introdujo importantes cambios respecto a la anterior LPI:</p>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-star"></i> Nuevas Figuras</h4>
+                        <ul>
+                            <li>Indicaciones geográficas (adicional a denominaciones de origen)</li>
+                            <li>Marcas de certificación</li>
+                            <li>Marcas no tradicionales (sonoras, olfativas, holográficas)</li>
+                            <li>Patentes complementarias farmacéuticas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-sync-alt"></i> Cambios Importantes</h4>
+                        <ul>
+                            <li>Diseños industriales: de 15 a 25 años</li>
+                            <li>Modelos de utilidad: de 10 a 15 años</li>
+                            <li>Procedimientos más ágiles</li>
+                            <li>Mayor protección contra competencia desleal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-university"></i> Autoridad Competente</h3>
+                <p>El <strong>Instituto Mexicano de la Propiedad Industrial (IMPI)</strong> es la autoridad encargada de:</p>
+                <ul>
+                    <li>Recibir y tramitar solicitudes de registro</li>
+                    <li>Otorgar patentes, registros de marcas y demás títulos</li>
+                    <li>Resolver controversias administrativas</li>
+                    <li>Sancionar infracciones a la ley</li>
+                    <li>Promover la cultura de la propiedad industrial</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-info-circle"></i> Principio de Territorialidad</h4>
+                    <p>Los derechos de propiedad industrial otorgados bajo la LFPPI solo tienen validez en <strong>territorio mexicano</strong>. Para protección internacional, es necesario solicitar registros en cada país o usar sistemas como el PCT (patentes) o el Protocolo de Madrid (marcas).</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-balance-scale"></i> Infracciones y Sanciones</h3>
+                <p>La LFPPI establece infracciones administrativas y sus sanciones:</p>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">1</div>
+                        <h4>Multas</h4>
+                        <p>Hasta 500,000 UMAs por infracciones graves.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">2</div>
+                        <h4>Clausura</h4>
+                        <p>Temporal o definitiva del establecimiento.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">3</div>
+                        <h4>Decomiso</h4>
+                        <p>De productos que violen derechos de PI.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Delitos en Materia de PI</h4>
+                    <p>Además de las infracciones administrativas, el <strong>Código Penal Federal</strong> tipifica delitos como la falsificación de marcas y la piratería, con penas de prisión de 2 a 10 años.</p>
+                </div>
+            </div>
+        `
+    },
+    
+    'tema3-3': {
+        title: '3.3 Competencia Desleal',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-balance-scale-right"></i> ¿Qué es la Competencia Desleal?</h3>
+                <p>La <strong>competencia desleal</strong> se refiere a cualquier acto contrario a los usos y prácticas honestas en materia industrial o comercial que afecte ilegítimamente a un competidor o al mercado en general.</p>
+                
+                <p>Mientras que la propiedad intelectual protege <strong>derechos exclusivos</strong> sobre creaciones específicas, la normativa de competencia desleal establece <strong>reglas de juego limpio</strong> en el mercado, sancionando conductas que, aunque no violen un derecho de PI concreto, sean contrarias a la buena fe comercial.</p>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-file-contract"></i> Marco Legal en México</h3>
+                <p>La competencia desleal en México está regulada por:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-gavel"></i>
+                            <h4>LFPPI</h4>
+                        </div>
+                        <p>La Ley Federal de Protección a la Propiedad Industrial tipifica infracciones relacionadas con competencia desleal en materia de PI.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>LFCE</h4>
+                        </div>
+                        <p>La Ley Federal de Competencia Económica sanciona prácticas monopólicas y restricciones al libre mercado.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h4>LFPC</h4>
+                        </div>
+                        <p>La Ley Federal de Protección al Consumidor protege contra publicidad engañosa.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-globe"></i>
+                            <h4>Convenio de París</h4>
+                        </div>
+                        <p>El artículo 10bis establece obligaciones internacionales de protección contra competencia desleal.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-ban"></i> Actos de Competencia Desleal</h3>
+                <p>Los principales actos considerados como competencia desleal incluyen:</p>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-clone"></i> Actos de Confusión</h4>
+                        <ul>
+                            <li>Imitación de signos distintivos</li>
+                            <li>Imitación de apariencia comercial (trade dress)</li>
+                            <li>Uso de nombres comerciales similares</li>
+                            <li>Copia de empaques o presentaciones</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-comment-slash"></i> Actos de Denigración</h4>
+                        <ul>
+                            <li>Afirmaciones falsas sobre competidores</li>
+                            <li>Difamación comercial</li>
+                            <li>Desprestigio de productos o servicios</li>
+                            <li>Publicidad comparativa deshonesta</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-mask"></i> Actos de Engaño</h4>
+                        <ul>
+                            <li>Publicidad falsa o engañosa</li>
+                            <li>Indicaciones falsas de origen</li>
+                            <li>Atribución falsa de cualidades</li>
+                            <li>Simulación de certificaciones</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-user-secret"></i> Apropiación Indebida</h4>
+                        <ul>
+                            <li>Violación de secretos industriales</li>
+                            <li>Inducción a la ruptura contractual</li>
+                            <li>Aprovechamiento del esfuerzo ajeno</li>
+                            <li>Parasitismo comercial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-exclamation-circle"></i> Infracciones en Materia de PI</h3>
+                <p>La LFPPI tipifica como infracciones administrativas relacionadas con competencia desleal:</p>
+                
+                <ul>
+                    <li>Usar una marca parecida en grado de confusión</li>
+                    <li>Producir, almacenar o comercializar productos con marcas falsificadas</li>
+                    <li>Revelar secretos industriales sin consentimiento</li>
+                    <li>Usar denominaciones de origen sin autorización</li>
+                    <li>Realizar actos que causen confusión sobre el origen empresarial</li>
+                    <li>Usar indicaciones falsas sobre premios o reconocimientos</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-landmark"></i> Autoridades Competentes</h4>
+                    <p>El <strong>IMPI</strong> es competente para conocer de infracciones administrativas en materia de PI, mientras que <strong>COFECE</strong> (Comisión Federal de Competencia Económica) conoce de prácticas monopólicas y <strong>PROFECO</strong> de violaciones a derechos del consumidor.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-shield-alt"></i> Protección y Recursos Legales</h3>
+                <p>Las empresas afectadas por competencia desleal pueden:</p>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">1</div>
+                        <h4>Solicitud de Infracción</h4>
+                        <p>Presentar solicitud ante el IMPI para que investigue y sancione.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">2</div>
+                        <h4>Medidas Precautorias</h4>
+                        <p>Solicitar el cese inmediato de las conductas desleales.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">3</div>
+                        <h4>Reparación del Daño</h4>
+                        <p>Demandar civilmente la indemnización por daños y perjuicios.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-laptop-code"></i> Competencia Desleal en el Entorno Digital</h3>
+                <p>En la era digital, surgen nuevas formas de competencia desleal:</p>
+                <ul>
+                    <li><strong>Cybersquatting:</strong> Registro de dominios con marcas ajenas</li>
+                    <li><strong>Metatags:</strong> Uso de marcas de terceros en código web</li>
+                    <li><strong>Click fraud:</strong> Manipulación de publicidad en línea</li>
+                    <li><strong>Fake reviews:</strong> Reseñas falsas para desprestigiar competidores</li>
+                    <li><strong>Scraping:</strong> Extracción no autorizada de datos comerciales</li>
+                </ul>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Importancia de la Prevención</h4>
+                    <p>La mejor estrategia contra la competencia desleal es la <strong>prevención</strong>: registrar marcas y demás signos distintivos, documentar innovaciones, implementar políticas de confidencialidad y monitorear el mercado para detectar infracciones tempranamente.</p>
+                </div>
+            </div>
+        `
+    },
+    
+    'tema3-4': {
+        title: '3.4 La OMPI en México',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-globe"></i> 3.4.1 La OMPI (Organización Mundial de la Propiedad Intelectual)</h3>
+                <p>La <strong>Organización Mundial de la Propiedad Intelectual (OMPI)</strong>, conocida en inglés como WIPO (World Intellectual Property Organization), es un organismo especializado de las Naciones Unidas dedicado a fomentar el uso y la protección de la propiedad intelectual a nivel mundial.</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Fundación</h4>
+                        </div>
+                        <p>Establecida en 1967, con sede en <strong>Ginebra, Suiza</strong>. Actualmente cuenta con 193 Estados miembros.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-bullseye"></i>
+                            <h4>Misión</h4>
+                        </div>
+                        <p>Desarrollar un sistema de PI internacional equilibrado que fomente la innovación y creatividad.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-flag"></i>
+                            <h4>México</h4>
+                        </div>
+                        <p>México es miembro de la OMPI desde <strong>1975</strong> y participa activamente en sus tratados y programas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-tasks"></i> Funciones Principales de la OMPI</h3>
+                <ul>
+                    <li><strong>Desarrollo normativo:</strong> Administra tratados internacionales de PI</li>
+                    <li><strong>Servicios de registro:</strong> Sistema PCT (patentes), Madrid (marcas), La Haya (diseños)</li>
+                    <li><strong>Resolución de controversias:</strong> Centro de Arbitraje y Mediación</li>
+                    <li><strong>Asistencia técnica:</strong> Apoyo a países en desarrollo</li>
+                    <li><strong>Base de datos:</strong> Acceso a información de patentes y marcas mundiales</li>
+                    <li><strong>Estadísticas:</strong> Indicadores globales de PI</li>
                 </ul>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-building"></i> Marco Institucional en México</h3>
-                <p>El <strong>Instituto Mexicano de la Propiedad Industrial (IMPI)</strong> es el organismo descentralizado encargado de administrar y proteger los derechos de Propiedad Industrial en México.</p>
+                <h3><i class="fas fa-file-signature"></i> Tratados Administrados por la OMPI</h3>
+                <p>México es parte de importantes tratados administrados por la OMPI:</p>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-lightbulb"></i> Propiedad Industrial</h4>
+                        <ul>
+                            <li><strong>Convenio de París</strong> (1883)</li>
+                            <li><strong>Tratado PCT</strong> - Patentes internacionales</li>
+                            <li><strong>Protocolo de Madrid</strong> - Marcas internacionales</li>
+                            <li><strong>Arreglo de La Haya</strong> - Diseños industriales</li>
+                            <li><strong>Arreglo de Lisboa</strong> - Denominaciones de origen</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-book"></i> Derecho de Autor</h4>
+                        <ul>
+                            <li><strong>Convenio de Berna</strong> (1886)</li>
+                            <li><strong>Tratado de la OMPI sobre Derecho de Autor (WCT)</strong></li>
+                            <li><strong>Tratado de la OMPI sobre Interpretaciones y Fonogramas (WPPT)</strong></li>
+                            <li><strong>Tratado de Beijing</strong> - Interpretaciones audiovisuales</li>
+                            <li><strong>Tratado de Marrakech</strong> - Acceso para discapacitados visuales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-calendar-check"></i> 3.4.2 La Agenda de la OMPI</h3>
+                <p>La <strong>Agenda para el Desarrollo de la OMPI</strong> fue adoptada en 2007 con 45 recomendaciones agrupadas en seis temas:</p>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">A</div>
+                        <h4>Asistencia Técnica</h4>
+                        <p>Fortalecimiento de capacidades en países en desarrollo orientada a las necesidades locales.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">B</div>
+                        <h4>Normas y Flexibilidades</h4>
+                        <p>Desarrollo de normas equilibradas que permitan flexibilidades para políticas públicas.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">C</div>
+                        <h4>Transferencia de Tecnología</h4>
+                        <p>Promoción de la difusión y transferencia de tecnología a países en desarrollo.</p>
+                    </div>
+                </div>
                 
                 <div class="highlight-box">
-                    <h4><i class="fas fa-gavel"></i> Marco Legal</h4>
-                    <p>La Propiedad Industrial en México se rige principalmente por:</p>
+                    <h4><i class="fas fa-flag-checkered"></i> Objetivos Clave</h4>
                     <ul>
-                        <li><strong>Ley Federal de Protección a la Propiedad Industrial (LFPPI)</strong> - Vigente desde 2020</li>
-                        <li><strong>Reglamento de la LFPPI</strong></li>
-                        <li><strong>Tratados internacionales</strong> (Convenio de París, ADPIC, PCT)</li>
+                        <li>Garantizar que la PI contribuya al desarrollo económico, social y cultural</li>
+                        <li>Promover el acceso al conocimiento y la tecnología</li>
+                        <li>Considerar las necesidades de los países en desarrollo</li>
+                        <li>Fomentar la innovación y creatividad en beneficio de todos</li>
                     </ul>
                 </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-table"></i> Comparativa de Figuras de Propiedad Industrial</h3>
+                <h3><i class="fas fa-graduation-cap"></i> 3.4.3 Academia de la OMPI</h3>
+                <p>La <strong>Academia de la OMPI</strong> es el centro de excelencia para la educación y formación en propiedad intelectual. Ofrece:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-laptop"></i>
+                            <h4>Cursos a Distancia</h4>
+                        </div>
+                        <p>Más de 20 cursos gratuitos en línea en español sobre diversos temas de PI, disponibles para cualquier persona.</p>
+                        <p class="example">Ejemplo: Curso General de PI (DL-101), Derecho de Autor, Patentes, Marcas.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-users"></i>
+                            <h4>Programas Profesionales</h4>
+                        </div>
+                        <p>Cursos avanzados para profesionales, funcionarios de oficinas de PI y académicos.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-university"></i>
+                            <h4>Maestrías</h4>
+                        </div>
+                        <p>Programas de maestría conjuntos con universidades reconocidas mundialmente.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Colaboraciones</h4>
+                        </div>
+                        <p>Alianzas con universidades e instituciones nacionales para formación especializada.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-link"></i> Recursos Útiles</h4>
+                    <p>La Academia de la OMPI ofrece recursos gratuitos accesibles en <strong>www.wipo.int/academy</strong>. Los cursos a distancia son particularmente valiosos para estudiantes y profesionales mexicanos interesados en especializarse en PI.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-handshake"></i> Relación OMPI-México</h3>
+                <p>México mantiene una relación activa con la OMPI:</p>
+                <ul>
+                    <li>Participa en asambleas y comités permanentes</li>
+                    <li>Utiliza los sistemas PCT y Madrid para protección internacional</li>
+                    <li>Recibe asistencia técnica para modernización del sistema de PI</li>
+                    <li>Colabora en programas de formación y capacitación</li>
+                    <li>Contribuye a la elaboración de nuevos tratados</li>
+                </ul>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-info-circle"></i> Importancia para Innovadores Mexicanos</h4>
+                    <p>Los sistemas de la OMPI permiten a inventores y empresarios mexicanos <strong>proteger sus creaciones en múltiples países</strong> con una sola solicitud, reduciendo costos y simplificando trámites. El sistema PCT es especialmente útil para startups tecnológicas que buscan expansión internacional.</p>
+                </div>
+            </div>
+        `
+    },
+    
+    'tema3-5': {
+        title: '3.5 El IMPI e INDAUTOR',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-building"></i> 3.5.1 Instituto Mexicano de la Propiedad Industrial (IMPI)</h3>
+                <p>El <strong>Instituto Mexicano de la Propiedad Industrial (IMPI)</strong> es un organismo público descentralizado con personalidad jurídica y patrimonio propio, encargado de administrar el sistema de propiedad industrial en México.</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Creación</h4>
+                        </div>
+                        <p>Fundado el <strong>10 de diciembre de 1993</strong>, inició operaciones el 1 de enero de 1994.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-gavel"></i>
+                            <h4>Marco Legal</h4>
+                        </div>
+                        <p>Regulado por la LFPPI y su Reglamento, así como por su Estatuto Orgánico.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Sede</h4>
+                        </div>
+                        <p>Oficinas centrales en la Ciudad de México, con oficinas regionales en todo el país.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-tasks"></i> Funciones del IMPI</h3>
+                <p>El IMPI tiene las siguientes atribuciones principales:</p>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-file-signature"></i> Funciones Registrales</h4>
+                        <ul>
+                            <li>Tramitar solicitudes de patentes</li>
+                            <li>Registrar modelos de utilidad</li>
+                            <li>Registrar diseños industriales</li>
+                            <li>Registrar marcas y avisos comerciales</li>
+                            <li>Registrar denominaciones de origen</li>
+                            <li>Mantener el acervo de solicitudes y registros</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-balance-scale"></i> Funciones de Autoridad</h4>
+                        <ul>
+                            <li>Resolver controversias administrativas</li>
+                            <li>Declarar nulidades y cancelaciones</li>
+                            <li>Sancionar infracciones a la LFPPI</li>
+                            <li>Realizar visitas de inspección</li>
+                            <li>Emitir medidas precautorias</li>
+                            <li>Imponer multas y sanciones</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-handshake"></i> Servicios</h4>
+                        <ul>
+                            <li>Búsquedas de antecedentes</li>
+                            <li>Información tecnológica de patentes</li>
+                            <li>Capacitación y difusión</li>
+                            <li>Orientación al público</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-globe"></i> Vinculación Internacional</h4>
+                        <ul>
+                            <li>Representar a México ante la OMPI</li>
+                            <li>Tramitar solicitudes PCT y Madrid</li>
+                            <li>Colaborar con oficinas extranjeras</li>
+                            <li>Participar en foros internacionales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-laptop"></i> Trámites en Línea</h3>
+                <p>El IMPI ofrece servicios digitales a través de su portal:</p>
+                <ul>
+                    <li><strong>MARCANET:</strong> Consulta de marcas registradas</li>
+                    <li><strong>SIGA:</strong> Sistema de solicitudes en línea</li>
+                    <li><strong>VIDOC:</strong> Visor de documentos de expedientes</li>
+                    <li><strong>Gaceta Electrónica:</strong> Publicación de solicitudes y registros</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-link"></i> Portal del IMPI</h4>
+                    <p>Todos los servicios están disponibles en <strong>www.gob.mx/impi</strong>. Los usuarios pueden realizar consultas gratuitas de marcas y patentes, y presentar solicitudes electrónicamente.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-book-open"></i> 3.5.2 Instituto Nacional del Derecho de Autor (INDAUTOR)</h3>
+                <p>El <strong>Instituto Nacional del Derecho de Autor (INDAUTOR)</strong> es un órgano desconcentrado de la Secretaría de Cultura, encargado de proteger y fomentar el derecho de autor y los derechos conexos en México.</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Creación</h4>
+                        </div>
+                        <p>Establecido en <strong>1996</strong> con la nueva Ley Federal del Derecho de Autor.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-gavel"></i>
+                            <h4>Marco Legal</h4>
+                        </div>
+                        <p>Regulado por la Ley Federal del Derecho de Autor (LFDA) y su Reglamento.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Sede</h4>
+                        </div>
+                        <p>Ciudad de México, dentro de las instalaciones de la Secretaría de Cultura.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-clipboard-list"></i> Funciones del INDAUTOR</h3>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-file-alt"></i> Funciones Registrales</h4>
+                        <ul>
+                            <li>Llevar el Registro Público del Derecho de Autor</li>
+                            <li>Inscribir obras literarias y artísticas</li>
+                            <li>Registrar contratos de cesión y licencia</li>
+                            <li>Inscribir reservas de derechos</li>
+                            <li>Registrar sociedades de gestión colectiva</li>
+                            <li>Expedir certificaciones y constancias</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-gavel"></i> Funciones de Autoridad</h4>
+                        <ul>
+                            <li>Realizar procedimientos de avenencia</li>
+                            <li>Resolver procedimientos de infracción</li>
+                            <li>Imponer sanciones administrativas</li>
+                            <li>Intervenir en arbitrajes</li>
+                            <li>Supervisar sociedades de gestión</li>
+                            <li>Emitir opiniones técnicas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-bookmark"></i> Reservas de Derechos</h3>
+                <p>INDAUTOR administra las <strong>reservas de derechos al uso exclusivo</strong>, que protegen:</p>
+                <ul>
+                    <li>Títulos de publicaciones periódicas (revistas, periódicos)</li>
+                    <li>Títulos de difusiones periódicas (programas de radio/TV)</li>
+                    <li>Nombres artísticos o seudónimos</li>
+                    <li>Nombres de grupos artísticos</li>
+                    <li>Personajes ficticios o simbólicos</li>
+                    <li>Personajes humanos de caracterización</li>
+                    <li>Promociones publicitarias</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-clock"></i> Vigencia</h4>
+                    <p>Las reservas tienen vigencia de <strong>1 a 5 años</strong> según el tipo, y son <strong>renovables</strong> indefinidamente mientras se acredite el uso.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-balance-scale-left"></i> Diferencias entre IMPI e INDAUTOR</h3>
+                
                 <div class="comparison-table">
                     <table>
                         <thead>
                             <tr>
-                                <th>Figura</th>
-                                <th>Objeto de Protección</th>
-                                <th>Duración</th>
-                                <th>Requisito Principal</th>
+                                <th>Aspecto</th>
+                                <th>IMPI</th>
+                                <th>INDAUTOR</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Patente</strong></td>
-                                <td>Invención técnica novedosa</td>
-                                <td>20 años</td>
-                                <td>Novedad, actividad inventiva, aplicación industrial</td>
+                                <td><strong>Materia</strong></td>
+                                <td>Propiedad Industrial</td>
+                                <td>Derecho de Autor</td>
                             </tr>
                             <tr>
-                                <td><strong>Modelo de Utilidad</strong></td>
-                                <td>Mejora funcional a objetos</td>
-                                <td>15 años</td>
-                                <td>Novedad y aplicación industrial</td>
+                                <td><strong>Ley aplicable</strong></td>
+                                <td>LFPPI</td>
+                                <td>LFDA</td>
                             </tr>
                             <tr>
-                                <td><strong>Diseño Industrial</strong></td>
-                                <td>Apariencia estética</td>
-                                <td>25 años</td>
-                                <td>Novedad y originalidad</td>
+                                <td><strong>Dependencia</strong></td>
+                                <td>Secretaría de Economía</td>
+                                <td>Secretaría de Cultura</td>
                             </tr>
                             <tr>
-                                <td><strong>Marca</strong></td>
-                                <td>Signos distintivos</td>
-                                <td>10 años (renovable)</td>
-                                <td>Distintividad</td>
+                                <td><strong>Registro</strong></td>
+                                <td>Constitutivo (crea el derecho)</td>
+                                <td>Declarativo (reconoce el derecho)</td>
                             </tr>
                             <tr>
-                                <td><strong>Secreto Industrial</strong></td>
-                                <td>Información confidencial</td>
+                                <td><strong>Protege</strong></td>
+                                <td>Patentes, marcas, diseños</td>
+                                <td>Obras, interpretaciones</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-laptop-code"></i> Servicios Digitales</h3>
+                <p>Ambas instituciones ofrecen servicios en línea:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-building"></i>
+                            <h4>IMPI en Línea</h4>
+                        </div>
+                        <ul>
+                            <li>Consulta de marcas (MARCANET)</li>
+                            <li>Solicitudes electrónicas (SIGA)</li>
+                            <li>Pago de derechos en línea</li>
+                            <li>Consulta de expedientes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-book-open"></i>
+                            <h4>INDAUTOR en Línea</h4>
+                        </div>
+                        <ul>
+                            <li>Consulta del Registro Público</li>
+                            <li>Solicitud de registros en línea</li>
+                            <li>Consulta de reservas de derechos</li>
+                            <li>Descarga de formatos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-info-circle"></i> Consejo Práctico</h4>
+                    <p>Antes de crear una marca, nombre artístico o título de publicación, es recomendable realizar búsquedas tanto en <strong>MARCANET del IMPI</strong> como en la base de datos de <strong>reservas de INDAUTOR</strong>, ya que pueden existir derechos previos en ambas instituciones.</p>
+                </div>
+            </div>
+        `
+    },
+    
+    'quiz3': {
+        title: 'Cuestionario Unidad 3: Legislación de la PI',
+        type: 'quiz',
+        content: `
+            <div class="quiz-content">
+                <div class="quiz-header">
+                    <h3><i class="fas fa-clipboard-check"></i> Cuestionario de Evaluación</h3>
+                    <p>Unidad 3: Legislación de la Propiedad Intelectual</p>
+                </div>
+                
+                <div class="quiz-value">
+                    <div class="value-badge">15%</div>
+                    <div>
+                        <strong>Valor del cuestionario</strong>
+                        <p>Este cuestionario representa el 15% de tu calificación final</p>
+                    </div>
+                </div>
+                
+                <div class="quiz-info">
+                    <div class="info-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>10 preguntas</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="quiz3-time-limit">15 minutos</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-redo"></i>
+                        <span id="quiz3-max-attempts">2 intentos permitidos</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-percentage"></i>
+                        <span id="quiz3-passing-score">Calificación mínima: 60%</span>
+                    </div>
+                </div>
+                
+                <div class="quiz-instructions">
+                    <h4><i class="fas fa-info-circle"></i> Instrucciones</h4>
+                    <ul>
+                        <li>Lee cuidadosamente cada pregunta antes de responder.</li>
+                        <li>Selecciona la opción que consideres correcta para cada pregunta.</li>
+                        <li>Una vez iniciado el cuestionario, el tiempo comenzará a correr.</li>
+                        <li>Puedes revisar tus respuestas antes de enviar.</li>
+                        <li>Al finalizar, recibirás retroalimentación inmediata.</li>
+                    </ul>
+                </div>
+                
+                <div id="quiz3-container" class="quiz-questions" style="display: none;">
+                    <!-- Las preguntas se cargarán dinámicamente -->
+                </div>
+                
+                <div id="quiz3-start" class="quiz-start-section">
+                    <p>Asegúrate de haber revisado los temas 3.1 al 3.5 antes de iniciar.</p>
+                    <div class="quiz-attempts-info" id="quiz3-attempts-info"></div>
+                    <button class="btn-primary btn-large" id="quiz3-start-btn" onclick="startQuiz(3)">
+                        <i class="fas fa-play"></i> Iniciar Cuestionario
+                    </button>
+                </div>
+                
+                <div id="quiz3-results" class="quiz-results" style="display: none;">
+                    <!-- Los resultados se mostrarán aquí -->
+                </div>
+            </div>
+        `
+    },
+    
+    // =============================================
+    // UNIDAD 4: DERECHO DE AUTOR Y CONEXOS
+    // =============================================
+    
+    'tema4-1': {
+        title: '4.1 Derechos de Autor',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-copyright"></i> ¿Qué es el Derecho de Autor?</h3>
+                <p>El <strong>Derecho de Autor</strong> es el conjunto de normas jurídicas que protegen las <strong>obras originales de autoría</strong> desde el momento de su creación. A diferencia de la Propiedad Industrial, el Derecho de Autor surge automáticamente con la creación de la obra, sin necesidad de registro previo.</p>
+                
+                <p>Esta rama de la Propiedad Intelectual protege la <strong>forma de expresión de las ideas</strong>, no las ideas en sí mismas. Mientras la idea de escribir una novela sobre robots no es protegible, la forma específica en que un autor desarrolla esa idea sí lo es.</p>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-building"></i> Marco Legal en México</h4>
+                    <p>El Derecho de Autor está regulado por la <strong>Ley Federal del Derecho de Autor (LFDA)</strong> y supervisado por el <strong>Instituto Nacional del Derecho de Autor (INDAUTOR)</strong>, dependiente de la Secretaría de Cultura.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-heart"></i> 4.1.1 Derechos Morales</h3>
+                <p>Los <strong>derechos morales</strong> protegen la relación personal e íntima entre el autor y su obra. Reconocen el vínculo espiritual que existe entre el creador y su creación.</p>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-info-circle"></i> Características de los Derechos Morales</h4>
+                    <ul>
+                        <li><strong>Perpetuos:</strong> No tienen límite de tiempo, incluso después de la muerte del autor</li>
+                        <li><strong>Inalienables:</strong> No pueden venderse ni transferirse a terceros</li>
+                        <li><strong>Irrenunciables:</strong> El autor no puede renunciar a ellos por contrato</li>
+                        <li><strong>Inembargables:</strong> No pueden ser objeto de embargo judicial</li>
+                        <li><strong>Imprescriptibles:</strong> No se pierden por el paso del tiempo</li>
+                    </ul>
+                </div>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-user-tag"></i>
+                            <h4>Derecho de Paternidad</h4>
+                        </div>
+                        <p>Derecho a ser reconocido como el <strong>autor de la obra</strong> y a que su nombre aparezca vinculado a ella. Incluye el derecho a usar seudónimo o permanecer anónimo.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Derecho de Integridad</h4>
+                        </div>
+                        <p>Derecho a <strong>oponerse a modificaciones</strong>, mutilaciones o deformaciones que puedan dañar el honor o reputación del autor, o que demeriten la obra.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-bullhorn"></i>
+                            <h4>Derecho de Divulgación</h4>
+                        </div>
+                        <p>Derecho a <strong>decidir si la obra se hace pública</strong> y en qué forma, cuándo y dónde, o a mantenerla inédita.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-undo"></i>
+                            <h4>Derecho de Retracto</h4>
+                        </div>
+                        <p>Derecho a <strong>retirar la obra del comercio</strong> cuando ya no represente su convicción intelectual o moral (requiere indemnizar a quien tenga derechos).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-coins"></i> 4.1.2 Derechos Patrimoniales</h3>
+                <p>Los <strong>derechos patrimoniales</strong> (también llamados derechos económicos) permiten al autor explotar económicamente su obra y obtener beneficios de ella.</p>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-info-circle"></i> Características de los Derechos Patrimoniales</h4>
+                    <ul>
+                        <li><strong>Temporales:</strong> Tienen una duración limitada (vida del autor + 100 años en México)</li>
+                        <li><strong>Transferibles:</strong> Pueden cederse, licenciarse o venderse</li>
+                        <li><strong>Renunciables:</strong> El autor puede renunciar a ellos</li>
+                        <li><strong>Embargables:</strong> Pueden ser objeto de medidas cautelares</li>
+                    </ul>
+                </div>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-copy"></i>
+                            <h4>Reproducción</h4>
+                        </div>
+                        <p>Derecho a autorizar o prohibir la <strong>realización de copias</strong> de la obra por cualquier medio (impreso, digital, etc.).</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-truck"></i>
+                            <h4>Distribución</h4>
+                        </div>
+                        <p>Derecho a <strong>poner copias a disposición del público</strong> mediante venta, alquiler o préstamo.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-broadcast-tower"></i>
+                            <h4>Comunicación Pública</h4>
+                        </div>
+                        <p>Derecho a <strong>representar, ejecutar o exhibir</strong> la obra ante un público sin distribución de copias.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-exchange-alt"></i>
+                            <h4>Transformación</h4>
+                        </div>
+                        <p>Derecho a autorizar <strong>traducciones, adaptaciones o modificaciones</strong> de la obra original.</p>
+                    </div>
+                </div>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo de Obra</th>
+                                <th>Duración en México</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Obras de autor individual</td>
+                                <td>Vida del autor + <strong>100 años</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Obras en colaboración</td>
+                                <td>Vida del último coautor + 100 años</td>
+                            </tr>
+                            <tr>
+                                <td>Obras anónimas/seudónimas</td>
+                                <td>100 años desde la primera publicación</td>
+                            </tr>
+                            <tr>
+                                <td>Programas de computación</td>
+                                <td>Vida del autor + 100 años</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-palette"></i> Obras Protegidas por Derecho de Autor</h3>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-check-circle"></i> Obras Protegidas</h4>
+                        <ul>
+                            <li>Obras literarias (libros, artículos, guiones)</li>
+                            <li>Obras musicales con o sin letra</li>
+                            <li>Obras artísticas (pinturas, esculturas, fotografías)</li>
+                            <li>Obras audiovisuales y cinematográficas</li>
+                            <li>Programas de computación (software)</li>
+                            <li>Bases de datos originales</li>
+                            <li>Obras arquitectónicas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-times-circle"></i> No Protegidas</h4>
+                        <ul>
+                            <li>Ideas, conceptos o teorías abstractas</li>
+                            <li>Procedimientos, métodos o sistemas</li>
+                            <li>Descubrimientos científicos</li>
+                            <li>Contenidos informativos de noticias</li>
+                            <li>Textos legislativos y judiciales</li>
+                            <li>Obras en dominio público</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    'tema4-2': {
+        title: '4.2 Marca',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-trademark"></i> 4.2.1 Concepto de Marca</h3>
+                <p>Una <strong>marca</strong> es un signo distintivo que sirve para <strong>identificar y diferenciar</strong> productos o servicios de una empresa respecto de los de sus competidores. Es uno de los activos intangibles más valiosos para las empresas.</p>
+                
+                <p>La marca cumple funciones esenciales en el mercado:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-fingerprint"></i>
+                            <h4>Función Distintiva</h4>
+                        </div>
+                        <p>Diferencia productos o servicios de una empresa respecto de los de la competencia.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-building"></i>
+                            <h4>Indicadora de Origen</h4>
+                        </div>
+                        <p>Señala la procedencia empresarial, permitiendo al consumidor identificar al fabricante.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-medal"></i>
+                            <h4>Garantía de Calidad</h4>
+                        </div>
+                        <p>Genera expectativas sobre la calidad del producto basadas en experiencias previas.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-bullhorn"></i>
+                            <h4>Función Publicitaria</h4>
+                        </div>
+                        <p>Herramienta de marketing y posicionamiento en el mercado.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-gavel"></i> Marco Legal</h4>
+                    <p>Las marcas en México están reguladas por la <strong>Ley Federal de Protección a la Propiedad Industrial (LFPPI)</strong> y su registro se realiza ante el <strong>Instituto Mexicano de la Propiedad Industrial (IMPI)</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-th-list"></i> 4.2.2 Tipos de Marcas</h3>
+                <p>La LFPPI reconoce diversos tipos de marcas según sus características:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-font"></i>
+                            <h4>Marcas Nominativas</h4>
+                        </div>
+                        <p>Consisten únicamente en <strong>palabras o letras</strong> sin diseño especial ni tipografía distintiva.</p>
+                        <p class="example">Ejemplos: "GOOGLE", "MICROSOFT", "BIMBO"</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-image"></i>
+                            <h4>Marcas Figurativas</h4>
+                        </div>
+                        <p>Consisten en <strong>figuras, símbolos o logotipos</strong> sin elementos de texto.</p>
+                        <p class="example">Ejemplos: La manzana de Apple, el swoosh de Nike</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-object-group"></i>
+                            <h4>Marcas Mixtas</h4>
+                        </div>
+                        <p>Combinan <strong>elementos verbales y gráficos</strong> en un solo signo.</p>
+                        <p class="example">Ejemplo: Logo de Coca-Cola con su tipografía característica</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-cube"></i>
+                            <h4>Marcas Tridimensionales</h4>
+                        </div>
+                        <p>Protegen la <strong>forma distintiva</strong> de productos o envases.</p>
+                        <p class="example">Ejemplos: Botella de Coca-Cola, forma del chocolate Toblerone</p>
+                    </div>
+                </div>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-music"></i>
+                            <h4>Marcas Sonoras</h4>
+                        </div>
+                        <p>Consisten en <strong>sonidos distintivos</strong> asociados a una marca.</p>
+                        <p class="example">Ejemplos: El rugido del león de MGM, el sonido de Netflix</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-palette"></i>
+                            <h4>Marcas de Color</h4>
+                        </div>
+                        <p>Protegen un <strong>color específico</strong> cuando ha adquirido distintividad.</p>
+                        <p class="example">Ejemplos: El azul Tiffany, el rojo de Christian Louboutin</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-layer-group"></i>
+                            <h4>Marcas Holográficas</h4>
+                        </div>
+                        <p>Elementos que cambian de apariencia según el ángulo de visión.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-wind"></i>
+                            <h4>Marcas Olfativas</h4>
+                        </div>
+                        <p>Fragancias distintivas asociadas a productos (novedad en LFPPI 2020).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-file-signature"></i> Registro de Marcas</h3>
+                <p>Para registrar una marca ante el IMPI:</p>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">1</div>
+                        <h4>Búsqueda de Antecedentes</h4>
+                        <p>Verificar disponibilidad en MARCANET para evitar conflictos con marcas existentes.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">2</div>
+                        <h4>Clasificación de Niza</h4>
+                        <p>Determinar las clases de productos o servicios aplicables (sistema internacional de 45 clases).</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">3</div>
+                        <h4>Solicitud ante IMPI</h4>
+                        <p>Presentar la solicitud con documentación y pago de derechos.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">4</div>
+                        <h4>Examen y Otorgamiento</h4>
+                        <p>El IMPI examina requisitos legales, publica en Gaceta y emite el título.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-clock"></i> Vigencia de las Marcas</h4>
+                    <p>Las marcas tienen vigencia de <strong>10 años</strong> a partir de su otorgamiento, <strong>renovables indefinidamente</strong> por períodos iguales. Es el único derecho de PI que puede ser perpetuo mientras se mantenga en uso.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-tags"></i> Otros Signos Distintivos</h3>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Signo Distintivo</th>
+                                <th>Función</th>
+                                <th>Vigencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Nombre Comercial</strong></td>
+                                <td>Identifica a una empresa o establecimiento</td>
+                                <td>10 años renovables</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aviso Comercial</strong></td>
+                                <td>Frases u oraciones publicitarias (eslóganes)</td>
+                                <td>10 años renovables</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Denominación de Origen</strong></td>
+                                <td>Vincula productos a una región geográfica</td>
                                 <td>Indefinida</td>
-                                <td>Confidencialidad activa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Indicación Geográfica</strong></td>
+                                <td>Similar pero con requisitos menos estrictos</td>
+                                <td>Indefinida</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Marca Colectiva</strong></td>
+                                <td>Identifica productos de una asociación</td>
+                                <td>10 años renovables</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Marca de Certificación</strong></td>
+                                <td>Garantiza cumplimiento de normas de calidad</td>
+                                <td>10 años renovables</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1252,14 +2550,189 @@ const courseContent = {
         `
     },
     
-    'tema3-2': {
-        title: '3.2 Patentes',
+    'tema4-3': {
+        title: '4.3 Diseños Industriales',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-pencil-ruler"></i> ¿Qué es un Diseño Industrial?</h3>
+                <p>El <strong>diseño industrial</strong> protege la apariencia estética u ornamental de productos industriales. No protege la función técnica, sino el <strong>aspecto visual</strong> que hace atractivo un producto ante los consumidores.</p>
+                
+                <p>Es una figura de propiedad industrial que reconoce el valor comercial de la estética en los productos, incentivando la inversión en diseño y diferenciación visual.</p>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-gavel"></i> Marco Legal</h4>
+                    <p>Los diseños industriales están regulados por la <strong>Ley Federal de Protección a la Propiedad Industrial (LFPPI)</strong> y se registran ante el <strong>IMPI</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-th-large"></i> Tipos de Diseños Industriales</h3>
+                <p>La LFPPI reconoce dos categorías de diseños industriales:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-image"></i>
+                            <h4>Dibujos Industriales</h4>
+                        </div>
+                        <p>Configuraciones <strong>bidimensionales</strong> aplicadas a la superficie de productos.</p>
+                        <ul>
+                            <li>Patrones textiles y estampados</li>
+                            <li>Diseños gráficos en envases</li>
+                            <li>Decoraciones en superficies</li>
+                            <li>Interfaces gráficas de usuario</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-cube"></i>
+                            <h4>Modelos Industriales</h4>
+                        </div>
+                        <p>Configuraciones <strong>tridimensionales</strong> de productos.</p>
+                        <ul>
+                            <li>Forma de automóviles</li>
+                            <li>Diseño de muebles</li>
+                            <li>Forma de electrodomésticos</li>
+                            <li>Diseño de envases y botellas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-check-double"></i> Requisitos de Protección</h3>
+                <p>Para registrar un diseño industrial debe cumplir con:</p>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">1</div>
+                        <h4>Novedad</h4>
+                        <p>No haber sido divulgado públicamente antes de la fecha de solicitud en ninguna parte del mundo.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">2</div>
+                        <h4>Originalidad</h4>
+                        <p>Ser creación independiente del diseñador, con características propias que lo distingan.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">3</div>
+                        <h4>Aplicación Industrial</h4>
+                        <p>Ser reproducible en serie por medios industriales o artesanales.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-ban"></i> Exclusiones</h3>
+                <p>No pueden registrarse como diseños industriales:</p>
+                <ul>
+                    <li>Diseños contrarios al orden público o la moral</li>
+                    <li>Diseños que carezcan de novedad u originalidad</li>
+                    <li>Formas dictadas <strong>exclusivamente por la función técnica</strong></li>
+                    <li>Diseños que puedan inducir a error sobre el origen o calidad del producto</li>
+                    <li>Diseños que reproduzcan emblemas oficiales o símbolos patrios</li>
+                </ul>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Forma Funcional vs. Estética</h4>
+                    <p>Si la forma del producto está dictada únicamente por su función técnica (como una tuerca hexagonal), no puede protegerse como diseño industrial. Solo se protege la apariencia que va <strong>más allá de lo funcionalmente necesario</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-clock"></i> Vigencia y Derechos</h3>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-calendar"></i> Duración</h4>
+                        <p>En México, los diseños industriales tienen una vigencia de <strong>25 años improrrogables</strong> contados desde la fecha de presentación de la solicitud.</p>
+                        <p><em>Nota: La LFPPI 2020 aumentó la vigencia de 15 a 25 años.</em></p>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-shield-alt"></i> Derechos del Titular</h4>
+                        <ul>
+                            <li>Impedir que terceros fabriquen productos con el diseño</li>
+                            <li>Prohibir la comercialización de productos infractores</li>
+                            <li>Licenciar o ceder el registro</li>
+                            <li>Iniciar acciones legales contra infractores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-laptop"></i> Diseños Industriales en Tecnología</h3>
+                <p>En el sector tecnológico, los diseños industriales protegen:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Dispositivos Electrónicos</h4>
+                        </div>
+                        <p>Forma y apariencia de smartphones, tablets, computadoras portátiles.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-desktop"></i>
+                            <h4>Interfaces Gráficas (GUI)</h4>
+                        </div>
+                        <p>Diseño visual de pantallas, iconos y elementos de interfaz de usuario.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-watch"></i>
+                            <h4>Wearables</h4>
+                        </div>
+                        <p>Diseño de relojes inteligentes, auriculares, dispositivos vestibles.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-gamepad"></i>
+                            <h4>Accesorios</h4>
+                        </div>
+                        <p>Controladores de videojuegos, cargadores, fundas y periféricos.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-gavel"></i> Caso Emblemático: Apple vs. Samsung</h4>
+                    <p>El litigio Apple vs. Samsung es un ejemplo icónico de la importancia de los diseños industriales en tecnología. Apple obtuvo protección sobre el diseño rectangular con esquinas redondeadas del iPhone, demostrando el valor estratégico de esta figura.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-globe"></i> Protección Internacional</h3>
+                <p>Para proteger diseños industriales en otros países:</p>
+                <ul>
+                    <li><strong>Sistema de La Haya:</strong> Permite solicitar protección en múltiples países con una sola solicitud internacional ante la OMPI</li>
+                    <li><strong>Solicitudes nacionales:</strong> Presentar solicitudes individuales en cada país de interés</li>
+                    <li><strong>Prioridad:</strong> 6 meses para reclamar prioridad desde la primera solicitud</li>
+                </ul>
+            </div>
+        `
+    },
+    
+    'tema4-4': {
+        title: '4.4 Patentes',
         content: `
             <div class="content-section">
                 <h3><i class="fas fa-lightbulb"></i> ¿Qué es una Patente?</h3>
                 <p>Una <strong>patente</strong> es un título de propiedad otorgado por el Estado que confiere a su titular el <strong>derecho exclusivo de explotar una invención</strong> por un tiempo determinado. Es el mecanismo por excelencia para proteger las innovaciones técnicas.</p>
                 
                 <p>A cambio de este monopolio temporal, el inventor debe <strong>divulgar públicamente su invención</strong>, contribuyendo así al acervo del conocimiento técnico mundial (estado de la técnica).</p>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-gavel"></i> Marco Legal</h4>
+                    <p>Las patentes están reguladas por la <strong>Ley Federal de Protección a la Propiedad Industrial (LFPPI)</strong> y se otorgan por el <strong>IMPI</strong>.</p>
+                </div>
             </div>
             
             <div class="content-section">
@@ -1321,7 +2794,7 @@ const courseContent = {
                             <li>Razas animales</li>
                             <li>El cuerpo humano y sus partes</li>
                             <li>Variedades vegetales</li>
-                            <li>Métodos de tratamiento quirúrgico/terapéutico</li>
+                            <li>Métodos de tratamiento médico</li>
                         </ul>
                     </div>
                 </div>
@@ -1330,10 +2803,11 @@ const courseContent = {
             <div class="content-section">
                 <h3><i class="fas fa-file-alt"></i> La Solicitud de Patente</h3>
                 <p>Una solicitud de patente debe contener:</p>
+                
                 <ul>
-                    <li><strong>Descripción:</strong> Explicación clara y completa de la invención</li>
+                    <li><strong>Descripción:</strong> Explicación clara y completa de la invención que permita reproducirla</li>
                     <li><strong>Reivindicaciones:</strong> Definen el alcance de la protección solicitada</li>
-                    <li><strong>Resumen:</strong> Síntesis de la invención</li>
+                    <li><strong>Resumen:</strong> Síntesis de la invención para fines de búsqueda</li>
                     <li><strong>Dibujos:</strong> Cuando sean necesarios para comprender la invención</li>
                 </ul>
                 
@@ -1344,35 +2818,8 @@ const courseContent = {
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-robot"></i> Patentes en Inteligencia Artificial</h3>
-                <p>En el campo de la IA, las patentes pueden proteger:</p>
-                <ul>
-                    <li>Algoritmos con <strong>aplicación técnica específica</strong></li>
-                    <li>Arquitecturas de redes neuronales novedosas</li>
-                    <li>Métodos de entrenamiento de modelos</li>
-                    <li>Aplicaciones técnicas concretas de machine learning</li>
-                </ul>
-                
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Desafío Actual</h4>
-                    <p>La patentabilidad de invenciones generadas por IA es un tema de debate. Actualmente, la mayoría de jurisdicciones requieren que el <strong>inventor sea una persona natural</strong>, no una máquina.</p>
-                </div>
-            </div>
-        `
-    },
-    
-    'tema3-3': {
-        title: '3.3 Modelos de Utilidad',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-tools"></i> ¿Qué es un Modelo de Utilidad?</h3>
-                <p>El <strong>modelo de utilidad</strong> es una figura de propiedad industrial que protege invenciones consistentes en la <strong>forma, configuración o disposición de elementos</strong> de un objeto que le proporcionen una mejora funcional o ventaja técnica.</p>
-                
-                <p>Se conocen comúnmente como <strong>"pequeñas patentes"</strong> o <strong>"patentes de innovación"</strong> porque protegen mejoras técnicas con un nivel inventivo menor que el requerido para las patentes.</p>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-balance-scale"></i> Diferencias con las Patentes</h3>
+                <h3><i class="fas fa-tools"></i> Modelos de Utilidad</h3>
+                <p>El <strong>modelo de utilidad</strong> es una figura alternativa para proteger invenciones menores:</p>
                 
                 <div class="comparison-table">
                     <table>
@@ -1392,12 +2839,12 @@ const courseContent = {
                             <tr>
                                 <td><strong>Objeto</strong></td>
                                 <td>Productos y procedimientos</td>
-                                <td>Solo objetos/utensilios/herramientas</td>
+                                <td>Solo objetos/utensilios</td>
                             </tr>
                             <tr>
                                 <td><strong>Vigencia</strong></td>
                                 <td>20 años</td>
-                                <td>15 años (México)</td>
+                                <td>15 años</td>
                             </tr>
                             <tr>
                                 <td><strong>Examen</strong></td>
@@ -1405,9 +2852,9 @@ const courseContent = {
                                 <td>Examen simplificado</td>
                             </tr>
                             <tr>
-                                <td><strong>Costo y tiempo</strong></td>
-                                <td>Mayor costo, proceso más largo</td>
-                                <td>Menor costo, proceso más rápido</td>
+                                <td><strong>Proceso</strong></td>
+                                <td>Más largo y costoso</td>
+                                <td>Más rápido y económico</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1415,1142 +2862,179 @@ const courseContent = {
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-check-circle"></i> Requisitos de Registro</h3>
-                <p>Para registrar un modelo de utilidad se requiere:</p>
+                <h3><i class="fas fa-globe"></i> Protección Internacional</h3>
+                <p>Para proteger una invención en otros países:</p>
                 
                 <div class="info-cards-grid">
                     <div class="info-card">
                         <div class="info-card-header">
-                            <i class="fas fa-star"></i>
-                            <h4>Novedad</h4>
+                            <i class="fas fa-file-signature"></i>
+                            <h4>Sistema PCT</h4>
                         </div>
-                        <p>El modelo no debe existir previamente en el estado de la técnica.</p>
+                        <p>El Tratado de Cooperación en Materia de Patentes permite solicitar protección en múltiples países con una sola solicitud internacional.</p>
                     </div>
                     
                     <div class="info-card">
                         <div class="info-card-header">
-                            <i class="fas fa-industry"></i>
-                            <h4>Aplicación Industrial</h4>
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Derecho de Prioridad</h4>
                         </div>
-                        <p>Debe ser susceptible de producción o uso industrial.</p>
-                    </div>
-                </div>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> Nota Importante</h4>
-                    <p>A diferencia de las patentes, los modelos de utilidad <strong>no requieren actividad inventiva</strong>. Basta con que representen una mejora funcional o ventaja técnica sobre lo existente.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-wrench"></i> Ejemplos de Modelos de Utilidad</h3>
-                <ul>
-                    <li>Una nueva forma de mango para herramientas que mejora el agarre</li>
-                    <li>Un diseño de envase que facilita el vertido</li>
-                    <li>Una mejora en la estructura de un mueble para mayor resistencia</li>
-                    <li>Un accesorio para dispositivos electrónicos con función práctica mejorada</li>
-                </ul>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-lightbulb"></i> Estrategia de Protección</h3>
-                <p>El modelo de utilidad es ideal para:</p>
-                <ul>
-                    <li>Pequeñas y medianas empresas con innovaciones incrementales</li>
-                    <li>Mejoras a productos existentes</li>
-                    <li>Protección rápida mientras se evalúa una patente</li>
-                    <li>Innovaciones con ciclo de vida comercial corto</li>
-                </ul>
-            </div>
-        `
-    },
-    
-    'tema3-4': {
-        title: '3.4 Diseños Industriales',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-pencil-ruler"></i> ¿Qué es un Diseño Industrial?</h3>
-                <p>El <strong>diseño industrial</strong> protege la apariencia estética u ornamental de productos industriales. No protege la función técnica, sino el <strong>aspecto visual</strong> que hace atractivo un producto.</p>
-                
-                <p>Comprende dos categorías:</p>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-image"></i>
-                            <h4>Dibujos Industriales</h4>
-                        </div>
-                        <p>Configuraciones <strong>bidimensionales</strong> aplicadas a productos.</p>
-                        <p class="example">Ejemplos: patrones textiles, diseños gráficos en envases, estampados decorativos.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-cube"></i>
-                            <h4>Modelos Industriales</h4>
-                        </div>
-                        <p>Configuraciones <strong>tridimensionales</strong> de productos.</p>
-                        <p class="example">Ejemplos: forma de un automóvil, diseño de muebles, forma de electrodomésticos.</p>
+                        <p>12 meses para presentar solicitudes en otros países reclamando la fecha de la primera solicitud (Convenio de París).</p>
                     </div>
                 </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-check-double"></i> Requisitos de Protección</h3>
-                <p>Para registrar un diseño industrial debe cumplir con:</p>
-                
+                <h3><i class="fas fa-robot"></i> Patentes en Tecnología e IA</h3>
+                <p>En el campo de la tecnología y la IA, las patentes pueden proteger:</p>
                 <ul>
-                    <li><strong>Novedad:</strong> No haber sido divulgado públicamente antes de la solicitud</li>
-                    <li><strong>Originalidad:</strong> Ser creación independiente del diseñador</li>
-                    <li><strong>Aplicación Industrial:</strong> Ser reproducible en serie por medios industriales</li>
-                </ul>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-clock"></i> Vigencia</h4>
-                    <p>En México, los diseños industriales tienen una vigencia de <strong>25 años improrrogables</strong> contados desde la fecha de presentación de la solicitud.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-ban"></i> Exclusiones</h3>
-                <p>No pueden registrarse como diseños industriales:</p>
-                <ul>
-                    <li>Diseños contrarios al orden público o la moral</li>
-                    <li>Diseños que carezcan de novedad u originalidad</li>
-                    <li>Formas dictadas exclusivamente por la función técnica</li>
-                    <li>Diseños que puedan inducir a error sobre el origen o calidad del producto</li>
-                </ul>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-laptop"></i> Diseños Industriales en Tecnología</h3>
-                <p>En el sector tecnológico, los diseños industriales protegen:</p>
-                <ul>
-                    <li>Interfaces gráficas de usuario (GUI)</li>
-                    <li>Iconos de aplicaciones</li>
-                    <li>Diseño de dispositivos electrónicos</li>
-                    <li>Apariencia de wearables y gadgets</li>
+                    <li>Algoritmos con <strong>aplicación técnica específica</strong></li>
+                    <li>Arquitecturas de redes neuronales novedosas</li>
+                    <li>Métodos de entrenamiento de modelos</li>
+                    <li>Aplicaciones técnicas concretas de machine learning</li>
+                    <li>Dispositivos y sistemas que incorporan IA</li>
                 </ul>
                 
                 <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Caso Emblemático</h4>
-                    <p>El litigio <strong>Apple vs. Samsung</strong> es un ejemplo icónico de la importancia de los diseños industriales en tecnología. Apple obtuvo protección sobre el diseño rectangular con esquinas redondeadas del iPhone, demostrando el valor estratégico de esta figura.</p>
-                </div>
-            </div>
-        `
-    },
-    
-    'tema3-5': {
-        title: '3.5 Marcas',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-trademark"></i> ¿Qué es una Marca?</h3>
-                <p>Una <strong>marca</strong> es un signo distintivo que sirve para identificar y diferenciar productos o servicios de una empresa respecto de los de sus competidores. Es uno de los activos intangibles más valiosos para las empresas.</p>
-                
-                <p>La marca cumple funciones esenciales:</p>
-                <ul>
-                    <li><strong>Distintiva:</strong> Diferencia productos/servicios en el mercado</li>
-                    <li><strong>Indicadora de origen:</strong> Señala la procedencia empresarial</li>
-                    <li><strong>Garantía de calidad:</strong> Genera expectativas sobre el producto</li>
-                    <li><strong>Publicitaria:</strong> Herramienta de marketing y posicionamiento</li>
-                </ul>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-th-list"></i> Tipos de Marcas</h3>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-font"></i>
-                            <h4>Nominativas</h4>
-                        </div>
-                        <p>Consisten únicamente en <strong>palabras o letras</strong> sin diseño especial.</p>
-                        <p class="example">Ejemplo: "GOOGLE", "MICROSOFT"</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-image"></i>
-                            <h4>Figurativas</h4>
-                        </div>
-                        <p>Consisten en <strong>figuras, símbolos o logotipos</strong> sin texto.</p>
-                        <p class="example">Ejemplo: La manzana de Apple, el swoosh de Nike</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-object-group"></i>
-                            <h4>Mixtas</h4>
-                        </div>
-                        <p>Combinan <strong>elementos verbales y gráficos</strong>.</p>
-                        <p class="example">Ejemplo: Logo de Coca-Cola con su tipografía característica</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-cube"></i>
-                            <h4>Tridimensionales</h4>
-                        </div>
-                        <p>Protegen la <strong>forma distintiva</strong> de productos o envases.</p>
-                        <p class="example">Ejemplo: Botella de Coca-Cola, forma del chocolate Toblerone</p>
-                    </div>
-                </div>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-music"></i>
-                            <h4>Sonoras</h4>
-                        </div>
-                        <p>Consisten en <strong>sonidos distintivos</strong>.</p>
-                        <p class="example">Ejemplo: El rugido del león de MGM, el sonido de Netflix</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-palette"></i>
-                            <h4>De Color</h4>
-                        </div>
-                        <p>Protegen un <strong>color específico</strong> asociado a una marca.</p>
-                        <p class="example">Ejemplo: El azul Tiffany, el rojo de Christian Louboutin</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-file-signature"></i> Registro de Marcas</h3>
-                <p>Para registrar una marca ante el IMPI:</p>
-                
-                <ol>
-                    <li><strong>Búsqueda de antecedentes:</strong> Verificar disponibilidad</li>
-                    <li><strong>Clasificación:</strong> Determinar las clases de Niza aplicables</li>
-                    <li><strong>Solicitud:</strong> Presentar ante el IMPI</li>
-                    <li><strong>Examen:</strong> Verificación de requisitos legales</li>
-                    <li><strong>Publicación:</strong> En la Gaceta de Propiedad Industrial</li>
-                    <li><strong>Expedición del título:</strong> Si no hay oposiciones</li>
-                </ol>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-clock"></i> Vigencia</h4>
-                    <p>Las marcas tienen vigencia de <strong>10 años</strong> a partir de su otorgamiento, <strong>renovables indefinidamente</strong> por períodos iguales. Es el único derecho de PI que puede ser perpetuo.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-tags"></i> Otros Signos Distintivos</h3>
-                <ul>
-                    <li><strong>Nombre Comercial:</strong> Identifica a una empresa o establecimiento</li>
-                    <li><strong>Aviso Comercial:</strong> Frases u oraciones publicitarias (eslóganes)</li>
-                    <li><strong>Denominación de Origen:</strong> Vincula productos a una región geográfica específica</li>
-                    <li><strong>Indicación Geográfica:</strong> Similar pero con requisitos menos estrictos</li>
-                    <li><strong>Marca Colectiva:</strong> Identifica productos de una asociación</li>
-                    <li><strong>Marca de Certificación:</strong> Garantiza cumplimiento de normas</li>
-                </ul>
-            </div>
-        `
-    },
-    
-    'tema3-6': {
-        title: '3.6 Secretos Industriales',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-user-secret"></i> ¿Qué es un Secreto Industrial?</h3>
-                <p>Un <strong>secreto industrial</strong> (también llamado secreto empresarial o comercial) es cualquier información de aplicación industrial o comercial que una empresa mantiene <strong>confidencial</strong> porque le otorga una ventaja competitiva.</p>
-                
-                <p>A diferencia de otros derechos de PI, el secreto industrial <strong>no requiere registro</strong> y puede tener <strong>duración indefinida</strong>, siempre que se mantenga la confidencialidad.</p>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-folder-open"></i> Tipos de Información Protegible</h3>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-flask"></i>
-                            <h4>Información Técnica</h4>
-                        </div>
-                        <ul>
-                            <li>Fórmulas químicas</li>
-                            <li>Procesos de fabricación</li>
-                            <li>Diseños y planos</li>
-                            <li>Algoritmos y código fuente</li>
-                            <li>Datos de entrenamiento de IA</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-chart-pie"></i>
-                            <h4>Información Comercial</h4>
-                        </div>
-                        <ul>
-                            <li>Listas de clientes y proveedores</li>
-                            <li>Estrategias de precios</li>
-                            <li>Planes de negocios</li>
-                            <li>Estudios de mercado</li>
-                            <li>Know-how organizacional</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-check-double"></i> Requisitos para la Protección</h3>
-                <p>Para que la información califique como secreto industrial debe cumplir <strong>tres requisitos</strong>:</p>
-                
-                <div class="phases-container">
-                    <div class="phase-box">
-                        <div class="phase-number">1</div>
-                        <h4>Ser Secreta</h4>
-                        <p>No debe ser generalmente conocida ni fácilmente accesible para personas que normalmente manejan ese tipo de información.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">2</div>
-                        <h4>Tener Valor Comercial</h4>
-                        <p>Debe proporcionar una ventaja competitiva precisamente por su carácter secreto.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">3</div>
-                        <h4>Medidas de Protección</h4>
-                        <p>El titular debe haber tomado medidas razonables para mantenerla secreta.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-shield-alt"></i> Medidas de Protección</h3>
-                <p>Las empresas deben implementar medidas para proteger sus secretos:</p>
-                
-                <div class="two-column-grid">
-                    <div class="column-box">
-                        <h4><i class="fas fa-file-contract"></i> Medidas Legales</h4>
-                        <ul>
-                            <li>Acuerdos de confidencialidad (NDA)</li>
-                            <li>Cláusulas de no competencia</li>
-                            <li>Contratos laborales con cláusulas de PI</li>
-                            <li>Políticas internas de manejo de información</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="column-box">
-                        <h4><i class="fas fa-lock"></i> Medidas Técnicas</h4>
-                        <ul>
-                            <li>Control de acceso físico</li>
-                            <li>Sistemas de seguridad informática</li>
-                            <li>Encriptación de datos</li>
-                            <li>Marcado de documentos confidenciales</li>
-                            <li>Auditorías y monitoreo</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-balance-scale"></i> Secreto Industrial vs. Patente</h3>
-                
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Aspecto</th>
-                                <th>Secreto Industrial</th>
-                                <th>Patente</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Registro</strong></td>
-                                <td>No requiere</td>
-                                <td>Obligatorio</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Duración</strong></td>
-                                <td>Potencialmente indefinida</td>
-                                <td>20 años máximo</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Divulgación</strong></td>
-                                <td>Debe mantenerse secreto</td>
-                                <td>Se publica completamente</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Costo</strong></td>
-                                <td>Costos de protección</td>
-                                <td>Tasas de registro y mantenimiento</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Riesgo</strong></td>
-                                <td>Pérdida si se divulga</td>
-                                <td>Protección garantizada</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Ingeniería inversa</strong></td>
-                                <td>No protege contra ella</td>
-                                <td>Sí protege</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-robot"></i> Secretos Industriales en IA</h3>
-                <p>En proyectos de Inteligencia Artificial, el secreto industrial es especialmente valioso para proteger:</p>
-                <ul>
-                    <li><strong>Datasets propietarios</strong> de entrenamiento</li>
-                    <li><strong>Arquitecturas de modelos</strong> específicas</li>
-                    <li><strong>Hiperparámetros</strong> optimizados</li>
-                    <li><strong>Pipelines de procesamiento</strong> de datos</li>
-                    <li><strong>Know-how</strong> de implementación</li>
-                </ul>
-                
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-circle"></i> Ejemplo Clásico</h4>
-                    <p>La fórmula de <strong>Coca-Cola</strong> es el secreto industrial más famoso del mundo. Ha permanecido confidencial por más de 130 años, demostrando que un secreto bien protegido puede ser más valioso que cualquier patente.</p>
-                </div>
-            </div>
-        `
-    },
-    
-    'quiz3': {
-        title: 'Cuestionario Unidad 3: Propiedad Industrial',
-        type: 'quiz',
-        content: `
-            <div class="quiz-content">
-                <div class="quiz-header">
-                    <h3><i class="fas fa-clipboard-check"></i> Cuestionario de Evaluación</h3>
-                    <p>Unidad 3: Propiedad Industrial</p>
-                </div>
-                
-                <div class="quiz-value">
-                    <div class="value-badge">15%</div>
-                    <div>
-                        <strong>Valor del cuestionario</strong>
-                        <p>Este cuestionario representa el 15% de tu calificación final</p>
-                    </div>
-                </div>
-                
-                <div class="quiz-info">
-                    <div class="info-item">
-                        <i class="fas fa-question-circle"></i>
-                        <span>10 preguntas</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <span id="quiz3-time-limit">15 minutos</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-redo"></i>
-                        <span id="quiz3-max-attempts">2 intentos permitidos</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-percentage"></i>
-                        <span id="quiz3-passing-score">Calificación mínima: 60%</span>
-                    </div>
-                </div>
-                
-                <div class="quiz-instructions">
-                    <h4><i class="fas fa-info-circle"></i> Instrucciones</h4>
-                    <ul>
-                        <li>Lee cuidadosamente cada pregunta antes de responder.</li>
-                        <li>Selecciona la opción que consideres correcta para cada pregunta.</li>
-                        <li>Una vez iniciado el cuestionario, el tiempo comenzará a correr.</li>
-                        <li>Puedes revisar tus respuestas antes de enviar.</li>
-                        <li>Al finalizar, recibirás retroalimentación inmediata.</li>
-                    </ul>
-                </div>
-                
-                <div id="quiz3-container" class="quiz-questions" style="display: none;">
-                    <!-- Las preguntas se cargarán dinámicamente -->
-                </div>
-                
-                <div id="quiz3-start" class="quiz-start-section">
-                    <p>Asegúrate de haber revisado los temas 3.1 al 3.6 antes de iniciar.</p>
-                    <div class="quiz-attempts-info" id="quiz3-attempts-info"></div>
-                    <button class="btn-primary btn-large" id="quiz3-start-btn" onclick="startQuiz(3)">
-                        <i class="fas fa-play"></i> Iniciar Cuestionario
-                    </button>
-                </div>
-                
-                <div id="quiz3-results" class="quiz-results" style="display: none;">
-                    <!-- Los resultados se mostrarán aquí -->
-                </div>
-            </div>
-        `
-    },
-    
-    // =============================================
-    // UNIDAD 4: DERECHOS DE AUTOR
-    // =============================================
-    
-    'tema4-1': {
-        title: '4.1 Concepto y Objeto del Derecho de Autor',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-copyright"></i> ¿Qué es el Derecho de Autor?</h3>
-                <p>El <strong>Derecho de Autor</strong> es el conjunto de normas jurídicas que protegen las <strong>obras originales de autoría</strong> desde el momento de su creación. A diferencia de la Propiedad Industrial, el Derecho de Autor surge automáticamente con la creación de la obra, sin necesidad de registro previo.</p>
-                
-                <p>Esta rama de la Propiedad Intelectual protege la <strong>forma de expresión de las ideas</strong>, no las ideas en sí mismas. Mientras la idea de escribir una novela sobre robots no es protegible, la forma específica en que un autor desarrolla esa idea sí lo es.</p>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-building"></i> Marco Institucional en México</h4>
-                    <p>El <strong>Instituto Nacional del Derecho de Autor (INDAUTOR)</strong> es la autoridad administrativa responsable de proteger y fomentar el derecho de autor en México, dependiente de la Secretaría de Cultura.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-palette"></i> Obras Protegidas</h3>
-                <p>El Derecho de Autor protege una amplia variedad de obras del intelecto humano:</p>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-book"></i>
-                            <h4>Obras Literarias</h4>
-                        </div>
-                        <ul>
-                            <li>Libros, artículos, ensayos</li>
-                            <li>Poesía y obras dramáticas</li>
-                            <li>Guiones cinematográficos</li>
-                            <li>Discursos y conferencias</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-music"></i>
-                            <h4>Obras Musicales</h4>
-                        </div>
-                        <ul>
-                            <li>Composiciones con o sin letra</li>
-                            <li>Arreglos musicales</li>
-                            <li>Fonogramas</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-paint-brush"></i>
-                            <h4>Obras Artísticas</h4>
-                        </div>
-                        <ul>
-                            <li>Pinturas, esculturas, dibujos</li>
-                            <li>Fotografías</li>
-                            <li>Obras arquitectónicas</li>
-                            <li>Obras de arte aplicado</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-film"></i>
-                            <h4>Obras Audiovisuales</h4>
-                        </div>
-                        <ul>
-                            <li>Películas cinematográficas</li>
-                            <li>Videos y documentales</li>
-                            <li>Videojuegos</li>
-                            <li>Contenido multimedia</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-code"></i>
-                            <h4>Software y Bases de Datos</h4>
-                        </div>
-                        <ul>
-                            <li>Programas de computación</li>
-                            <li>Código fuente y código objeto</li>
-                            <li>Bases de datos originales</li>
-                            <li>Interfaces de usuario</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-layer-group"></i>
-                            <h4>Obras Derivadas</h4>
-                        </div>
-                        <ul>
-                            <li>Traducciones</li>
-                            <li>Adaptaciones</li>
-                            <li>Compilaciones y antologías</li>
-                            <li>Arreglos y transformaciones</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-star"></i> Requisitos de Protección</h3>
-                <p>Para que una obra sea protegida por Derecho de Autor debe cumplir con:</p>
-                
-                <div class="phases-container">
-                    <div class="phase-box">
-                        <div class="phase-number">1</div>
-                        <h4>Originalidad</h4>
-                        <p>Debe ser una creación propia del autor, que refleje su personalidad y aporte creativo. No se requiere novedad absoluta, solo que no sea una copia.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">2</div>
-                        <h4>Fijación</h4>
-                        <p>Debe estar materializada o fijada en un soporte perceptible (papel, disco, archivo digital, etc.). Las ideas no fijadas no están protegidas.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">3</div>
-                        <h4>Expresión Creativa</h4>
-                        <p>Debe reflejar un mínimo de creatividad. Los datos puramente fácticos o las copias mecánicas no califican.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-ban"></i> Exclusiones de Protección</h3>
-                <p>El Derecho de Autor <strong>NO protege</strong>:</p>
-                
-                <div class="two-column-grid">
-                    <div class="column-box">
-                        <h4><i class="fas fa-times-circle"></i> No son obras protegibles:</h4>
-                        <ul>
-                            <li>Las ideas, conceptos o teorías abstractas</li>
-                            <li>Los procedimientos, métodos o sistemas</li>
-                            <li>Los descubrimientos científicos</li>
-                            <li>Los contenidos informativos de noticias del día</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="column-box">
-                        <h4><i class="fas fa-globe"></i> Dominio público:</h4>
-                        <ul>
-                            <li>Leyes, reglamentos y textos oficiales</li>
-                            <li>Tratados internacionales</li>
-                            <li>Resoluciones judiciales</li>
-                            <li>Obras cuyo plazo de protección ha expirado</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    
-    'tema4-2': {
-        title: '4.2 Derechos Morales y Patrimoniales',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-heart"></i> Derechos Morales</h3>
-                <p>Los <strong>derechos morales</strong> protegen la relación personal e íntima entre el autor y su obra. Reconocen el vínculo espiritual que existe entre el creador y su creación.</p>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> Características de los Derechos Morales</h4>
-                    <ul>
-                        <li><strong>Perpetuos:</strong> No tienen límite de tiempo</li>
-                        <li><strong>Inalienables:</strong> No pueden venderse ni transferirse</li>
-                        <li><strong>Irrenunciables:</strong> El autor no puede renunciar a ellos</li>
-                        <li><strong>Inembargables:</strong> No pueden ser objeto de embargo</li>
-                        <li><strong>Imprescriptibles:</strong> No se pierden por el paso del tiempo</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-list"></i> Tipos de Derechos Morales</h3>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-user-tag"></i>
-                            <h4>Derecho de Paternidad</h4>
-                        </div>
-                        <p>Derecho a ser reconocido como el <strong>autor de la obra</strong> y a que su nombre aparezca vinculado a ella.</p>
-                        <p class="example">También incluye el derecho a usar seudónimo o permanecer anónimo.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-shield-alt"></i>
-                            <h4>Derecho de Integridad</h4>
-                        </div>
-                        <p>Derecho a <strong>oponerse a modificaciones</strong> que puedan dañar el honor o reputación del autor, o que demeriten la obra.</p>
-                        <p class="example">Protege contra mutilaciones, deformaciones o alteraciones no autorizadas.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-bullhorn"></i>
-                            <h4>Derecho de Divulgación</h4>
-                        </div>
-                        <p>Derecho a <strong>decidir si la obra se hace pública</strong> y en qué forma, o a mantenerla inédita.</p>
-                        <p class="example">El autor controla cuándo y cómo se da a conocer su obra al público.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-undo"></i>
-                            <h4>Derecho de Retracto</h4>
-                        </div>
-                        <p>Derecho a <strong>retirar la obra del comercio</strong> cuando ya no represente su convicción intelectual o moral.</p>
-                        <p class="example">Requiere indemnizar previamente a quien tenga derechos de explotación.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-coins"></i> Derechos Patrimoniales</h3>
-                <p>Los <strong>derechos patrimoniales</strong> (también llamados derechos económicos) permiten al autor explotar económicamente su obra y obtener beneficios de ella.</p>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> Características de los Derechos Patrimoniales</h4>
-                    <ul>
-                        <li><strong>Temporales:</strong> Tienen una duración limitada por ley</li>
-                        <li><strong>Transferibles:</strong> Pueden cederse, licenciarse o venderse</li>
-                        <li><strong>Renunciables:</strong> El autor puede renunciar a ellos</li>
-                        <li><strong>Embargables:</strong> Pueden ser objeto de medidas cautelares</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-th-list"></i> Tipos de Derechos Patrimoniales</h3>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-copy"></i>
-                            <h4>Reproducción</h4>
-                        </div>
-                        <p>Derecho a autorizar o prohibir la <strong>realización de copias</strong> de la obra por cualquier medio.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-truck"></i>
-                            <h4>Distribución</h4>
-                        </div>
-                        <p>Derecho a <strong>poner copias a disposición del público</strong> mediante venta, alquiler o préstamo.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-broadcast-tower"></i>
-                            <h4>Comunicación Pública</h4>
-                        </div>
-                        <p>Derecho a <strong>representar, ejecutar o exhibir</strong> la obra ante un público sin distribución de copias.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-exchange-alt"></i>
-                            <h4>Transformación</h4>
-                        </div>
-                        <p>Derecho a autorizar <strong>traducciones, adaptaciones o modificaciones</strong> de la obra.</p>
-                    </div>
-                </div>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-globe"></i>
-                            <h4>Puesta a Disposición</h4>
-                        </div>
-                        <p>Derecho a hacer la obra <strong>accesible en Internet</strong>, permitiendo que el público acceda desde cualquier lugar.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-plane"></i>
-                            <h4>Importación</h4>
-                        </div>
-                        <p>Derecho a autorizar o prohibir la <strong>importación de copias</strong> hechas sin autorización.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-clock"></i> Vigencia de los Derechos Patrimoniales</h3>
-                
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Tipo de Obra</th>
-                                <th>Duración en México</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Obras de autor individual</td>
-                                <td>Vida del autor + <strong>100 años</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Obras en colaboración</td>
-                                <td>Vida del último coautor + 100 años</td>
-                            </tr>
-                            <tr>
-                                <td>Obras anónimas/seudónimas</td>
-                                <td>100 años desde la primera publicación</td>
-                            </tr>
-                            <tr>
-                                <td>Obras póstumas</td>
-                                <td>100 años desde la primera publicación</td>
-                            </tr>
-                            <tr>
-                                <td>Programas de computación</td>
-                                <td>Vida del autor + 100 años</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Importante</h4>
-                    <p>México tiene uno de los <strong>plazos más largos del mundo</strong> (vida del autor + 100 años). En otros países como Estados Unidos es vida + 70 años, y en algunos países europeos vida + 70 años también.</p>
-                </div>
-            </div>
-        `
-    },
-    
-    'tema4-3': {
-        title: '4.3 Limitaciones y Excepciones',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-balance-scale"></i> El Equilibrio del Derecho de Autor</h3>
-                <p>El sistema de Derecho de Autor busca un <strong>equilibrio</strong> entre los derechos exclusivos del autor y el interés público de acceder al conocimiento y la cultura. Las <strong>limitaciones y excepciones</strong> son mecanismos que permiten ciertos usos sin autorización del titular.</p>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> Fundamento</h4>
-                    <p>Las excepciones reconocen que en ciertos casos, el beneficio social de permitir el uso supera el interés del titular en controlarlo. Están consagradas en tratados internacionales y en la legislación nacional.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-check-circle"></i> La Prueba de los Tres Pasos</h3>
-                <p>El <strong>Convenio de Berna</strong> y el <strong>Acuerdo ADPIC</strong> establecen que las excepciones deben cumplir tres condiciones:</p>
-                
-                <div class="phases-container">
-                    <div class="phase-box">
-                        <div class="phase-number">1</div>
-                        <h4>Casos Especiales</h4>
-                        <p>La excepción debe estar limitada a casos especiales, definidos de manera precisa y concreta.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">2</div>
-                        <h4>No Conflicto con Explotación Normal</h4>
-                        <p>El uso no debe entrar en conflicto con la explotación normal de la obra por parte del titular.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">3</div>
-                        <h4>No Perjuicio Injustificado</h4>
-                        <p>El uso no debe causar un perjuicio injustificado a los intereses legítimos del autor.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-list-alt"></i> Principales Excepciones en México</h3>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-quote-right"></i>
-                            <h4>Cita</h4>
-                        </div>
-                        <p>Reproducción de <strong>fragmentos breves</strong> de obras ajenas con fines de crítica, comentario, información o ilustración.</p>
-                        <p class="example">Requisito: citar la fuente y no alterar la obra.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h4>Uso Educativo</h4>
-                        </div>
-                        <p>Reproducción para <strong>fines de enseñanza</strong>, siempre que no haya lucro y se cite la fuente.</p>
-                        <p class="example">Incluye compilaciones para uso académico.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-home"></i>
-                            <h4>Copia Privada</h4>
-                        </div>
-                        <p>Reproducción de una obra para <strong>uso personal y privado</strong>, sin fines de lucro.</p>
-                        <p class="example">No aplica a software ni bases de datos.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-newspaper"></i>
-                            <h4>Información</h4>
-                        </div>
-                        <p>Reproducción de noticias del día, discursos públicos y obras en lugares públicos con <strong>fines informativos</strong>.</p>
-                    </div>
-                </div>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-theater-masks"></i>
-                            <h4>Parodia</h4>
-                        </div>
-                        <p>Creación de obras que <strong>imitan o satirizan</strong> una obra original con fines humorísticos o críticos.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-book-reader"></i>
-                            <h4>Bibliotecas y Archivos</h4>
-                        </div>
-                        <p>Reproducción para <strong>preservación, investigación o préstamo</strong> interbibliotecario.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-flag-usa"></i> Fair Use (Uso Justo) - Modelo Estadounidense</h3>
-                <p>A diferencia del sistema de excepciones cerradas de México, Estados Unidos utiliza el <strong>Fair Use</strong>, una doctrina más flexible que evalúa caso por caso cuatro factores:</p>
-                
-                <ol>
-                    <li><strong>Propósito y carácter del uso:</strong> ¿Es transformativo? ¿Comercial o educativo?</li>
-                    <li><strong>Naturaleza de la obra:</strong> ¿Es factual o creativa? ¿Publicada o inédita?</li>
-                    <li><strong>Cantidad usada:</strong> ¿Cuánto se tomó en relación al todo?</li>
-                    <li><strong>Efecto en el mercado:</strong> ¿Afecta el valor comercial de la obra original?</li>
-                </ol>
-                
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Precaución</h4>
-                    <p>El Fair Use <strong>no aplica en México</strong>. Los ingenieros que trabajen en proyectos globales deben conocer las diferencias entre jurisdicciones para evitar infracciones.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-robot"></i> Excepciones y la Inteligencia Artificial</h3>
-                <p>El entrenamiento de modelos de IA con obras protegidas plantea nuevos desafíos:</p>
-                
-                <ul>
-                    <li>¿Constituye el entrenamiento una "reproducción" que requiere autorización?</li>
-                    <li>¿Aplica alguna excepción como la de minería de datos (text and data mining)?</li>
-                    <li>¿Quién es responsable si el modelo genera contenido que infringe derechos de autor?</li>
-                </ul>
-                
-                <p>Estas preguntas están en el centro del debate legal actual, con litigios en curso como <strong>Getty Images vs. Stability AI</strong> y <strong>The New York Times vs. OpenAI</strong>.</p>
-            </div>
-        `
-    },
-    
-    'tema4-4': {
-        title: '4.4 Registro y Gestión de Derechos de Autor',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-file-signature"></i> El Registro de Obras</h3>
-                <p>En México, el registro de obras ante el <strong>INDAUTOR</strong> es <strong>declarativo, no constitutivo</strong>. Esto significa que los derechos nacen con la creación de la obra, no con el registro. Sin embargo, el registro ofrece importantes beneficios:</p>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-certificate"></i>
-                            <h4>Prueba de Autoría</h4>
-                        </div>
-                        <p>El certificado de registro es <strong>prueba fehaciente</strong> de la autoría y fecha de creación en un juicio.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-gavel"></i>
-                            <h4>Facilita la Defensa</h4>
-                        </div>
-                        <p>Simplifica los <strong>procedimientos legales</strong> contra infractores al tener documentación oficial.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-bullhorn"></i>
-                            <h4>Publicidad</h4>
-                        </div>
-                        <p>Da <strong>publicidad</strong> a la obra y permite identificar al titular de los derechos.</p>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-globe"></i>
-                            <h4>Reconocimiento Internacional</h4>
-                        </div>
-                        <p>Facilita el reconocimiento de derechos en otros países signatarios del <strong>Convenio de Berna</strong>.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-clipboard-list"></i> Procedimiento de Registro</h3>
-                <p>Para registrar una obra ante INDAUTOR:</p>
-                
-                <ol>
-                    <li><strong>Llenar la solicitud:</strong> Formato específico según el tipo de obra</li>
-                    <li><strong>Presentar la obra:</strong> En el formato adecuado (impreso, digital, fonograma, etc.)</li>
-                    <li><strong>Documentos de identidad:</strong> Identificación oficial del autor</li>
-                    <li><strong>Pago de derechos:</strong> Tarifa establecida por INDAUTOR</li>
-                    <li><strong>Esperar resolución:</strong> El Instituto revisa y emite el certificado</li>
-                </ol>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-laptop"></i> Registro en Línea</h4>
-                    <p>INDAUTOR ofrece el sistema <strong>e-INDAUTOR</strong> para realizar trámites en línea, agilizando el proceso de registro.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-users"></i> Gestión Colectiva de Derechos</h3>
-                <p>Las <strong>sociedades de gestión colectiva</strong> son organizaciones sin fines de lucro que administran los derechos de sus miembros, facilitando el licenciamiento y la recaudación de regalías.</p>
-                
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Sociedad</th>
-                                <th>Tipo de Obras</th>
-                                <th>Funciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>SACM</strong></td>
-                                <td>Música (compositores)</td>
-                                <td>Recauda regalías por ejecución pública</td>
-                            </tr>
-                            <tr>
-                                <td><strong>SOGEM</strong></td>
-                                <td>Obras literarias y dramáticas</td>
-                                <td>Administra derechos de escritores</td>
-                            </tr>
-                            <tr>
-                                <td><strong>INDA</strong></td>
-                                <td>Intérpretes y ejecutantes</td>
-                                <td>Protege derechos conexos</td>
-                            </tr>
-                            <tr>
-                                <td><strong>DIRECTORES</strong></td>
-                                <td>Obras audiovisuales</td>
-                                <td>Representa a directores de cine</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-handshake"></i> Cesión y Licenciamiento</h3>
-                
-                <div class="two-column-grid">
-                    <div class="column-box">
-                        <h4><i class="fas fa-file-contract"></i> Cesión de Derechos</h4>
-                        <p>La <strong>cesión</strong> es la transferencia de la titularidad de los derechos patrimoniales:</p>
-                        <ul>
-                            <li>Debe constar por escrito</li>
-                            <li>Solo se cede lo expresamente pactado</li>
-                            <li>Duración máxima: 15 años (salvo excepciones)</li>
-                            <li>Puede ser onerosa o gratuita</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="column-box">
-                        <h4><i class="fas fa-key"></i> Licencia</h4>
-                        <p>La <strong>licencia</strong> es una autorización de uso sin transferir la titularidad:</p>
-                        <ul>
-                            <li><strong>Exclusiva:</strong> Solo el licenciatario puede usar</li>
-                            <li><strong>No exclusiva:</strong> Múltiples licenciatarios</li>
-                            <li>Define alcance, territorio y duración</li>
-                            <li>Generalmente incluye remuneración</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fab fa-creative-commons"></i> Licencias Creative Commons</h3>
-                <p>Las licencias <strong>Creative Commons (CC)</strong> permiten a los autores compartir sus obras de forma estandarizada, indicando qué usos permiten:</p>
-                
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Licencia</th>
-                                <th>Condiciones</th>
-                                <th>Uso Comercial</th>
-                                <th>Obras Derivadas</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>CC BY</strong></td>
-                                <td>Solo atribución</td>
-                                <td>✓ Sí</td>
-                                <td>✓ Sí</td>
-                            </tr>
-                            <tr>
-                                <td><strong>CC BY-SA</strong></td>
-                                <td>Atribución + CompartirIgual</td>
-                                <td>✓ Sí</td>
-                                <td>✓ Bajo misma licencia</td>
-                            </tr>
-                            <tr>
-                                <td><strong>CC BY-NC</strong></td>
-                                <td>Atribución + NoComercial</td>
-                                <td>✗ No</td>
-                                <td>✓ Sí</td>
-                            </tr>
-                            <tr>
-                                <td><strong>CC BY-ND</strong></td>
-                                <td>Atribución + SinDerivadas</td>
-                                <td>✓ Sí</td>
-                                <td>✗ No</td>
-                            </tr>
-                            <tr>
-                                <td><strong>CC BY-NC-SA</strong></td>
-                                <td>Atribución + NC + SA</td>
-                                <td>✗ No</td>
-                                <td>✓ Bajo misma licencia</td>
-                            </tr>
-                            <tr>
-                                <td><strong>CC BY-NC-ND</strong></td>
-                                <td>La más restrictiva</td>
-                                <td>✗ No</td>
-                                <td>✗ No</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h4><i class="fas fa-exclamation-triangle"></i> Desafío Actual</h4>
+                    <p>La patentabilidad de invenciones generadas por IA es un tema de debate. Actualmente, la mayoría de jurisdicciones requieren que el <strong>inventor sea una persona natural</strong>, no una máquina. El caso DABUS ha sido rechazado en múltiples países.</p>
                 </div>
             </div>
         `
     },
     
     'tema4-5': {
-        title: '4.5 Licenciamiento de Software',
+        title: '4.5 Licencias Tecnológicas',
         content: `
             <div class="content-section">
-                <h3><i class="fas fa-code"></i> El Software como Obra Protegida</h3>
-                <p>El <strong>software</strong> está protegido por Derecho de Autor como obra literaria. Esta protección cubre el <strong>código fuente</strong> y el <strong>código objeto</strong>, pero no los conceptos, algoritmos o funcionalidades subyacentes.</p>
+                <h3><i class="fas fa-file-contract"></i> ¿Qué son las Licencias Tecnológicas?</h3>
+                <p>Una <strong>licencia tecnológica</strong> es un contrato mediante el cual el titular de derechos de propiedad intelectual autoriza a un tercero a utilizar su tecnología bajo condiciones específicas. Es el mecanismo principal para la <strong>transferencia de tecnología</strong> y la comercialización de innovaciones.</p>
+                
+                <p>Las licencias tecnológicas permiten monetizar la PI sin perder la titularidad, a diferencia de la cesión donde se transfieren los derechos.</p>
                 
                 <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> Protección Dual</h4>
-                    <p>El software puede recibir protección complementaria:</p>
-                    <ul>
-                        <li><strong>Derecho de Autor:</strong> Protege la expresión del código</li>
-                        <li><strong>Patentes:</strong> Protegen invenciones técnicas implementadas en software</li>
-                        <li><strong>Secreto Industrial:</strong> Protege algoritmos y código no divulgado</li>
-                    </ul>
+                    <h4><i class="fas fa-info-circle"></i> Importancia Estratégica</h4>
+                    <p>Las licencias son fundamentales para startups y empresas tecnológicas que buscan <strong>escalar globalmente</strong>, generar ingresos por regalías, o acceder a tecnologías complementarias mediante licencias cruzadas.</p>
                 </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-th-list"></i> Tipos de Licencias de Software</h3>
+                <h3><i class="fas fa-th-list"></i> Tipos de Licencias Tecnológicas</h3>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-user-lock"></i>
+                            <h4>Licencia Exclusiva</h4>
+                        </div>
+                        <p>Solo el licenciatario puede explotar la tecnología en el territorio y campo acordados. Ni siquiera el licenciante puede usarla.</p>
+                        <p class="example">Mayor valor, mayor compromiso del licenciatario.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-users"></i>
+                            <h4>Licencia No Exclusiva</h4>
+                        </div>
+                        <p>El licenciante puede otorgar múltiples licencias a diferentes partes y seguir explotando la tecnología.</p>
+                        <p class="example">Mayor alcance de mercado, menores regalías por licencia.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-user-check"></i>
+                            <h4>Licencia Única</h4>
+                        </div>
+                        <p>Solo un licenciatario, pero el licenciante <strong>se reserva el derecho</strong> de explotar también la tecnología.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-exchange-alt"></i>
+                            <h4>Licencia Cruzada</h4>
+                        </div>
+                        <p>Dos partes se otorgan mutuamente licencias sobre sus respectivas tecnologías. Común entre grandes empresas tecnológicas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-clipboard-list"></i> Elementos de un Contrato de Licencia</h3>
+                <p>Un contrato de licencia tecnológica debe incluir:</p>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-file-alt"></i> Elementos Esenciales</h4>
+                        <ul>
+                            <li><strong>Objeto:</strong> Descripción de la tecnología licenciada</li>
+                            <li><strong>Alcance:</strong> Usos permitidos y prohibidos</li>
+                            <li><strong>Territorio:</strong> Ámbito geográfico</li>
+                            <li><strong>Duración:</strong> Plazo de la licencia</li>
+                            <li><strong>Exclusividad:</strong> Tipo de licencia</li>
+                            <li><strong>Contraprestación:</strong> Regalías o pago fijo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-shield-alt"></i> Cláusulas Importantes</h4>
+                        <ul>
+                            <li><strong>Sublicenciamiento:</strong> Permitido o prohibido</li>
+                            <li><strong>Mejoras:</strong> Titularidad de desarrollos derivados</li>
+                            <li><strong>Auditoría:</strong> Verificación de cumplimiento</li>
+                            <li><strong>Confidencialidad:</strong> Protección de know-how</li>
+                            <li><strong>Garantías:</strong> Titularidad y no infracción</li>
+                            <li><strong>Terminación:</strong> Causales y consecuencias</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-coins"></i> Modelos de Compensación</h3>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Descripción</th>
+                                <th>Uso Típico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Regalías</strong></td>
+                                <td>Porcentaje sobre ventas o ingresos</td>
+                                <td>Productos de consumo masivo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pago Fijo (Lump Sum)</strong></td>
+                                <td>Pago único por la licencia</td>
+                                <td>Tecnologías maduras</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pago Inicial + Regalías</strong></td>
+                                <td>Combinación de ambos modelos</td>
+                                <td>Licencias exclusivas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mínimo Garantizado</strong></td>
+                                <td>Regalías con piso mínimo</td>
+                                <td>Protección del licenciante</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Por Usuario/Dispositivo</strong></td>
+                                <td>Pago por unidad de uso</td>
+                                <td>Software y SaaS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-code"></i> Licencias de Software</h3>
+                <p>El software tiene modelos de licenciamiento específicos:</p>
                 
                 <div class="info-cards-grid">
                     <div class="info-card">
@@ -2558,138 +3042,51 @@ const courseContent = {
                             <i class="fas fa-lock"></i>
                             <h4>Software Propietario</h4>
                         </div>
-                        <p>El código fuente <strong>no está disponible</strong>. El usuario adquiere una licencia de uso limitado.</p>
-                        <p class="example">Ejemplos: Microsoft Office, Adobe Photoshop, Windows</p>
+                        <p>Código cerrado, licencia de uso limitado. El usuario no puede modificar ni redistribuir.</p>
+                        <p class="example">Ejemplos: Microsoft Office, Adobe Creative Cloud</p>
                     </div>
                     
                     <div class="info-card">
                         <div class="info-card-header">
                             <i class="fas fa-unlock"></i>
-                            <h4>Software Libre</h4>
+                            <h4>Software Libre/Open Source</h4>
                         </div>
-                        <p>Garantiza las <strong>cuatro libertades</strong>: usar, estudiar, modificar y redistribuir.</p>
-                        <p class="example">Ejemplos: Linux, Firefox, LibreOffice</p>
+                        <p>Código abierto con diferentes niveles de restricción según la licencia.</p>
+                        <p class="example">Licencias: MIT, Apache 2.0, GPL, LGPL</p>
                     </div>
                     
                     <div class="info-card">
                         <div class="info-card-header">
-                            <i class="fas fa-code-branch"></i>
-                            <h4>Open Source</h4>
+                            <i class="fas fa-cloud"></i>
+                            <h4>SaaS (Software as a Service)</h4>
                         </div>
-                        <p>El código fuente está <strong>disponible públicamente</strong>. Enfoque más pragmático que el software libre.</p>
-                        <p class="example">Ejemplos: Apache, MySQL, Python</p>
+                        <p>Acceso al software como servicio en la nube, sin instalación local.</p>
+                        <p class="example">Ejemplos: Salesforce, Google Workspace, Slack</p>
                     </div>
                     
                     <div class="info-card">
                         <div class="info-card-header">
-                            <i class="fas fa-gift"></i>
-                            <h4>Freeware</h4>
+                            <i class="fas fa-share-alt"></i>
+                            <h4>Copyleft</h4>
                         </div>
-                        <p>Gratuito pero <strong>sin acceso al código</strong>. El autor mantiene todos los derechos.</p>
-                        <p class="example">Ejemplos: Skype, WhatsApp Desktop</p>
+                        <p>Obliga a compartir modificaciones bajo la misma licencia (GPL).</p>
+                        <p class="example">Linux kernel, WordPress</p>
                     </div>
                 </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-file-alt"></i> Licencias Open Source Principales</h3>
-                
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Licencia</th>
-                                <th>Tipo</th>
-                                <th>Copyleft</th>
-                                <th>Uso en Proyectos Comerciales</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>MIT</strong></td>
-                                <td>Permisiva</td>
-                                <td>No</td>
-                                <td>✓ Sin restricciones</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Apache 2.0</strong></td>
-                                <td>Permisiva</td>
-                                <td>No</td>
-                                <td>✓ Sin restricciones</td>
-                            </tr>
-                            <tr>
-                                <td><strong>BSD</strong></td>
-                                <td>Permisiva</td>
-                                <td>No</td>
-                                <td>✓ Sin restricciones</td>
-                            </tr>
-                            <tr>
-                                <td><strong>GPL v3</strong></td>
-                                <td>Copyleft fuerte</td>
-                                <td>Sí</td>
-                                <td>⚠ Requiere liberar código derivado</td>
-                            </tr>
-                            <tr>
-                                <td><strong>LGPL</strong></td>
-                                <td>Copyleft débil</td>
-                                <td>Parcial</td>
-                                <td>✓ Permite enlazar sin liberar</td>
-                            </tr>
-                            <tr>
-                                <td><strong>AGPL</strong></td>
-                                <td>Copyleft fuerte</td>
-                                <td>Sí (SaaS)</td>
-                                <td>⚠ Aplica también a uso en red</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-share-alt"></i> El Concepto de Copyleft</h3>
-                <p>El <strong>copyleft</strong> es un mecanismo legal que usa el Derecho de Autor para garantizar que una obra y sus derivados permanezcan libres:</p>
+                <h3><i class="fas fa-robot"></i> Licencias en Inteligencia Artificial</h3>
+                <p>Los proyectos de IA tienen consideraciones especiales:</p>
                 
                 <ul>
-                    <li>Si usas código con copyleft, <strong>debes compartir tu código</strong> bajo la misma licencia</li>
-                    <li>Las licencias <strong>permisivas</strong> (MIT, Apache) no tienen esta restricción</li>
-                    <li>La <strong>GPL</strong> es la licencia copyleft más conocida</li>
-                    <li>La <strong>AGPL</strong> extiende el copyleft al uso en servicios en red (SaaS)</li>
+                    <li><strong>Código:</strong> Generalmente bajo licencias open source (Apache 2.0, MIT)</li>
+                    <li><strong>Modelos entrenados:</strong> Licencias específicas que pueden restringir usos comerciales o dañinos</li>
+                    <li><strong>Datasets:</strong> Requieren verificar derechos sobre los datos</li>
                 </ul>
-                
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Precaución para Empresas</h4>
-                    <p>Usar código GPL en un proyecto propietario puede obligar a liberar todo el código del proyecto. Es esencial realizar <strong>auditorías de licencias</strong> antes de incorporar dependencias open source.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-robot"></i> Licenciamiento en Proyectos de IA</h3>
-                <p>Los proyectos de IA tienen consideraciones especiales de licenciamiento:</p>
-                
-                <div class="two-column-grid">
-                    <div class="column-box">
-                        <h4><i class="fas fa-code"></i> Código</h4>
-                        <ul>
-                            <li>Frameworks (TensorFlow, PyTorch): Apache 2.0</li>
-                            <li>Librerías auxiliares: Verificar cada una</li>
-                            <li>Código propio: Elegir licencia estratégicamente</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="column-box">
-                        <h4><i class="fas fa-brain"></i> Modelos y Datos</h4>
-                        <ul>
-                            <li>Pesos del modelo: ¿Obra derivada?</li>
-                            <li>Datos de entrenamiento: Derechos sobre datos</li>
-                            <li>Licencias específicas (Hugging Face, etc.)</li>
-                        </ul>
-                    </div>
-                </div>
                 
                 <div class="highlight-box">
                     <h4><i class="fas fa-balance-scale"></i> Licencias de IA Emergentes</h4>
-                    <p>Han surgido licencias específicas para modelos de IA como:</p>
                     <ul>
                         <li><strong>OpenRAIL:</strong> Permite uso pero prohíbe ciertos usos dañinos</li>
                         <li><strong>Llama 2 License:</strong> Uso comercial con restricciones de escala</li>
@@ -2697,17 +3094,52 @@ const courseContent = {
                     </ul>
                 </div>
             </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-handshake"></i> Mejores Prácticas</h3>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">1</div>
+                        <h4>Due Diligence</h4>
+                        <p>Verificar titularidad, libertad de operación y validez de los derechos de PI antes de negociar.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">2</div>
+                        <h4>Definir Alcance</h4>
+                        <p>Especificar claramente territorio, campo de uso, exclusividad y duración.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">3</div>
+                        <h4>Valoración</h4>
+                        <p>Determinar el valor justo de la tecnología usando métodos reconocidos.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">4</div>
+                        <h4>Documentar</h4>
+                        <p>Formalizar por escrito todos los términos, incluyendo resolución de disputas.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Auditoría de Licencias</h4>
+                    <p>Antes de incorporar código de terceros en proyectos comerciales, es esencial realizar una <strong>auditoría de licencias</strong> para identificar obligaciones y riesgos, especialmente con licencias copyleft como GPL.</p>
+                </div>
+            </div>
         `
     },
     
     'quiz4': {
-        title: 'Cuestionario Unidad 4: Derechos de Autor',
+        title: 'Cuestionario Unidad 4: Derecho de Autor y Conexos',
         type: 'quiz',
         content: `
             <div class="quiz-content">
                 <div class="quiz-header">
                     <h3><i class="fas fa-clipboard-check"></i> Cuestionario de Evaluación</h3>
-                    <p>Unidad 4: Derechos de Autor</p>
+                    <p>Unidad 4: Derecho de Autor y Conexos</p>
                 </div>
                 
                 <div class="quiz-value">
@@ -2768,15 +3200,692 @@ const courseContent = {
     },
     
     // =============================================
-    // UNIDAD 5: PROTECCIÓN Y APLICACIÓN DE LA PI
+    // UNIDAD 5: PI Y SU APLICACIÓN
     // =============================================
     
     'tema5-1': {
-        title: '5.1 Infracciones a la Propiedad Intelectual',
+        title: '5.1 Marcas y Secretos Industriales',
         content: `
             <div class="content-section">
-                <h3><i class="fas fa-exclamation-triangle"></i> Tipos de Infracciones</h3>
-                <p>Las <strong>infracciones a la propiedad intelectual</strong> son actos que vulneran los derechos exclusivos del titular sin su autorización. Estas violaciones pueden afectar tanto derechos de autor como derechos de propiedad industrial, y tienen consecuencias legales significativas.</p>
+                <h3><i class="fas fa-trademark"></i> Las Marcas en la Práctica Empresarial</h3>
+                <p>Las <strong>marcas</strong> son signos distintivos que identifican productos o servicios en el mercado, diferenciándolos de los de la competencia. Son activos estratégicos fundamentales para cualquier empresa.</p>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-lightbulb"></i> Valor de la Marca</h4>
+                    <p>Las marcas pueden valer más que los activos físicos de una empresa. Según Interbrand, Apple vale más de <strong>$400 mil millones USD</strong> solo como marca, y Coca-Cola más de <strong>$80 mil millones USD</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-building"></i> Estrategias de Marca</h3>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-star"></i>
+                            <h4>Marca Única</h4>
+                        </div>
+                        <p>Una sola marca para todos los productos de la empresa.</p>
+                        <p class="example">Ejemplo: Apple (iPhone, iPad, MacBook, Apple Watch)</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-layer-group"></i>
+                            <h4>Marcas Múltiples</h4>
+                        </div>
+                        <p>Diferentes marcas para diferentes líneas de productos.</p>
+                        <p class="example">Ejemplo: P&G (Tide, Pampers, Gillette, Pantene)</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-sitemap"></i>
+                            <h4>Marca Paraguas</h4>
+                        </div>
+                        <p>Marca corporativa + submarcas por producto.</p>
+                        <p class="example">Ejemplo: Google (Gmail, Google Maps, Google Drive)</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Co-branding</h4>
+                        </div>
+                        <p>Alianzas entre marcas para crear productos conjuntos.</p>
+                        <p class="example">Ejemplo: Nike + Apple Watch, GoPro + Red Bull</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-shield-alt"></i> Protección de Marcas</h3>
+                <p>Para mantener una marca fuerte y protegida, se debe:</p>
+                
+                <ul>
+                    <li><strong>Vigilancia del mercado:</strong> Monitorear uso no autorizado por terceros</li>
+                    <li><strong>Acciones de defensa:</strong> Oposiciones, nulidades, demandas por infracción</li>
+                    <li><strong>Renovación oportuna:</strong> Cada 10 años ante el IMPI</li>
+                    <li><strong>Uso consistente:</strong> Mantener el uso comercial activo</li>
+                    <li><strong>Licenciamiento controlado:</strong> Franquicias con control de calidad</li>
+                </ul>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Riesgo de Genericidad</h4>
+                    <p>Si una marca se vuelve genérica (usada para describir la categoría de producto), puede perder protección. Ejemplos históricos: aspirina, escalera mecánica, zipper. Evítalo usando la marca como adjetivo, no como sustantivo.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-user-secret"></i> Secretos Industriales</h3>
+                <p>Los <strong>secretos industriales</strong> son información confidencial que da ventaja competitiva a quien la posee. A diferencia de las patentes, no requieren registro pero exigen medidas activas de protección.</p>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Característica</th>
+                                <th>Secreto Industrial</th>
+                                <th>Patente</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Registro</strong></td>
+                                <td>No requiere registro</td>
+                                <td>Registro obligatorio ante IMPI</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Duración</strong></td>
+                                <td>Indefinida (mientras se mantenga secreto)</td>
+                                <td>20 años máximo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Requisitos</strong></td>
+                                <td>Confidencialidad y medidas de protección</td>
+                                <td>Novedad, actividad inventiva, aplicación industrial</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Divulgación</strong></td>
+                                <td>Pierde protección al divulgarse</td>
+                                <td>Se publica para obtener protección</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ingeniería inversa</strong></td>
+                                <td>Es legal analizarlo y copiarlo</td>
+                                <td>Está prohibido sin licencia</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-lock"></i> Medidas de Protección de Secretos</h3>
+                <p>Para que un secreto industrial tenga protección legal, debe haber:</p>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">1</div>
+                        <h4>Identificación</h4>
+                        <p>Clasificar qué información es confidencial y documentarla adecuadamente.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">2</div>
+                        <h4>Restricción de Acceso</h4>
+                        <p>Limitar el acceso solo a personas autorizadas con necesidad de conocer.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">3</div>
+                        <h4>Acuerdos de Confidencialidad</h4>
+                        <p>NDAs con empleados, proveedores, socios y cualquier persona con acceso.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">4</div>
+                        <h4>Medidas Técnicas</h4>
+                        <p>Contraseñas, cifrado, servidores seguros, control de documentos.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-flask"></i> Ejemplo Famoso: Coca-Cola</h4>
+                    <p>La fórmula de Coca-Cola se ha mantenido como secreto industrial por más de 130 años. Supuestamente solo dos ejecutivos conocen la fórmula completa, y nunca viajan juntos. Si hubieran optado por patentarla, habría expirado hace más de un siglo.</p>
+                </div>
+            </div>
+        `
+    },
+    
+    'tema5-2': {
+        title: '5.2 Protección de la Propiedad Intelectual',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-shield-alt"></i> 5.2.1 Estrategias de Protección</h3>
+                <p>La <strong>protección efectiva de la PI</strong> requiere una estrategia integral que combine diferentes mecanismos legales, técnicos y administrativos adaptados a cada tipo de activo intelectual.</p>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-lightbulb"></i> Importancia de la Protección</h4>
+                    <p>Una estrategia de PI bien diseñada puede convertir creaciones intangibles en ventajas competitivas duraderas, generar ingresos por licenciamiento, atraer inversiones y disuadir a competidores de copiar innovaciones.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-clipboard-list"></i> Etapas de una Estrategia de Protección</h3>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">1</div>
+                        <h4>Identificación</h4>
+                        <p>Realizar un inventario de todos los activos de PI: marcas, invenciones, diseños, obras, secretos, software, bases de datos.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">2</div>
+                        <h4>Clasificación</h4>
+                        <p>Evaluar cada activo: importancia estratégica, valor comercial, vulnerabilidad a copia, vida útil esperada.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">3</div>
+                        <h4>Selección del Mecanismo</h4>
+                        <p>Elegir la protección adecuada: patente, modelo de utilidad, diseño industrial, marca, secreto, derecho de autor.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">4</div>
+                        <h4>Registro</h4>
+                        <p>Tramitar los registros ante las autoridades competentes (IMPI, INDAUTOR) o implementar medidas de protección.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">5</div>
+                        <h4>Vigilancia</h4>
+                        <p>Monitorear el mercado para detectar infracciones, solicitudes de registro de terceros, y amenazas competitivas.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">6</div>
+                        <h4>Defensa</h4>
+                        <p>Actuar contra infractores mediante procedimientos administrativos, civiles o penales según el caso.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-balance-scale"></i> Comparativa de Mecanismos de Protección</h3>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mecanismo</th>
+                                <th>Protege</th>
+                                <th>Duración</th>
+                                <th>Costo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Patente</strong></td>
+                                <td>Invenciones técnicas</td>
+                                <td>20 años</td>
+                                <td>Alto</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modelo de Utilidad</strong></td>
+                                <td>Mejoras técnicas menores</td>
+                                <td>10 años</td>
+                                <td>Medio</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Diseño Industrial</strong></td>
+                                <td>Apariencia estética</td>
+                                <td>25 años</td>
+                                <td>Medio</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Marca</strong></td>
+                                <td>Signos distintivos</td>
+                                <td>Indefinida (renovable)</td>
+                                <td>Bajo-Medio</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Derecho de Autor</strong></td>
+                                <td>Obras creativas</td>
+                                <td>Vida + 100 años</td>
+                                <td>Bajo (automático)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Secreto Industrial</strong></td>
+                                <td>Información confidencial</td>
+                                <td>Indefinida</td>
+                                <td>Variable (medidas)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-building"></i> Protección Empresarial</h3>
+                <p>Las empresas deben implementar políticas internas de protección de PI:</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-file-contract"></i>
+                            <h4>Contratos Laborales</h4>
+                        </div>
+                        <p>Cláusulas de cesión de derechos sobre creaciones desarrolladas en el trabajo.</p>
+                        <p class="example">Incluir: invenciones, software, diseños, mejoras</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-user-secret"></i>
+                            <h4>NDAs</h4>
+                        </div>
+                        <p>Acuerdos de confidencialidad con empleados, proveedores y socios comerciales.</p>
+                        <p class="example">Definir: información protegida, duración, excepciones</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Políticas de Software</h4>
+                        </div>
+                        <p>Reglas sobre uso de código open source y desarrollo de software propietario.</p>
+                        <p class="example">Auditorías de licencias, compatibilidad GPL</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Capacitación</h4>
+                        </div>
+                        <p>Formar al personal sobre la importancia y manejo de la PI de la empresa.</p>
+                        <p class="example">Cursos, manuales, protocolos de seguridad</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-globe"></i> Protección Internacional</h3>
+                <p>Para proteger PI en múltiples países, existen sistemas internacionales:</p>
+                
+                <ul>
+                    <li><strong>PCT (Patent Cooperation Treaty):</strong> Solicitud única para patentes en más de 150 países</li>
+                    <li><strong>Sistema de Madrid:</strong> Registro internacional de marcas en más de 120 países</li>
+                    <li><strong>Sistema de La Haya:</strong> Protección de diseños industriales en múltiples jurisdicciones</li>
+                    <li><strong>Convenio de Berna:</strong> Protección automática de derechos de autor sin registro</li>
+                </ul>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Consideración Importante</h4>
+                    <p>Aunque estos sistemas facilitan la solicitud, la <strong>protección sigue siendo territorial</strong>. Cada país examina y otorga los derechos según su propia ley. El costo de protección global puede ser muy alto.</p>
+                </div>
+            </div>
+        `
+    },
+    
+    'tema5-3': {
+        title: '5.3 Herramientas de Registro',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-building"></i> 5.3.1 Instituto Mexicano de la Propiedad Industrial (IMPI)</h3>
+                <p>El <strong>IMPI</strong> es la autoridad responsable de administrar el sistema de propiedad industrial en México. Depende de la Secretaría de Economía.</p>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-trademark"></i>
+                            <h4>Marcas</h4>
+                        </div>
+                        <p>Registro, renovación y protección de marcas, avisos comerciales y nombres comerciales.</p>
+                        <p class="example">Vigencia: 10 años renovables</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Patentes</h4>
+                        </div>
+                        <p>Otorgamiento de patentes para invenciones y modelos de utilidad.</p>
+                        <p class="example">Vigencia: 20 años (patentes), 10 años (modelos)</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-palette"></i>
+                            <h4>Diseños Industriales</h4>
+                        </div>
+                        <p>Registro de dibujos y modelos industriales.</p>
+                        <p class="example">Vigencia: 5 años, renovable hasta 25 años</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-gavel"></i>
+                            <h4>Defensa</h4>
+                        </div>
+                        <p>Procedimientos de infracción, nulidad y cancelación.</p>
+                        <p class="example">Visitas de inspección y sanciones</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-laptop"></i> Servicios en Línea del IMPI</h3>
+                <p>El IMPI ofrece diversos servicios digitales:</p>
+                
+                <ul>
+                    <li><strong>MARCANET:</strong> Base de datos de marcas registradas y en trámite</li>
+                    <li><strong>SIGA:</strong> Sistema de gestión de solicitudes en línea</li>
+                    <li><strong>VIDOC:</strong> Visor de documentos de expedientes</li>
+                    <li><strong>Calculadora de tarifas:</strong> Estimación de costos de trámites</li>
+                    <li><strong>Gaceta de la PI:</strong> Publicación oficial de solicitudes y registros</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-link"></i> Portal IMPI</h4>
+                    <p>Acceso a todos los servicios en: <strong>www.gob.mx/impi</strong></p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-copyright"></i> 5.3.2 Instituto Nacional del Derecho de Autor (INDAUTOR)</h3>
+                <p>El <strong>INDAUTOR</strong> es la autoridad encargada de proteger y fomentar el derecho de autor en México. Depende de la Secretaría de Cultura.</p>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-file-alt"></i> Servicios de Registro</h4>
+                        <ul>
+                            <li>Registro de obras literarias y artísticas</li>
+                            <li>Registro de contratos (cesión, licencia)</li>
+                            <li>Reservas de derechos al uso exclusivo</li>
+                            <li>ISBN para publicaciones</li>
+                            <li>ISSN para publicaciones periódicas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-shield-alt"></i> Funciones de Protección</h4>
+                        <ul>
+                            <li>Procedimientos de infracción</li>
+                            <li>Avenencia (mediación entre partes)</li>
+                            <li>Arbitraje en materia de derechos de autor</li>
+                            <li>Supervisión de sociedades de gestión colectiva</li>
+                            <li>Expedición de constancias</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
+                    <p>El registro ante INDAUTOR es <strong>declarativo, no constitutivo</strong>. El derecho de autor nace automáticamente al crear la obra; el registro solo sirve como prueba de titularidad y fecha de creación.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-globe"></i> 5.3.3 Organización Mundial de la Propiedad Intelectual (OMPI)</h3>
+                <p>La <strong>OMPI</strong> (WIPO en inglés) es el organismo de las Naciones Unidas dedicado a promover y proteger la PI a nivel mundial.</p>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number"><i class="fas fa-file-signature"></i></div>
+                        <h4>Sistema PCT</h4>
+                        <p>Solicitud única de patente con efecto en más de 150 países. Simplifica el proceso internacional.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number"><i class="fas fa-trademark"></i></div>
+                        <h4>Sistema de Madrid</h4>
+                        <p>Registro internacional de marcas en más de 120 países con una sola solicitud.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number"><i class="fas fa-palette"></i></div>
+                        <h4>Sistema de La Haya</h4>
+                        <p>Registro internacional de diseños industriales en múltiples jurisdicciones.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number"><i class="fas fa-balance-scale"></i></div>
+                        <h4>Centro de Arbitraje</h4>
+                        <p>Resolución de disputas de PI, incluyendo conflictos de nombres de dominio.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-database"></i> Bases de Datos de la OMPI</h3>
+                <p>La OMPI ofrece bases de datos gratuitas para búsqueda de PI:</p>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Base de Datos</th>
+                                <th>Contenido</th>
+                                <th>Uso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>PATENTSCOPE</strong></td>
+                                <td>Más de 100 millones de documentos de patentes</td>
+                                <td>Búsqueda de estado de la técnica</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Global Brand Database</strong></td>
+                                <td>Más de 50 millones de marcas</td>
+                                <td>Verificar disponibilidad de marcas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hague Express</strong></td>
+                                <td>Diseños industriales internacionales</td>
+                                <td>Búsqueda de diseños registrados</td>
+                            </tr>
+                            <tr>
+                                <td><strong>WIPO Lex</strong></td>
+                                <td>Legislación de PI de todos los países</td>
+                                <td>Consulta de leyes y tratados</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-search"></i> Búsquedas de Anterioridades</h4>
+                    <p>Antes de solicitar una patente o marca, es esencial hacer <strong>búsquedas de anterioridades</strong> para verificar que no exista algo similar ya registrado. Esto evita rechazos y gastos innecesarios.</p>
+                </div>
+            </div>
+        `
+    },
+    
+    'tema5-4': {
+        title: '5.4 Inteligencia Artificial y Propiedad Intelectual',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-robot"></i> 5.4.1 IA como Herramienta de Creación</h3>
+                <p>La <strong>Inteligencia Artificial</strong> está revolucionando la creación de contenido, planteando nuevos desafíos para el sistema de propiedad intelectual.</p>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-question-circle"></i> La Pregunta Central</h4>
+                    <p>¿Quién es el "autor" de una obra generada por IA? ¿El programador? ¿El usuario que dio el prompt? ¿La empresa que desarrolló la IA? ¿O la IA misma?</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-palette"></i> Contenido Generado por IA</h3>
+                
+                <div class="info-cards-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-image"></i>
+                            <h4>Imágenes</h4>
+                        </div>
+                        <p>Generadores como DALL-E, Midjourney, Stable Diffusion crean imágenes a partir de descripciones textuales.</p>
+                        <p class="example">Uso: arte, publicidad, diseño, ilustraciones</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-file-alt"></i>
+                            <h4>Texto</h4>
+                        </div>
+                        <p>Modelos como GPT-4, Claude, Gemini generan texto coherente sobre cualquier tema.</p>
+                        <p class="example">Uso: artículos, código, traducciones, resúmenes</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-music"></i>
+                            <h4>Música</h4>
+                        </div>
+                        <p>Herramientas como Suno, Udio, AIVA componen música en diversos estilos.</p>
+                        <p class="example">Uso: fondos musicales, jingles, composiciones</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-code"></i>
+                            <h4>Código</h4>
+                        </div>
+                        <p>Asistentes como GitHub Copilot, Cursor generan código funcional.</p>
+                        <p class="example">Uso: desarrollo de software, automatización</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-balance-scale"></i> 5.4.2 Protección de Creaciones de IA</h3>
+                <p>El estatus legal de las obras generadas por IA es aún incierto y varía por jurisdicción:</p>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Jurisdicción</th>
+                                <th>Posición Actual</th>
+                                <th>Implicaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Estados Unidos</strong></td>
+                                <td>No hay protección sin autor humano</td>
+                                <td>Obras 100% IA son dominio público</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Unión Europea</strong></td>
+                                <td>Requiere "creación intelectual propia"</td>
+                                <td>Debate sobre el rol del operador humano</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reino Unido</strong></td>
+                                <td>Protección para obras "computer-generated"</td>
+                                <td>Autor = quien hace los arreglos necesarios</td>
+                            </tr>
+                            <tr>
+                                <td><strong>México</strong></td>
+                                <td>No hay legislación específica</td>
+                                <td>Se aplican principios tradicionales de autoría</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-gavel"></i> Caso Thaler vs. USPTO (2023)</h4>
+                    <p>Un tribunal de EE.UU. confirmó que una obra de arte generada por la IA "DABUS" no puede recibir registro de copyright porque carece de autoría humana. El fallo establece que "la autoría humana es un requisito fundamental".</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-database"></i> 5.4.3 Uso de Datos para Entrenar IA</h3>
+                <p>El entrenamiento de modelos de IA usando obras protegidas genera controversias legales significativas:</p>
+                
+                <div class="two-column-grid">
+                    <div class="column-box">
+                        <h4><i class="fas fa-book"></i> Argumentos de los Creadores</h4>
+                        <ul>
+                            <li>El entrenamiento es una reproducción no autorizada</li>
+                            <li>Los modelos pueden generar obras "al estilo de"</li>
+                            <li>Se apropian del valor de millones de obras</li>
+                            <li>Competencia desleal con creadores humanos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-box">
+                        <h4><i class="fas fa-microchip"></i> Argumentos de las Empresas de IA</h4>
+                        <ul>
+                            <li>El entrenamiento es "fair use" (uso justo)</li>
+                            <li>No se copian obras, solo se aprenden patrones</li>
+                            <li>Es transformativo: crea algo nuevo</li>
+                            <li>Beneficia a la sociedad con nuevas herramientas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-gavel"></i> Demandas en Curso</h3>
+                <p>Diversos creadores han demandado a empresas de IA:</p>
+                
+                <ul>
+                    <li><strong>Getty Images vs. Stability AI:</strong> Por usar millones de imágenes protegidas para entrenar Stable Diffusion</li>
+                    <li><strong>Autores vs. OpenAI:</strong> Demandas de escritores (incluyendo Sarah Silverman, George R.R. Martin) por usar sus libros</li>
+                    <li><strong>Artistas vs. Midjourney:</strong> Demanda colectiva de artistas visuales</li>
+                    <li><strong>NYT vs. OpenAI:</strong> The New York Times demanda por uso de artículos periodísticos</li>
+                </ul>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Riesgo para Usuarios</h4>
+                    <p>Quienes usan contenido generado por IA pueden enfrentar riesgos si ese contenido infringe derechos de terceros. Algunas empresas de IA ofrecen indemnización, pero no todas.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-lightbulb"></i> Recomendaciones Prácticas</h3>
+                
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">1</div>
+                        <h4>Revisar Licencias</h4>
+                        <p>Verificar los términos de uso de cada herramienta de IA para entender qué derechos se obtienen sobre el contenido generado.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">2</div>
+                        <h4>Aportación Humana</h4>
+                        <p>Añadir creatividad y edición humana significativa al contenido generado por IA para fortalecer reclamaciones de autoría.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">3</div>
+                        <h4>Documentar Proceso</h4>
+                        <p>Guardar prompts, iteraciones y ediciones para demostrar la contribución creativa humana.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">4</div>
+                        <h4>Considerar Alternativas</h4>
+                        <p>Para usos críticos, considerar modelos entrenados solo con contenido con licencia o de dominio público.</p>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    'tema5-5': {
+        title: '5.5 Infracción a la Propiedad Intelectual',
+        content: `
+            <div class="content-section">
+                <h3><i class="fas fa-exclamation-triangle"></i> Tipos de Infracción</h3>
+                <p>Las <strong>infracciones a la propiedad intelectual</strong> son actos que vulneran los derechos exclusivos del titular sin su autorización. Conocer los tipos de infracción es fundamental para proteger y defender los activos de PI.</p>
                 
                 <div class="info-cards-grid">
                     <div class="info-card">
@@ -2803,7 +3912,7 @@ const courseContent = {
                             <h4>Falsificación</h4>
                         </div>
                         <p>Uso no autorizado de marcas registradas para hacer pasar productos como originales.</p>
-                        <p class="example">Ejemplos: bolsos "Louis Vuitton" falsos, relojes "Rolex" piratas, ropa deportiva falsificada.</p>
+                        <p class="example">Ejemplos: bolsos falsos, relojes piratas, ropa deportiva falsificada.</p>
                     </div>
                     
                     <div class="info-card">
@@ -2812,382 +3921,122 @@ const courseContent = {
                             <h4>Usurpación de Patentes</h4>
                         </div>
                         <p>Fabricar, usar o vender un producto o proceso patentado sin autorización del titular.</p>
-                        <p class="example">Ejemplos: copiar tecnología patentada, fabricar medicamentos genéricos sin licencia.</p>
+                        <p class="example">Ejemplos: copiar tecnología patentada, fabricar medicamentos sin licencia.</p>
                     </div>
                 </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-globe"></i> Piratería Digital</h3>
-                <p>En el entorno digital, las infracciones adquieren nuevas dimensiones:</p>
+                <h3><i class="fas fa-building"></i> Procedimientos Administrativos</h3>
+                <p>En México, las autoridades administrativas pueden sancionar infracciones de PI:</p>
                 
                 <div class="two-column-grid">
                     <div class="column-box">
-                        <h4><i class="fas fa-download"></i> Formas Comunes</h4>
+                        <h4><i class="fas fa-industry"></i> Ante IMPI</h4>
                         <ul>
-                            <li><strong>Descargas ilegales:</strong> torrents, sitios de descarga directa</li>
-                            <li><strong>Streaming no autorizado:</strong> sitios que retransmiten contenido sin licencia</li>
-                            <li><strong>Distribución P2P:</strong> compartir archivos protegidos</li>
-                            <li><strong>Cracking:</strong> eliminar protecciones de software</li>
-                            <li><strong>Keygens:</strong> generadores de claves de licencia falsas</li>
+                            <li>Solicitud de declaración de infracción</li>
+                            <li>Visitas de inspección</li>
+                            <li>Aseguramiento de productos</li>
+                            <li>Multas hasta 500,000 UMAs</li>
+                            <li>Clausura temporal o definitiva</li>
                         </ul>
                     </div>
                     
                     <div class="column-box">
-                        <h4><i class="fas fa-chart-line"></i> Impacto Económico</h4>
+                        <h4><i class="fas fa-copyright"></i> Ante INDAUTOR</h4>
                         <ul>
-                            <li>Pérdidas globales estimadas en <strong>$500 mil millones USD anuales</strong></li>
-                            <li>Destrucción de empleos en industrias creativas</li>
-                            <li>Desincentivo a la innovación y creación</li>
-                            <li>Riesgos de seguridad (malware en software pirata)</li>
-                            <li>Evasión fiscal a gran escala</li>
+                            <li>Procedimiento de avenencia (mediación)</li>
+                            <li>Procedimiento de infracción</li>
+                            <li>Arbitraje especializado</li>
+                            <li>Multas administrativas</li>
+                            <li>Suspensión de actividades</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-balance-scale"></i> Responsabilidad por Infracciones</h3>
-                <p>La responsabilidad por infracciones puede recaer en diferentes actores:</p>
+                <h3><i class="fas fa-balance-scale"></i> Acciones Civiles</h3>
+                <p>La vía civil permite obtener reparación económica por daños:</p>
                 
                 <div class="comparison-table">
                     <table>
                         <thead>
                             <tr>
-                                <th>Tipo de Responsable</th>
-                                <th>Descripción</th>
-                                <th>Ejemplo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Infractor Directo</strong></td>
-                                <td>Quien realiza directamente la infracción</td>
-                                <td>El que copia y vende software pirata</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Infractor Contributivo</strong></td>
-                                <td>Quien facilita o contribuye a la infracción de otro</td>
-                                <td>Sitio web que hospeda enlaces a contenido pirata</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Infractor Vicario</strong></td>
-                                <td>Quien tiene capacidad de control y beneficio económico</td>
-                                <td>Plataforma que lucra con publicidad de contenido infractor</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-gavel"></i> Caso MGM vs. Grokster (2005)</h4>
-                    <p>La Corte Suprema de EE.UU. estableció que los proveedores de tecnología pueden ser responsables si <strong>inducen activamente</strong> a los usuarios a infringir derechos de autor, incluso si la tecnología tiene usos legítimos.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-shield-alt"></i> Infracciones en el Ámbito Empresarial</h3>
-                <p>Las empresas enfrentan riesgos específicos de infracción:</p>
-                
-                <ul>
-                    <li><strong>Uso de software sin licencia:</strong> Auditorías de BSA/Software Alliance</li>
-                    <li><strong>Uso de imágenes de stock sin pagar:</strong> Getty Images, Shutterstock</li>
-                    <li><strong>Uso de fuentes tipográficas sin licencia:</strong> Adobe, Monotype</li>
-                    <li><strong>Código open source mal utilizado:</strong> Violaciones de GPL</li>
-                    <li><strong>Uso de música en publicidad:</strong> Sin licencia de sincronización</li>
-                </ul>
-                
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Riesgo Corporativo</h4>
-                    <p>Una auditoría de software puede resultar en multas de <strong>millones de pesos</strong>, además de obligar a comprar las licencias faltantes. Las empresas deben mantener registros de todas sus licencias.</p>
-                </div>
-            </div>
-        `
-    },
-    
-    'tema5-2': {
-        title: '5.2 Procedimientos Administrativos',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-building"></i> Autoridades Competentes en México</h3>
-                <p>En México, diferentes autoridades administrativas tienen competencia para conocer de infracciones a la PI:</p>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-industry"></i>
-                            <h4>IMPI</h4>
-                        </div>
-                        <p><strong>Instituto Mexicano de la Propiedad Industrial</strong></p>
-                        <ul>
-                            <li>Marcas y avisos comerciales</li>
-                            <li>Patentes y modelos de utilidad</li>
-                            <li>Diseños industriales</li>
-                            <li>Secretos industriales</li>
-                            <li>Denominaciones de origen</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-copyright"></i>
-                            <h4>INDAUTOR</h4>
-                        </div>
-                        <p><strong>Instituto Nacional del Derecho de Autor</strong></p>
-                        <ul>
-                            <li>Obras literarias y artísticas</li>
-                            <li>Programas de computación</li>
-                            <li>Bases de datos</li>
-                            <li>Derechos conexos</li>
-                            <li>Reservas de derechos</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-clipboard-list"></i> Procedimiento de Declaración Administrativa ante IMPI</h3>
-                <p>El procedimiento administrativo ante el IMPI sigue estas etapas:</p>
-                
-                <div class="phases-container">
-                    <div class="phase-box">
-                        <div class="phase-number">1</div>
-                        <h4>Solicitud</h4>
-                        <p>El titular presenta solicitud de declaración administrativa de infracción, acompañada de pruebas y documentación que acredite su derecho.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">2</div>
-                        <h4>Admisión</h4>
-                        <p>El IMPI analiza la solicitud y, si cumple requisitos, la admite y emplaza al presunto infractor para que conteste.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">3</div>
-                        <h4>Contestación</h4>
-                        <p>El presunto infractor tiene 10 días hábiles para contestar, ofrecer pruebas y presentar sus argumentos de defensa.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">4</div>
-                        <h4>Pruebas</h4>
-                        <p>Se abre un período probatorio de 20 días para el desahogo de pruebas ofrecidas por las partes.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">5</div>
-                        <h4>Alegatos</h4>
-                        <p>Las partes presentan sus alegatos finales por escrito.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">6</div>
-                        <h4>Resolución</h4>
-                        <p>El IMPI emite resolución declarando o no la existencia de infracción, e imponiendo las sanciones correspondientes.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-search"></i> Visitas de Inspección</h3>
-                <p>El IMPI tiene facultades para realizar <strong>visitas de inspección</strong> a establecimientos donde se sospeche que se cometen infracciones:</p>
-                
-                <ul>
-                    <li>Se requiere <strong>orden de visita</strong> emitida por el IMPI</li>
-                    <li>Pueden realizarse con o sin aviso previo al presunto infractor</li>
-                    <li>Los inspectores pueden revisar mercancías, documentos y equipo</li>
-                    <li>Pueden <strong>asegurar</strong> productos presuntamente infractores</li>
-                    <li>El acta de inspección es prueba fundamental en el procedimiento</li>
-                </ul>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> Importante</h4>
-                    <p>El titular de derechos puede solicitar visitas de inspección como medida preliminar, antes de iniciar el procedimiento formal de declaración de infracción.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-gavel"></i> Sanciones Administrativas</h3>
-                <p>Las sanciones que puede imponer el IMPI incluyen:</p>
-                
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Sanción</th>
+                                <th>Tipo de Daño</th>
                                 <th>Descripción</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Multa</strong></td>
-                                <td>Hasta <strong>500,000 UMAs</strong> (aproximadamente $54 millones de pesos)</td>
+                                <td><strong>Daño emergente</strong></td>
+                                <td>Pérdidas directamente sufridas por la infracción</td>
                             </tr>
                             <tr>
-                                <td><strong>Clausura temporal</strong></td>
-                                <td>Hasta 90 días del establecimiento infractor</td>
+                                <td><strong>Lucro cesante</strong></td>
+                                <td>Ganancias dejadas de percibir</td>
                             </tr>
                             <tr>
-                                <td><strong>Clausura definitiva</strong></td>
-                                <td>En casos de reincidencia grave</td>
+                                <td><strong>Regalía razonable</strong></td>
+                                <td>Lo que habría costado una licencia legítima</td>
                             </tr>
                             <tr>
-                                <td><strong>Decomiso</strong></td>
-                                <td>De productos, empaques, etiquetas infractores</td>
+                                <td><strong>Beneficios del infractor</strong></td>
+                                <td>Ganancias obtenidas ilegalmente por el infractor</td>
                             </tr>
                             <tr>
-                                <td><strong>Destrucción</strong></td>
-                                <td>De productos decomisados (a costa del infractor)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Arresto administrativo</strong></td>
-                                <td>Hasta 36 horas en caso de desacato</td>
+                                <td><strong>Daño moral</strong></td>
+                                <td>Afectación a la reputación y honor del titular</td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-shield-alt"></i> Medidas Provisionales</h3>
-                <p>El titular puede solicitar <strong>medidas provisionales</strong> urgentes antes o durante el procedimiento:</p>
-                
-                <ul>
-                    <li><strong>Cese inmediato</strong> de los actos que constituyan la infracción</li>
-                    <li><strong>Retiro de circulación</strong> de productos infractores</li>
-                    <li><strong>Aseguramiento</strong> de bienes relacionados con la infracción</li>
-                    <li><strong>Suspensión</strong> de servicios o contenidos en línea</li>
-                    <li><strong>Prohibición</strong> de importación de productos infractores</li>
-                </ul>
-                
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Requisitos</h4>
-                    <p>Para obtener medidas provisionales, el solicitante debe demostrar: 1) titularidad del derecho, 2) existencia de la infracción, y 3) posibilidad de daño irreparable. Generalmente se requiere otorgar una <strong>fianza</strong>.</p>
-                </div>
-            </div>
-        `
-    },
-    
-    'tema5-3': {
-        title: '5.3 Acciones Civiles y Penales',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-balance-scale"></i> Vía Civil</h3>
-                <p>La <strong>vía civil</strong> permite al titular obtener una reparación económica por los daños causados por la infracción. Se tramita ante juzgados civiles federales.</p>
-                
-                <div class="two-column-grid">
-                    <div class="column-box">
-                        <h4><i class="fas fa-hand-holding-usd"></i> Tipos de Indemnización</h4>
-                        <ul>
-                            <li><strong>Daño emergente:</strong> Pérdida sufrida directamente</li>
-                            <li><strong>Lucro cesante:</strong> Ganancia dejada de percibir</li>
-                            <li><strong>Daño moral:</strong> Afectación a reputación y honor</li>
-                            <li><strong>Regalías hipotéticas:</strong> Lo que habría costado la licencia</li>
-                            <li><strong>Beneficios del infractor:</strong> Ganancias obtenidas ilegalmente</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="column-box">
-                        <h4><i class="fas fa-file-invoice-dollar"></i> Otras Prestaciones</h4>
-                        <ul>
-                            <li><strong>Destrucción</strong> de productos infractores</li>
-                            <li><strong>Publicación</strong> de la sentencia</li>
-                            <li><strong>Costas procesales:</strong> Honorarios de abogados</li>
-                            <li><strong>Gastos de investigación:</strong> Detectives, peritos</li>
-                            <li><strong>Intereses legales:</strong> Sobre las cantidades adeudadas</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-calculator"></i> Cuantificación de Daños</h3>
-                <p>La cuantificación de daños en PI es compleja y puede hacerse por diferentes métodos:</p>
-                
-                <div class="phases-container">
-                    <div class="phase-box">
-                        <div class="phase-number">1</div>
-                        <h4>Ganancias Perdidas</h4>
-                        <p>Ventas que el titular habría realizado de no existir la infracción. Requiere demostrar causalidad directa.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">2</div>
-                        <h4>Regalía Razonable</h4>
-                        <p>Monto que un licenciatario habría pagado por usar legalmente el derecho. Se usa cuando las ganancias perdidas son difíciles de probar.</p>
-                    </div>
-                    
-                    <div class="phase-box">
-                        <div class="phase-number">3</div>
-                        <h4>Beneficios del Infractor</h4>
-                        <p>Ganancias obtenidas por el infractor gracias a la violación. El titular solo debe probar los ingresos; el infractor debe demostrar sus costos.</p>
-                    </div>
-                </div>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> Daños Estatutarios</h4>
-                    <p>En algunos países (como EE.UU.) existen <strong>daños estatutarios</strong> que permiten reclamar montos fijos sin necesidad de probar el daño real. En México, esta figura no existe, por lo que siempre debe probarse el daño.</p>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-gavel"></i> Vía Penal</h3>
-                <p>Las infracciones graves a la PI pueden constituir <strong>delitos</strong> perseguibles penalmente. Se tramitan ante el Ministerio Público Federal y juzgados penales.</p>
+                <p>Las infracciones graves pueden constituir <strong>delitos</strong> con penas de prisión:</p>
                 
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Delito</th>
-                                <th>Conducta</th>
-                                <th>Pena (Código Penal Federal)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Piratería de obras</strong></td>
-                                <td>Reproducir, distribuir o vender obras sin autorización</td>
-                                <td>2 a 10 años de prisión + multa</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Falsificación de marcas</strong></td>
-                                <td>Usar marcas registradas sin autorización con fines de lucro</td>
-                                <td>2 a 6 años de prisión + multa</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Revelación de secretos</strong></td>
-                                <td>Divulgar secretos industriales ajenos</td>
-                                <td>2 a 6 años de prisión + multa</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Usurpación de patentes</strong></td>
-                                <td>Fabricar productos patentados sin autorización</td>
-                                <td>2 a 6 años de prisión + multa</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Elusión de MTP</strong></td>
-                                <td>Romper medidas tecnológicas de protección</td>
-                                <td>3 a 10 años de prisión + multa</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <ul>
+                    <li><strong>Piratería de obras:</strong> 2 a 10 años de prisión + multa</li>
+                    <li><strong>Falsificación de marcas:</strong> 2 a 6 años de prisión + multa</li>
+                    <li><strong>Revelación de secretos industriales:</strong> 2 a 6 años de prisión</li>
+                    <li><strong>Usurpación de patentes:</strong> 2 a 6 años de prisión</li>
+                </ul>
+                
+                <div class="highlight-box warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Delitos de Querella</h4>
+                    <p>La mayoría de los delitos contra la PI son de <strong>querella</strong>, es decir, requieren que el titular presente formalmente la denuncia para iniciar la investigación.</p>
                 </div>
             </div>
             
             <div class="content-section">
-                <h3><i class="fas fa-users"></i> Delincuencia Organizada</h3>
-                <p>Cuando la piratería o falsificación se comete de forma organizada, pueden aplicarse las disposiciones de la <strong>Ley Federal contra la Delincuencia Organizada</strong>:</p>
+                <h3><i class="fas fa-shield-alt"></i> Medidas Preventivas</h3>
                 
-                <ul>
-                    <li>Penas aumentadas hasta en <strong>50%</strong></li>
-                    <li>Aplicación de <strong>extinción de dominio</strong></li>
-                    <li>Intervención de comunicaciones y técnicas especiales de investigación</li>
-                    <li>Posibilidad de testigos protegidos y colaboradores</li>
-                </ul>
-                
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Requisitos de Procedibilidad</h4>
-                    <p>La mayoría de los delitos contra la PI son de <strong>querella</strong>, es decir, requieren que el titular del derecho presente formalmente la denuncia. Solo algunos casos muy graves se persiguen de oficio.</p>
+                <div class="phases-container">
+                    <div class="phase-box">
+                        <div class="phase-number">1</div>
+                        <h4>Registrar</h4>
+                        <p>Mantener registros actualizados de marcas, patentes, diseños y obras.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">2</div>
+                        <h4>Vigilar</h4>
+                        <p>Monitorear el mercado en busca de posibles infracciones.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">3</div>
+                        <h4>Documentar</h4>
+                        <p>Preservar evidencia de titularidad y de cualquier infracción detectada.</p>
+                    </div>
+                    
+                    <div class="phase-box">
+                        <div class="phase-number">4</div>
+                        <h4>Actuar</h4>
+                        <p>Responder rápidamente ante infracciones con las vías legales disponibles.</p>
+                    </div>
                 </div>
             </div>
             
@@ -3198,331 +4047,12 @@ const courseContent = {
                 <ul>
                     <li>El titular puede registrar sus derechos ante la autoridad aduanera</li>
                     <li>La aduana notifica al titular cuando detecta mercancía sospechosa</li>
-                    <li>El titular tiene plazo corto para confirmar si hay infracción</li>
-                    <li>Si se confirma, las mercancías pueden ser destruidas</li>
-                    <li>Evita que productos falsificados entren al mercado</li>
-                </ul>
-            </div>
-        `
-    },
-    
-    'tema5-4': {
-        title: '5.4 Medidas Tecnológicas de Protección',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-lock"></i> ¿Qué son las Medidas Tecnológicas de Protección?</h3>
-                <p>Las <strong>Medidas Tecnológicas de Protección (MTP)</strong> son mecanismos técnicos diseñados para controlar el acceso y uso de obras protegidas por derecho de autor. También se conocen como <strong>DRM</strong> (Digital Rights Management).</p>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> Protección Legal</h4>
-                    <p>La <strong>elusión</strong> (burlar, hackear, crackear) de medidas tecnológicas está prohibida por ley, independientemente de si se comete otra infracción. En México está tipificada en la Ley Federal del Derecho de Autor.</p>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-th-list"></i> Tipos de Medidas Tecnológicas</h3>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-key"></i>
-                            <h4>Control de Acceso</h4>
-                        </div>
-                        <p>Impiden acceder al contenido sin autorización.</p>
-                        <ul>
-                            <li>Cifrado de contenido</li>
-                            <li>Contraseñas y autenticación</li>
-                            <li>Códigos de región (DVDs, consolas)</li>
-                            <li>Tokens de hardware</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-ban"></i>
-                            <h4>Control de Uso</h4>
-                        </div>
-                        <p>Restringen lo que se puede hacer con el contenido.</p>
-                        <ul>
-                            <li>Impedir copia</li>
-                            <li>Limitar reproducciones</li>
-                            <li>Bloquear impresión</li>
-                            <li>Fechas de expiración</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-fingerprint"></i>
-                            <h4>Marcas de Agua</h4>
-                        </div>
-                        <p>Identificadores invisibles o visibles en el contenido.</p>
-                        <ul>
-                            <li>Watermarks en imágenes</li>
-                            <li>Fingerprints en audio</li>
-                            <li>Códigos ocultos en video</li>
-                            <li>Metadatos embebidos</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-cloud"></i>
-                            <h4>Verificación en Línea</h4>
-                        </div>
-                        <p>Requieren conexión a servidores para funcionar.</p>
-                        <ul>
-                            <li>Activación de software</li>
-                            <li>Licencias flotantes</li>
-                            <li>Always-online DRM</li>
-                            <li>Validación periódica</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-gamepad"></i> DRM en la Industria</h3>
-                <p>Diferentes industrias usan distintos sistemas de DRM:</p>
-                
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Industria</th>
-                                <th>Sistema DRM</th>
-                                <th>Características</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Música</strong></td>
-                                <td>FairPlay (Apple), Widevine</td>
-                                <td>Streaming limitado, descargas con restricciones</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Video</strong></td>
-                                <td>Widevine, PlayReady, HDCP</td>
-                                <td>Resolución limitada según dispositivo, anti-captura</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Videojuegos</strong></td>
-                                <td>Denuvo, Steam DRM, Always-Online</td>
-                                <td>Verificación de licencia, anti-manipulación</td>
-                            </tr>
-                            <tr>
-                                <td><strong>E-books</strong></td>
-                                <td>Amazon DRM, Adobe DRM</td>
-                                <td>Dispositivos autorizados, no impresión</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Software</strong></td>
-                                <td>Dongles, licencias flotantes</td>
-                                <td>Activación, verificación periódica</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-balance-scale"></i> Debate sobre el DRM</h3>
-                
-                <div class="two-column-grid">
-                    <div class="column-box">
-                        <h4><i class="fas fa-thumbs-up"></i> Argumentos a Favor</h4>
-                        <ul>
-                            <li>Protege las inversiones de los creadores</li>
-                            <li>Permite nuevos modelos de negocio (suscripción, renta)</li>
-                            <li>Reduce la piratería casual</li>
-                            <li>Facilita la distribución digital segura</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="column-box">
-                        <h4><i class="fas fa-thumbs-down"></i> Argumentos en Contra</h4>
-                        <ul>
-                            <li>Limita los derechos de los usuarios legítimos</li>
-                            <li>Puede impedir usos legales (copia privada, accesibilidad)</li>
-                            <li>Problemas de interoperabilidad</li>
-                            <li>Obsolescencia tecnológica (servidores que cierran)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-unlock-alt"></i> Excepciones a la Protección Anti-Elusión</h3>
-                <p>La ley contempla algunas <strong>excepciones</strong> donde eludir MTP es legal:</p>
-                
-                <ul>
-                    <li><strong>Investigación en criptografía:</strong> Para analizar vulnerabilidades</li>
-                    <li><strong>Ingeniería inversa:</strong> Para lograr interoperabilidad (limitada)</li>
-                    <li><strong>Seguridad informática:</strong> Para probar sistemas de seguridad</li>
-                    <li><strong>Accesibilidad:</strong> Para personas con discapacidad</li>
-                    <li><strong>Bibliotecas y archivos:</strong> Para preservación</li>
+                    <li>Si se confirma infracción, las mercancías pueden ser decomisadas y destruidas</li>
+                    <li>Evita que productos falsificados entren al mercado nacional</li>
                 </ul>
                 
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Precaución</h4>
-                    <p>Estas excepciones son <strong>muy limitadas</strong> y específicas. Eludir DRM "para uso personal" o "porque ya pagué" generalmente <strong>no está permitido</strong>.</p>
-                </div>
-            </div>
-        `
-    },
-    
-    'tema5-5': {
-        title: '5.5 Casos Prácticos y Estrategias de Protección',
-        content: `
-            <div class="content-section">
-                <h3><i class="fas fa-briefcase"></i> Caso 1: Startup de Software</h3>
                 <div class="highlight-box">
-                    <h4>Situación</h4>
-                    <p>Una startup mexicana desarrolla una aplicación móvil innovadora. Meses después de su lanzamiento, descubren que una empresa china ha copiado la app casi idénticamente y la vende en tiendas de apps alternativas.</p>
-                </div>
-                
-                <h4>Análisis Legal:</h4>
-                <ul>
-                    <li><strong>Derechos afectados:</strong> Derecho de autor sobre el código, diseño de interfaz, posible marca registrada del nombre</li>
-                    <li><strong>Jurisdicción:</strong> El infractor está en China, complicando la aplicación de leyes mexicanas</li>
-                    <li><strong>Evidencia:</strong> Capturas de pantalla, comparativa de código si es posible, fechas de publicación</li>
-                </ul>
-                
-                <h4>Estrategia Recomendada:</h4>
-                <ol>
-                    <li><strong>Notificación a plataformas:</strong> Reportar a las tiendas de apps (DMCA takedown)</li>
-                    <li><strong>Registro de marca:</strong> Registrar marca en China si se planea operar allí</li>
-                    <li><strong>Documentación:</strong> Preservar toda evidencia de la infracción</li>
-                    <li><strong>Asesoría local:</strong> Contratar abogado en China para acciones locales</li>
-                </ol>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-store"></i> Caso 2: Falsificación de Productos</h3>
-                <div class="highlight-box">
-                    <h4>Situación</h4>
-                    <p>Una empresa detecta que en un mercado popular se venden productos con su marca registrada pero de calidad muy inferior. Los vendedores los ofrecen como "originales" a precios reducidos.</p>
-                </div>
-                
-                <h4>Análisis Legal:</h4>
-                <ul>
-                    <li><strong>Infracción:</strong> Uso no autorizado de marca registrada, competencia desleal</li>
-                    <li><strong>Riesgos adicionales:</strong> Daño a reputación, posibles riesgos de seguridad para consumidores</li>
-                    <li><strong>Autoridad competente:</strong> IMPI para vía administrativa</li>
-                </ul>
-                
-                <h4>Estrategia Recomendada:</h4>
-                <ol>
-                    <li><strong>Compra de muestra:</strong> Adquirir producto infractor como evidencia</li>
-                    <li><strong>Solicitar visita de inspección:</strong> Al IMPI para asegurar mercancía</li>
-                    <li><strong>Denuncia penal:</strong> Si la falsificación es a escala comercial</li>
-                    <li><strong>Campaña de concientización:</strong> Informar a consumidores cómo identificar originales</li>
-                </ol>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-music"></i> Caso 3: Uso de Música en Publicidad</h3>
-                <div class="highlight-box">
-                    <h4>Situación</h4>
-                    <p>Un músico independiente encuentra que una empresa de telecomunicaciones está usando su canción en un comercial de televisión nacional, sin haberle pedido permiso ni pagado regalías.</p>
-                </div>
-                
-                <h4>Análisis Legal:</h4>
-                <ul>
-                    <li><strong>Derechos afectados:</strong> Derechos patrimoniales (reproducción, comunicación pública), derechos morales (paternidad)</li>
-                    <li><strong>Tipo de licencia requerida:</strong> Licencia de sincronización (no cubierta por sociedades de gestión)</li>
-                    <li><strong>Cuantificación:</strong> Valor de mercado de una licencia similar</li>
-                </ul>
-                
-                <h4>Estrategia Recomendada:</h4>
-                <ol>
-                    <li><strong>Carta de cese:</strong> Enviar notificación formal exigiendo retiro del comercial</li>
-                    <li><strong>Negociación:</strong> Ofrecer licencia retroactiva con compensación</li>
-                    <li><strong>Demanda civil:</strong> Si no hay respuesta, demandar daños y perjuicios</li>
-                    <li><strong>INDAUTOR:</strong> Presentar denuncia administrativa</li>
-                </ol>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-shield-alt"></i> Estrategias Preventivas de Protección</h3>
-                <p>La mejor estrategia es <strong>prevenir</strong> las infracciones antes de que ocurran:</p>
-                
-                <div class="info-cards-grid">
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-file-signature"></i>
-                            <h4>Registro</h4>
-                        </div>
-                        <ul>
-                            <li>Registrar marcas, patentes y obras ante las autoridades</li>
-                            <li>Mantener registros actualizados (renovaciones)</li>
-                            <li>Extender protección a países donde se opere</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-file-contract"></i>
-                            <h4>Contratos</h4>
-                        </div>
-                        <ul>
-                            <li>Acuerdos de confidencialidad (NDA) con empleados</li>
-                            <li>Cláusulas de PI en contratos de trabajo</li>
-                            <li>Licencias claras con terceros</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-eye"></i>
-                            <h4>Vigilancia</h4>
-                        </div>
-                        <ul>
-                            <li>Monitorear el mercado en busca de infractores</li>
-                            <li>Usar servicios de vigilancia de marcas</li>
-                            <li>Alertas de Google para detectar usos no autorizados</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-card-header">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h4>Capacitación</h4>
-                        </div>
-                        <ul>
-                            <li>Educar empleados sobre políticas de PI</li>
-                            <li>Procedimientos para manejar información confidencial</li>
-                            <li>Protocolos de respuesta ante infracciones</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-lightbulb"></i> Recomendaciones Finales</h3>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-check-circle"></i> Para Creadores e Inventores</h4>
-                    <ul>
-                        <li>Documenta tu proceso creativo desde el inicio</li>
-                        <li>Registra tus creaciones antes de divulgarlas</li>
-                        <li>Usa contratos claros cuando colabores con terceros</li>
-                        <li>Respeta la PI de otros para exigir respeto a la tuya</li>
-                    </ul>
-                </div>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-building"></i> Para Empresas</h4>
-                    <ul>
-                        <li>Realiza auditorías periódicas de activos de PI</li>
-                        <li>Implementa políticas claras de gestión de PI</li>
-                        <li>Asegúrate de tener licencias para todo el software y contenido que usas</li>
-                        <li>Designa responsables de vigilancia y respuesta</li>
-                    </ul>
-                </div>
-                
-                <div class="highlight-box warning">
-                    <h4><i class="fas fa-balance-scale"></i> Principio Fundamental</h4>
+                    <h4><i class="fas fa-lightbulb"></i> Principio Fundamental</h4>
                     <p>La protección efectiva de la Propiedad Intelectual no solo beneficia a los titulares: fomenta la innovación, incentiva la creatividad, protege a los consumidores y contribuye al desarrollo económico de la sociedad.</p>
                 </div>
             </div>
@@ -3530,13 +4060,13 @@ const courseContent = {
     },
     
     'quiz5': {
-        title: 'Cuestionario Unidad 5: Protección y Aplicación',
+        title: 'Cuestionario Unidad 5: PI y su Aplicación',
         type: 'quiz',
         content: `
             <div class="quiz-content">
                 <div class="quiz-header">
                     <h3><i class="fas fa-clipboard-check"></i> Cuestionario de Evaluación</h3>
-                    <p>Unidad 5: Protección y Aplicación de la PI</p>
+                    <p>Unidad 5: PI y su Aplicación</p>
                 </div>
                 
                 <div class="quiz-value">

@@ -412,347 +412,347 @@ const quiz2Questions = [
 ];
 
 // =============================================
-// CUESTIONARIO UNIDAD 3: PROPIEDAD INDUSTRIAL
+// CUESTIONARIO UNIDAD 3: LEGISLACIÓN DE LA PROPIEDAD INTELECTUAL
 // =============================================
 
 const quiz3Questions = [
     {
-        question: "¿Cuál es el organismo encargado de administrar y proteger los derechos de Propiedad Industrial en México?",
+        question: "¿Qué ley regula la protección de los derechos de autor en México?",
         options: [
-            "INDAUTOR",
-            "IMPI (Instituto Mexicano de la Propiedad Industrial)",
-            "PROFECO",
-            "Secretaría de Economía directamente"
-        ],
-        correct: 1,
-        feedback: "El IMPI (Instituto Mexicano de la Propiedad Industrial) es el organismo descentralizado encargado de administrar y proteger los derechos de Propiedad Industrial en México."
-    },
-    {
-        question: "Para que una invención sea patentable, debe cumplir con tres requisitos fundamentales. ¿Cuáles son?",
-        options: [
-            "Originalidad, creatividad y utilidad",
-            "Novedad, actividad inventiva y aplicación industrial",
-            "Registro, publicación y divulgación",
-            "Diseño, funcionalidad y estética"
-        ],
-        correct: 1,
-        feedback: "Los tres requisitos de patentabilidad son: Novedad (no existir en el estado de la técnica), Actividad Inventiva (no ser obvio para un experto) y Aplicación Industrial (poder fabricarse o utilizarse)."
-    },
-    {
-        question: "¿Cuál es la vigencia de una patente en México?",
-        options: [
-            "10 años renovables",
-            "15 años improrrogables",
-            "20 años improrrogables",
-            "25 años renovables"
+            "Ley Federal de Protección a la Propiedad Industrial",
+            "Ley General de Transparencia",
+            "Ley Federal del Derecho de Autor (LFDA)",
+            "Código Civil Federal"
         ],
         correct: 2,
-        feedback: "En México, las patentes tienen una vigencia de 20 años improrrogables contados a partir de la fecha de presentación de la solicitud."
+        feedback: "La Ley Federal del Derecho de Autor (LFDA) es el ordenamiento jurídico que regula la protección de las obras literarias, artísticas y demás creaciones protegidas por el Derecho de Autor en México."
     },
     {
-        question: "¿Qué diferencia principal existe entre una patente y un modelo de utilidad?",
+        question: "¿En qué año fue publicada la Ley Federal de Protección a la Propiedad Industrial (LFPPI)?",
         options: [
-            "El modelo de utilidad protege solo marcas",
-            "El modelo de utilidad no requiere actividad inventiva, solo novedad y aplicación industrial",
-            "La patente tiene menor duración",
-            "El modelo de utilidad protege procedimientos"
-        ],
-        correct: 1,
-        feedback: "A diferencia de las patentes, los modelos de utilidad no requieren actividad inventiva. Basta con que representen una mejora funcional o ventaja técnica sobre lo existente."
-    },
-    {
-        question: "Los diseños industriales protegen:",
-        options: [
-            "La función técnica de un producto",
-            "El proceso de fabricación",
-            "La apariencia estética u ornamental de productos industriales",
-            "Las fórmulas químicas"
+            "1991",
+            "2000",
+            "2020",
+            "2015"
         ],
         correct: 2,
-        feedback: "El diseño industrial protege la apariencia estética u ornamental de productos industriales. No protege la función técnica, sino el aspecto visual que hace atractivo un producto."
+        feedback: "La LFPPI fue publicada el 1 de julio de 2020, sustituyendo a la anterior Ley de la Propiedad Industrial (LPI) de 1991."
     },
     {
-        question: "¿Cuál es la vigencia de los diseños industriales en México?",
+        question: "¿Cuál de las siguientes NO es una novedad introducida por la LFPPI de 2020?",
         options: [
-            "10 años renovables",
-            "15 años improrrogables",
-            "20 años improrrogables",
-            "25 años improrrogables"
-        ],
-        correct: 3,
-        feedback: "En México, los diseños industriales tienen una vigencia de 25 años improrrogables contados desde la fecha de presentación de la solicitud."
-    },
-    {
-        question: "¿Cuál de los siguientes NO es un tipo de marca reconocido?",
-        options: [
-            "Marca nominativa",
-            "Marca figurativa",
-            "Marca algorítmica",
-            "Marca sonora"
+            "Indicaciones geográficas",
+            "Marcas de certificación",
+            "Patentes de 30 años",
+            "Marcas no tradicionales (sonoras, olfativas)"
         ],
         correct: 2,
-        feedback: "Los tipos de marcas reconocidos incluyen: nominativas, figurativas, mixtas, tridimensionales, sonoras y de color. No existe el concepto de 'marca algorítmica'."
+        feedback: "La LFPPI no modificó la vigencia de las patentes, que sigue siendo de 20 años. Las novedades incluyen indicaciones geográficas, marcas de certificación y marcas no tradicionales."
     },
     {
-        question: "¿Cuál es la característica única de las marcas respecto a otros derechos de PI?",
+        question: "¿Qué acto se considera competencia desleal?",
         options: [
-            "No requieren registro",
-            "Son renovables indefinidamente, pudiendo ser perpetuas",
-            "Tienen la duración más corta",
-            "Solo protegen en el país de origen"
-        ],
-        correct: 1,
-        feedback: "Las marcas tienen vigencia de 10 años renovables indefinidamente por períodos iguales. Es el único derecho de PI que puede ser perpetuo."
-    },
-    {
-        question: "Para que la información califique como secreto industrial debe cumplir tres requisitos. ¿Cuál NO es uno de ellos?",
-        options: [
-            "Ser secreta (no generalmente conocida)",
-            "Tener valor comercial por su carácter secreto",
-            "Estar registrada ante el IMPI",
-            "Haber tomado medidas razonables para mantenerla secreta"
+            "Registrar una marca similar a la de un competidor",
+            "Ofrecer precios más bajos que la competencia",
+            "Imitación de signos distintivos para causar confusión",
+            "Lanzar productos innovadores al mercado"
         ],
         correct: 2,
-        feedback: "El secreto industrial NO requiere registro. Los tres requisitos son: ser secreta, tener valor comercial por su carácter secreto, y que el titular haya tomado medidas razonables para mantenerla secreta."
+        feedback: "La imitación de signos distintivos para causar confusión es un acto de competencia desleal. Ofrecer mejores precios o innovar son prácticas comerciales legítimas."
     },
     {
-        question: "¿Cuál es una ventaja del secreto industrial sobre la patente?",
+        question: "¿Qué artículo del Convenio de París establece obligaciones internacionales de protección contra competencia desleal?",
         options: [
-            "Protege contra la ingeniería inversa",
-            "Tiene duración potencialmente indefinida",
-            "Es más fácil de defender en tribunales",
-            "Requiere divulgación pública"
+            "Artículo 6",
+            "Artículo 10bis",
+            "Artículo 15",
+            "Artículo 1"
         ],
         correct: 1,
-        feedback: "El secreto industrial puede tener duración potencialmente indefinida, siempre que se mantenga la confidencialidad. A diferencia de la patente (20 años máximo), no tiene límite temporal."
+        feedback: "El artículo 10bis del Convenio de París establece las obligaciones internacionales de los países miembros para proteger contra actos de competencia desleal."
+    },
+    {
+        question: "¿Cuántos Estados miembros tiene actualmente la OMPI?",
+        options: [
+            "150 Estados",
+            "175 Estados",
+            "193 Estados",
+            "210 Estados"
+        ],
+        correct: 2,
+        feedback: "La Organización Mundial de la Propiedad Intelectual (OMPI) cuenta actualmente con 193 Estados miembros, siendo un organismo especializado de las Naciones Unidas."
+    },
+    {
+        question: "¿Desde qué año es México miembro de la OMPI?",
+        options: [
+            "1967",
+            "1975",
+            "1986",
+            "1994"
+        ],
+        correct: 1,
+        feedback: "México es miembro de la OMPI desde 1975 y participa activamente en sus tratados y programas internacionales."
+    },
+    {
+        question: "¿Qué sistema administrado por la OMPI permite solicitar protección de patentes en múltiples países con una sola solicitud?",
+        options: [
+            "Sistema de Madrid",
+            "Sistema PCT (Tratado de Cooperación en materia de Patentes)",
+            "Sistema de La Haya",
+            "Sistema de Lisboa"
+        ],
+        correct: 1,
+        feedback: "El Sistema PCT (Tratado de Cooperación en materia de Patentes) permite solicitar protección de patentes en múltiples países con una sola solicitud internacional."
+    },
+    {
+        question: "¿Cuál es la diferencia principal entre el IMPI e INDAUTOR en cuanto al efecto del registro?",
+        options: [
+            "El IMPI es federal y el INDAUTOR es estatal",
+            "El registro en IMPI es constitutivo (crea el derecho), mientras que en INDAUTOR es declarativo (reconoce el derecho)",
+            "El INDAUTOR solo registra software",
+            "No hay diferencia, ambos son constitutivos"
+        ],
+        correct: 1,
+        feedback: "El registro ante el IMPI es constitutivo (crea el derecho de PI), mientras que el registro ante INDAUTOR es declarativo (el derecho nace con la creación de la obra, el registro solo lo reconoce)."
+    },
+    {
+        question: "¿Cuál de los siguientes NO es un recurso que ofrece la Academia de la OMPI?",
+        options: [
+            "Cursos a distancia gratuitos",
+            "Programas de maestría conjuntos",
+            "Certificación obligatoria para agentes de PI",
+            "Cursos profesionales para funcionarios de oficinas de PI"
+        ],
+        correct: 2,
+        feedback: "La Academia de la OMPI ofrece cursos a distancia gratuitos, programas de maestría y cursos profesionales. No ofrece certificaciones obligatorias para agentes de PI, esto depende de cada país."
     }
 ];
 
 // Preguntas del Quiz 4: Derechos de Autor
 const quiz4Questions = [
     {
-        question: "¿Qué protege el Derecho de Autor?",
+        question: "¿Cuál de las siguientes es una característica de los derechos morales?",
         options: [
-            "Las ideas y conceptos abstractos",
-            "La forma de expresión original de las ideas",
-            "Los procedimientos y métodos",
-            "Los descubrimientos científicos"
+            "Son transferibles mediante contrato",
+            "Son perpetuos, inalienables e irrenunciables",
+            "Tienen una duración de 100 años",
+            "Solo se aplican a obras literarias"
         ],
         correct: 1,
-        feedback: "El Derecho de Autor protege la forma de expresión original de las ideas, no las ideas en sí mismas. Una idea no es protegible, pero la forma específica en que se expresa sí lo es."
+        feedback: "Los derechos morales son perpetuos, inalienables (no pueden venderse) e irrenunciables. Protegen el vínculo personal entre el autor y su obra, incluyendo el derecho de paternidad e integridad."
     },
     {
-        question: "¿Cuáles son características de los derechos morales?",
+        question: "¿Cuánto duran los derechos patrimoniales sobre una obra en México?",
         options: [
-            "Temporales, transferibles y embargables",
-            "Perpetuos, inalienables e irrenunciables",
-            "Limitados a 100 años después de la muerte del autor",
-            "Cedibles mediante contrato de licencia"
+            "50 años después de la muerte del autor",
+            "70 años después de la muerte del autor",
+            "100 años después de la muerte del autor",
+            "La vida del autor únicamente"
+        ],
+        correct: 2,
+        feedback: "En México, los derechos patrimoniales duran la vida del autor más 100 años después de su muerte. Es uno de los plazos más extensos del mundo."
+    },
+    {
+        question: "¿Qué elemento NO es distintivo de una marca?",
+        options: [
+            "Nombres propios distintivos",
+            "Figuras o símbolos tridimensionales",
+            "Descripciones genéricas del producto",
+            "Sonidos y hologramas"
+        ],
+        correct: 2,
+        feedback: "Las descripciones genéricas del producto (ej: 'Leche' para vender leche) no pueden registrarse como marca porque carecen de distintividad. Las marcas deben distinguir productos de sus competidores."
+    },
+    {
+        question: "¿Cuál es la vigencia de una marca registrada en México?",
+        options: [
+            "5 años, no renovable",
+            "10 años, renovable indefinidamente",
+            "15 años, renovable hasta 3 veces",
+            "20 años desde el registro"
         ],
         correct: 1,
-        feedback: "Los derechos morales son perpetuos, inalienables (no pueden venderse), irrenunciables, inembargables e imprescriptibles. Protegen el vínculo personal entre el autor y su obra."
+        feedback: "Las marcas en México tienen vigencia de 10 años desde su registro y pueden renovarse indefinidamente por períodos iguales, siempre que se pague la tarifa y se demuestre el uso."
     },
     {
-        question: "¿Cuánto dura la protección de los derechos patrimoniales en México para obras de autor individual?",
+        question: "¿Cuál de los siguientes NO puede registrarse como diseño industrial?",
         options: [
-            "Vida del autor + 50 años",
-            "Vida del autor + 70 años",
-            "Vida del autor + 100 años",
-            "100 años desde la creación"
+            "La forma de una botella de perfume",
+            "El patrón decorativo de una tela",
+            "El mecanismo interno de un reloj",
+            "La apariencia de un teléfono celular"
         ],
         correct: 2,
-        feedback: "En México, los derechos patrimoniales duran la vida del autor más 100 años. Es uno de los plazos más largos del mundo."
+        feedback: "Los diseños industriales protegen la apariencia estética (forma, configuración, ornamento), no los aspectos funcionales o técnicos como el mecanismo interno de un reloj."
     },
     {
-        question: "¿Qué es el derecho de integridad?",
+        question: "¿Qué requisito es esencial para que una invención sea patentable?",
         options: [
-            "Derecho a ser reconocido como autor de la obra",
-            "Derecho a decidir si la obra se hace pública",
-            "Derecho a oponerse a modificaciones que dañen el honor del autor",
-            "Derecho a retirar la obra del comercio"
+            "Ser conocida previamente en México",
+            "Ser una teoría científica",
+            "Tener aplicación industrial",
+            "Ser un método de negocios"
         ],
         correct: 2,
-        feedback: "El derecho de integridad permite al autor oponerse a modificaciones, mutilaciones o deformaciones que puedan dañar su honor o reputación, o que demeriten la obra."
+        feedback: "Para ser patentable, una invención debe cumplir tres requisitos: novedad, actividad inventiva y aplicación industrial. Las teorías científicas y métodos de negocios están expresamente excluidos."
     },
     {
-        question: "¿Cuál de las siguientes NO es una excepción al Derecho de Autor en México?",
+        question: "¿Cuál es la diferencia entre una patente y un modelo de utilidad?",
         options: [
-            "Cita con fines de crítica o comentario",
-            "Reproducción para uso educativo sin lucro",
-            "Uso comercial sin autorización si se menciona la fuente",
-            "Copia privada para uso personal"
+            "Son exactamente lo mismo",
+            "El modelo de utilidad requiere mayor nivel inventivo",
+            "El modelo de utilidad protege mejoras menores por menos tiempo",
+            "Las patentes solo protegen procesos, no productos"
         ],
         correct: 2,
-        feedback: "El uso comercial SÍ requiere autorización del titular. Las excepciones como cita, uso educativo y copia privada no permiten fines de lucro."
+        feedback: "Los modelos de utilidad (patentes menores) protegen mejoras técnicas con menor nivel inventivo, tienen vigencia de 10 años (vs 20 de patentes) y proceso más rápido y económico."
     },
     {
-        question: "¿Qué es el copyleft?",
+        question: "¿Qué caracteriza a una licencia exclusiva de tecnología?",
         options: [
-            "Una forma de renunciar a todos los derechos de autor",
+            "El licenciante puede otorgar licencias a múltiples partes",
+            "Solo el licenciatario puede explotar la tecnología en el territorio acordado",
+            "Es siempre gratuita",
+            "No requiere contrato escrito"
+        ],
+        correct: 1,
+        feedback: "En una licencia exclusiva, solo el licenciatario puede explotar la tecnología en el territorio y campo definidos. El licenciante renuncia a otorgar licencias a terceros e incluso a explotarla él mismo."
+    },
+    {
+        question: "¿Qué es el copyleft en licencias de software?",
+        options: [
+            "Una renuncia total a los derechos de autor",
             "Un mecanismo que obliga a compartir obras derivadas bajo la misma licencia",
-            "Una licencia que prohíbe cualquier modificación",
-            "Un tipo de patente para software"
+            "Una licencia que prohíbe cualquier uso comercial",
+            "Un tipo de patente de software"
         ],
         correct: 1,
-        feedback: "El copyleft usa el Derecho de Autor para garantizar que una obra y sus derivados permanezcan libres. Si usas código con copyleft, debes compartir tu código bajo la misma licencia."
+        feedback: "El copyleft usa el derecho de autor para garantizar que una obra y sus derivados permanezcan libres. Si usas código con copyleft (como GPL), debes liberar tu código bajo la misma licencia."
     },
     {
-        question: "¿Cuál licencia Creative Commons es la más permisiva?",
+        question: "¿Cuál es la licencia más permisiva para software?",
         options: [
-            "CC BY-NC-ND",
-            "CC BY-SA",
-            "CC BY",
-            "CC BY-NC"
+            "GPL (General Public License)",
+            "LGPL (Lesser GPL)",
+            "MIT License",
+            "AGPL (Affero GPL)"
         ],
         correct: 2,
-        feedback: "CC BY (atribución) es la más permisiva: solo requiere dar crédito al autor. Permite uso comercial y obras derivadas sin restricciones adicionales."
-    },
-    {
-        question: "¿Qué característica tiene la licencia GPL para software?",
-        options: [
-            "Es una licencia permisiva sin copyleft",
-            "Tiene copyleft fuerte, requiere liberar código derivado",
-            "Solo permite uso no comercial",
-            "Prohíbe la modificación del código"
-        ],
-        correct: 1,
-        feedback: "La GPL (General Public License) tiene copyleft fuerte. Si usas código GPL en un proyecto, debes liberar todo el código derivado bajo la misma licencia."
-    },
-    {
-        question: "¿Cuál es el papel del INDAUTOR en México?",
-        options: [
-            "Registrar marcas y patentes",
-            "Proteger y fomentar el derecho de autor",
-            "Perseguir penalmente la piratería",
-            "Regular el comercio electrónico"
-        ],
-        correct: 1,
-        feedback: "El Instituto Nacional del Derecho de Autor (INDAUTOR) es la autoridad administrativa responsable de proteger y fomentar el derecho de autor en México."
-    },
-    {
-        question: "¿Qué diferencia hay entre cesión y licencia de derechos?",
-        options: [
-            "Son términos equivalentes",
-            "La cesión transfiere la titularidad, la licencia solo autoriza el uso",
-            "La licencia es perpetua, la cesión es temporal",
-            "Solo la licencia requiere contrato escrito"
-        ],
-        correct: 1,
-        feedback: "La cesión transfiere la titularidad de los derechos patrimoniales al cesionario. La licencia solo autoriza ciertos usos sin transferir la titularidad, que permanece con el autor."
+        feedback: "La licencia MIT es muy permisiva: solo requiere mantener el aviso de copyright. Permite uso comercial, modificación y distribución sin copyleft, lo que la hace popular en proyectos comerciales."
     }
 ];
 
-// Preguntas Unidad 5: Protección y Aplicación de la PI
+// Preguntas Unidad 5: PI y su Aplicación
 const quiz5Questions = [
     {
-        question: "¿Cuál es la diferencia principal entre piratería y falsificación?",
+        question: "¿Cuál es la principal ventaja del secreto industrial sobre la patente?",
         options: [
-            "Son sinónimos que se usan indistintamente",
-            "La piratería afecta derechos de autor; la falsificación afecta marcas registradas",
-            "La falsificación solo aplica a productos físicos, la piratería solo a digitales",
-            "La piratería es legal para uso personal, la falsificación nunca"
+            "Ofrece protección más fuerte",
+            "Tiene duración indefinida mientras se mantenga confidencial",
+            "Es más fácil de defender en juicio",
+            "Protege contra la ingeniería inversa"
         ],
         correct: 1,
-        feedback: "La piratería se refiere a la reproducción no autorizada de obras protegidas por derecho de autor (software, música, películas), mientras que la falsificación implica usar marcas registradas sin autorización para hacer pasar productos como originales."
+        feedback: "El secreto industrial puede durar indefinidamente mientras se mantenga confidencial, a diferencia de la patente que expira a los 20 años. Sin embargo, no protege contra la ingeniería inversa legítima."
     },
     {
-        question: "¿Qué autoridad mexicana es competente para conocer infracciones a marcas registradas?",
+        question: "¿Qué organismo administra el sistema de propiedad industrial en México?",
         options: [
             "INDAUTOR",
-            "PROFECO",
             "IMPI",
-            "Secretaría de Economía"
-        ],
-        correct: 2,
-        feedback: "El Instituto Mexicano de la Propiedad Industrial (IMPI) es la autoridad competente para marcas, patentes, diseños industriales y secretos industriales. INDAUTOR se encarga de derechos de autor."
-    },
-    {
-        question: "¿Cuántos días hábiles tiene el presunto infractor para contestar una solicitud de declaración administrativa ante el IMPI?",
-        options: [
-            "5 días hábiles",
-            "10 días hábiles",
-            "15 días hábiles",
-            "30 días hábiles"
+            "OMPI",
+            "Secretaría de Cultura"
         ],
         correct: 1,
-        feedback: "El presunto infractor tiene 10 días hábiles para contestar la solicitud de declaración administrativa, ofrecer pruebas y presentar sus argumentos de defensa."
+        feedback: "El Instituto Mexicano de la Propiedad Industrial (IMPI) es la autoridad responsable de administrar el sistema de propiedad industrial en México, incluyendo marcas, patentes y diseños industriales."
+    },
+    {
+        question: "¿Para qué sirve el Sistema de Madrid administrado por la OMPI?",
+        options: [
+            "Registro internacional de patentes",
+            "Registro internacional de marcas",
+            "Arbitraje de disputas de PI",
+            "Registro de derechos de autor"
+        ],
+        correct: 1,
+        feedback: "El Sistema de Madrid permite el registro internacional de marcas en más de 120 países con una sola solicitud, simplificando la protección de marcas a nivel global."
+    },
+    {
+        question: "Según la posición actual de EE.UU. sobre obras generadas por IA, ¿qué estatus legal tienen?",
+        options: [
+            "Protección completa para el desarrollador de la IA",
+            "No hay protección de copyright sin autor humano",
+            "Protección automática para el usuario que creó el prompt",
+            "Protección compartida entre IA y usuario"
+        ],
+        correct: 1,
+        feedback: "Los tribunales de EE.UU. han establecido que una obra generada completamente por IA no puede recibir registro de copyright porque carece de autoría humana, considerándose que pasa al dominio público."
+    },
+    {
+        question: "¿Cuál es el principal argumento legal de los creadores contra el entrenamiento de IA con sus obras?",
+        options: [
+            "Las IAs son competencia desleal",
+            "El entrenamiento constituye una reproducción no autorizada",
+            "Las IAs no pagan impuestos",
+            "Los modelos son demasiado poderosos"
+        ],
+        correct: 1,
+        feedback: "Los creadores argumentan que el entrenamiento de modelos de IA implica una reproducción no autorizada de sus obras protegidas por derecho de autor, lo cual requeriría licencia o compensación."
+    },
+    {
+        question: "¿Cuál es la diferencia entre piratería y falsificación?",
+        options: [
+            "Son términos equivalentes",
+            "La piratería afecta derechos de autor; la falsificación afecta marcas",
+            "La falsificación solo aplica a productos digitales",
+            "La piratería es legal para uso personal"
+        ],
+        correct: 1,
+        feedback: "La piratería se refiere a la reproducción no autorizada de obras protegidas por derecho de autor, mientras que la falsificación implica usar marcas registradas sin autorización para hacer pasar productos como originales."
     },
     {
         question: "¿Cuál de las siguientes NO es una sanción que puede imponer el IMPI?",
         options: [
             "Multa de hasta 500,000 UMAs",
             "Clausura temporal del establecimiento",
-            "Prisión de hasta 10 años",
+            "Pena de prisión",
             "Decomiso de productos infractores"
         ],
         correct: 2,
         feedback: "El IMPI es una autoridad administrativa y solo puede imponer sanciones administrativas como multas, clausuras y decomisos. Las penas de prisión solo pueden ser impuestas por autoridades judiciales penales."
     },
     {
-        question: "En materia civil, ¿cuál método de cuantificación de daños implica calcular lo que un licenciatario habría pagado por usar legalmente el derecho?",
+        question: "¿Qué es la regalía razonable como método de cuantificación de daños?",
         options: [
-            "Ganancias perdidas",
-            "Beneficios del infractor",
-            "Regalía razonable",
-            "Daños estatutarios"
+            "El precio de venta del producto infractor",
+            "Lo que un licenciatario habría pagado por usar legalmente el derecho",
+            "El costo de producción del infractor",
+            "Un monto fijo establecido por ley"
         ],
-        correct: 2,
+        correct: 1,
         feedback: "La regalía razonable es el monto que un licenciatario hipotético habría pagado por usar legalmente el derecho. Se usa cuando las ganancias perdidas son difíciles de probar directamente."
     },
     {
-        question: "¿Qué significa que la mayoría de los delitos contra la PI sean de 'querella'?",
+        question: "¿Qué significa que un delito contra la PI sea de 'querella'?",
         options: [
-            "Que se persiguen automáticamente por las autoridades",
-            "Que requieren que el titular presente formalmente la denuncia",
-            "Que solo pueden denunciarse ante tribunales federales",
-            "Que no tienen penas de prisión"
+            "Que se persigue automáticamente por las autoridades",
+            "Que requiere que el titular presente formalmente la denuncia",
+            "Que solo puede procesarse en tribunales federales",
+            "Que las penas son más severas"
         ],
         correct: 1,
-        feedback: "Los delitos de querella requieren que el titular del derecho afectado presente formalmente la denuncia para que el Ministerio Público pueda iniciar la investigación. Sin querella del afectado, no hay persecución."
+        feedback: "Los delitos de querella requieren que el titular del derecho afectado presente formalmente la denuncia para que el Ministerio Público pueda iniciar la investigación."
     },
     {
-        question: "¿Qué son las Medidas Tecnológicas de Protección (MTP)?",
+        question: "¿Cuál es una recomendación práctica al usar contenido generado por IA?",
         options: [
-            "Leyes que protegen a los creadores de tecnología",
-            "Mecanismos técnicos para controlar el acceso y uso de obras protegidas",
-            "Seguros contra robo de propiedad intelectual",
-            "Certificaciones de calidad para software"
+            "No hay necesidad de revisar licencias porque la IA crea todo nuevo",
+            "Añadir creatividad y edición humana significativa para fortalecer reclamaciones de autoría",
+            "Usar el contenido sin modificaciones para mantener la pureza del algoritmo",
+            "Reclamar siempre autoría completa sin mencionar el uso de IA"
         ],
         correct: 1,
-        feedback: "Las MTP (también conocidas como DRM) son mecanismos técnicos diseñados para controlar el acceso y uso de obras protegidas por derecho de autor, como cifrado, contraseñas, códigos de región, etc."
-    },
-    {
-        question: "¿Cuál de las siguientes es una excepción legal válida para eludir medidas tecnológicas de protección?",
-        options: [
-            "Para uso personal ya que el usuario pagó por el producto",
-            "Para investigación en criptografía y seguridad informática",
-            "Cuando el DRM es muy restrictivo o molesto",
-            "Para compartir contenido con familiares"
-        ],
-        correct: 1,
-        feedback: "La investigación en criptografía y seguridad informática es una de las pocas excepciones legales para eludir MTP. Las otras opciones, aunque puedan parecer razonables, no están contempladas como excepciones legales."
-    },
-    {
-        question: "¿Qué tipo de licencia se requiere para usar una canción en un comercial de televisión?",
-        options: [
-            "Licencia de ejecución pública",
-            "Licencia mecánica",
-            "Licencia de sincronización",
-            "Licencia de reproducción"
-        ],
-        correct: 2,
-        feedback: "La licencia de sincronización es necesaria cuando se usa música junto con imágenes (comerciales, películas, videojuegos). Esta licencia no está cubierta por las sociedades de gestión colectiva y debe negociarse directamente con el titular."
-    },
-    {
-        question: "¿Cuál de las siguientes es una estrategia preventiva recomendada para proteger la propiedad intelectual empresarial?",
-        options: [
-            "Evitar registrar marcas para mantener secreto el nombre",
-            "Firmar NDAs (acuerdos de confidencialidad) con empleados y realizar auditorías de PI",
-            "Publicar todas las invenciones inmediatamente para establecer prioridad",
-            "Usar solo software de código abierto para evitar problemas de licencias"
-        ],
-        correct: 1,
-        feedback: "Los acuerdos de confidencialidad (NDA) con empleados y las auditorías periódicas de activos de PI son estrategias preventivas fundamentales para proteger la propiedad intelectual de una empresa."
+        feedback: "Añadir creatividad y edición humana significativa al contenido generado por IA fortalece las reclamaciones de autoría y ayuda a establecer derechos sobre el resultado final."
     }
 ];
 
