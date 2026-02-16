@@ -2,13 +2,34 @@
 // MAIN.JS - FUNCIONALIDAD PRINCIPAL
 // ============================================
 
+// ============================================
+// CONFIGURACIÓN DE VISIBILIDAD DE UNIDADES
+// Cambiar a 'false' para ocultar una unidad
+// ============================================
+const UNIDAD_1_VISIBLE = true;  // Unidad I: Legislación Informática
+const UNIDAD_2_VISIBLE = true;  // Unidad II: Principios de Propiedad Intelectual
+const UNIDAD_3_VISIBLE = true;  // Unidad III: Legislación de la PI
+const UNIDAD_4_VISIBLE = true;  // Unidad IV: Derecho de Autor y Conexos
+const UNIDAD_5_VISIBLE = true;  // Unidad V: PI y su Aplicación
+
+// Array de configuración para fácil acceso
+const UNIDADES_VISIBLES = [
+    UNIDAD_1_VISIBLE,
+    UNIDAD_2_VISIBLE,
+    UNIDAD_3_VISIBLE,
+    UNIDAD_4_VISIBLE,
+    UNIDAD_5_VISIBLE
+];
+
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar componentes
     initTabs();
     initSidebar();
     initModals();
     initSearch();
-    initContactForm();
+    
+    // Aplicar visibilidad de unidades
+    applyUnitsVisibility();
 });
 
 // ============================================
@@ -117,6 +138,9 @@ function loadContent(contentId) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Exponer loadContent globalmente para el sistema de filtrado
+window.loadContent = loadContent;
+
 // Mostrar sección de examen
 function showExamSection() {
     document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
@@ -143,12 +167,11 @@ function initModals() {
     
     // Contacto
     const contactBtn = document.getElementById('contactBtn');
-    const contactModal = document.getElementById('contactModal');
     
     if (contactBtn) {
         contactBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            contactModal.classList.add('show');
+            window.location.href = 'mailto:mparedesc@ipn.mx';
         });
     }
     
@@ -327,30 +350,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ============================================
-// FORMULARIO DE CONTACTO
-// ============================================
-function initContactForm() {
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('contactName').value;
-            const email = document.getElementById('contactEmail').value;
-            const subject = document.getElementById('contactSubject').value;
-            const message = document.getElementById('contactMessage').value;
-            
-            // Simular envío
-            alert(`Gracias ${name}, tu mensaje ha sido enviado.\n\nTe responderemos a ${email} lo antes posible.`);
-            
-            // Limpiar formulario y cerrar modal
-            contactForm.reset();
-            document.getElementById('contactModal').classList.remove('show');
-        });
-    }
-}
+
 
 // ============================================
 // RESPONSIVE - TOGGLE SIDEBAR
@@ -408,6 +408,90 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 // UTILIDADES
 // ============================================
+
+// ============================================
+// CONTROL DE VISIBILIDAD DE UNIDADES
+// ============================================
+function applyUnitsVisibility() {
+    const menuSections = document.querySelectorAll('.menu-section');
+    
+    // Iterar sobre las secciones del menú (excluyendo la sección de examen)
+    menuSections.forEach((section) => {
+        const sectionTitle = section.querySelector('.section-title');
+        if (!sectionTitle) return;
+        
+        const sectionId = sectionTitle.getAttribute('data-section');
+        
+        // Verificar si es una unidad (unidad1, unidad2, etc.)
+        if (sectionId && sectionId.startsWith('unidad')) {
+            const unitNumber = parseInt(sectionId.replace('unidad', ''));
+            
+            // Verificar si la unidad debe estar visible
+            if (unitNumber >= 1 && unitNumber <= 5) {
+                const isVisible = UNIDADES_VISIBLES[unitNumber - 1];
+                
+                if (!isVisible) {
+                    // Ocultar la sección completa de la unidad
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = '';
+                }
+            }
+        }
+    });
+    
+    // Filtrar contenido accesible para evitar acceso directo a unidades ocultas
+    filterAccessibleContent();
+}
+
+// Función para filtrar el contenido accesible
+function filterAccessibleContent() {
+    // Sobrescribir la función loadContent para verificar acceso
+    const originalLoadContent = window.loadContent || loadContent;
+    
+    window.loadContent = function(contentId) {
+        // Verificar si el contenido pertenece a una unidad oculta
+        const unitNumber = getUnitFromContentId(contentId);
+        
+        if (unitNumber !== null && !UNIDADES_VISIBLES[unitNumber - 1]) {
+            console.warn('Acceso denegado: La unidad ' + unitNumber + ' no está disponible.');
+            return;
+        }
+        
+        // Llamar a la función original
+        originalLoadContent(contentId);
+    };
+}
+
+// Obtener el número de unidad desde el ID del contenido
+function getUnitFromContentId(contentId) {
+    // Patrones de contenido por unidad
+    const patterns = [
+        { prefix: 'tema1-', unit: 1 },
+        { prefix: 'tema2-', unit: 2 },
+        { prefix: 'tema3-', unit: 3 },
+        { prefix: 'tema4-', unit: 4 },
+        { prefix: 'tema5-', unit: 5 },
+        { prefix: 'quiz1', unit: 1 },
+        { prefix: 'quiz2', unit: 2 },
+        { prefix: 'quiz3', unit: 3 },
+        { prefix: 'quiz4', unit: 4 },
+        { prefix: 'quiz5', unit: 5 },
+        { prefix: 'actividades1', unit: 1 },
+        { prefix: 'actividades2', unit: 2 },
+        { prefix: 'actividades3', unit: 3 },
+        { prefix: 'actividades4', unit: 4 },
+        { prefix: 'actividades5', unit: 5 }
+    ];
+    
+    for (const pattern of patterns) {
+        if (contentId.startsWith(pattern.prefix)) {
+            return pattern.unit;
+        }
+    }
+    
+    return null;
+}
 
 // Función para enviar actividad (placeholder)
 function submitActivity(activityNumber) {

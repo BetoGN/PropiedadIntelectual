@@ -2986,3 +2986,217 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   ESTILOS PARA ACTIVIDADES
+   ============================================ */
+
+.activities-content {
+    padding: 20px 0;
+}
+
+.activities-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: var(--radius-lg);
+    border-left: 5px solid var(--primary-color);
+}
+
+.activities-header h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.activities-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.activity-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.activity-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.activity-number {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.activity-card h4 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.activity-card h4 i {
+    color: var(--primary-color);
+}
+
+.activity-description {
+    color: var(--text-secondary);
+}
+
+.activity-description p {
+    margin-bottom: 15px;
+}
+
+.activity-tasks {
+    background: var(--bg-tertiary);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    margin: 20px 0;
+}
+
+.activity-tasks h5 {
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.activity-tasks h5 i {
+    color: var(--primary-color);
+}
+
+.activity-tasks ol, 
+.activity-tasks ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.activity-tasks ol li,
+.activity-tasks ul li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.activity-tasks ul ul {
+    margin-top: 8px;
+    list-style-type: circle;
+}
+
+.activity-group-work {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    padding: 15px 20px;
+    border-radius: var(--radius-md);
+    margin: 15px 0;
+    border-left: 4px solid var(--warning-color);
+}
+
+.activity-group-work p {
+    color: #92400e;
+    margin: 0;
+    font-weight: 500;
+}
+
+.activity-group-work i {
+    color: var(--warning-color);
+}
+
+.team-task {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    margin: 15px 0;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+.team-task h6 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.team-task ul {
+    margin-left: 20px;
+}
+
+.team-task ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.activity-deliverable {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    margin-top: 20px;
+    border-left: 4px solid var(--success-color);
+}
+
+.activity-deliverable h5 {
+    color: #065f46;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.activity-deliverable h5 i {
+    color: var(--success-color);
+}
+
+.activity-deliverable p {
+    color: #065f46;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Responsive para actividades */
+@media (max-width: 768px) {
+    .activities-header {
+        padding: 20px;
+    }
+    
+    .activities-header h3 {
+        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .activity-card {
+        padding: 20px;
+    }
+    
+    .activity-card h4 {
+        font-size: 1.1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .activity-tasks {
+        padding: 15px;
+    }
+    
+    .team-task {
+        padding: 15px;
+    }
+}

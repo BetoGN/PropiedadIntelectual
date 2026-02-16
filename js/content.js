@@ -24,7 +24,7 @@ const courseContent = {
                 </ul>
                 
                 <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> Importancia</h4>
+                    <h4><i class="fas fa-info-circle"></i> ¿Por qué es relevante?</h4>
                     <p>Comprender los elementos primarios del derecho es un prerrequisito indispensable para analizar cualquier marco normativo tecnológico, especialmente en el campo de la Ingeniería en Inteligencia Artificial.</p>
                 </div>
             </div>
@@ -4121,6 +4121,663 @@ const courseContent = {
                 
                 <div id="quiz5-results" class="quiz-results" style="display: none;">
                     <!-- Los resultados se mostrarán aquí -->
+                </div>
+            </div>
+        `
+    },
+    
+    // =============================================
+    // ACTIVIDADES POR UNIDAD
+    // =============================================
+    
+    'actividades1': {
+        title: 'Actividades - Unidad I: Legislación Informática',
+        type: 'activities',
+        content: `
+            <div class="activities-content">
+                <div class="activities-header">
+                    <h3><i class="fas fa-tasks"></i> Actividades de Aprendizaje</h3>
+                    <p>Unidad I: Legislación Informática</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 1</div>
+                    <h4><i class="fas fa-balance-scale"></i> Clasificación de Delitos Informáticos</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Identificar y clasificar los diferentes tipos de delitos informáticos según el Código Penal Federal.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li>Investiga en el <strong>Código Penal Federal</strong> los artículos relacionados con delitos informáticos (Título Noveno, Capítulo II).</li>
+                                <li>Elabora una <strong>tabla comparativa</strong> que incluya:
+                                    <ul>
+                                        <li>Tipo de delito</li>
+                                        <li>Conducta tipificada</li>
+                                        <li>Sanción aplicable</li>
+                                        <li>Ejemplo práctico</li>
+                                    </ul>
+                                </li>
+                                <li>Identifica al menos <strong>5 tipos diferentes</strong> de delitos informáticos.</li>
+                                <li>Presenta tus hallazgos en clase y discute la relevancia de cada tipo de delito en el contexto de la Inteligencia Artificial.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Tabla comparativa de delitos informáticos (formato digital o en cuaderno).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 2</div>
+                    <h4><i class="fas fa-users"></i> Investigación sobre la LFTR y el Espectro Radioeléctrico</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Comprender la estructura y alcance de la Ley Federal de Telecomunicaciones y Radiodifusión (LFTR) y el papel del IFT.</p>
+                        
+                        <div class="activity-group-work">
+                            <p><i class="fas fa-info-circle"></i> <strong>Trabajo en equipos:</strong> Dividir la clase en tres grupos.</p>
+                        </div>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Tareas por equipo:</h5>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 1:</strong> Estructura de la LFTR</h6>
+                                <ul>
+                                    <li>Investigar sobre la estructura general de la LFTR.</li>
+                                    <li>Escribir en tu cuaderno el <strong>inciso LX del Artículo 15</strong> de la LFTR.</li>
+                                    <li>Analizar el <strong>Artículo 3° Constitucional</strong> en lo referente a telecomunicaciones y radiodifusión.</li>
+                                    <li>Explicar la relación entre ambos ordenamientos.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 2:</strong> Concesiones del Espectro Radioeléctrico</h6>
+                                <ul>
+                                    <li>Investigar sobre los <strong>planes de concesión del espectro radioeléctrico</strong> en México.</li>
+                                    <li>Identificar los <strong>últimos concursos públicos</strong> realizados por el IFT para asignación de frecuencias.</li>
+                                    <li>Analizar quiénes han sido los principales concesionarios y en qué bandas.</li>
+                                    <li>Reflexionar sobre la importancia del espectro para servicios de IA y 5G.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 3:</strong> Resoluciones del IFT</h6>
+                                <ul>
+                                    <li>Investigar <strong>casos de resoluciones del IFT</strong> en materia de sanciones por incumplimiento de la LFTR.</li>
+                                    <li>Analizar al menos <strong>3 casos reales</strong> de sanciones impuestas.</li>
+                                    <li>Identificar las conductas sancionadas y las multas aplicadas.</li>
+                                    <li>Reflexionar sobre las implicaciones para empresas de tecnología.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Presentación por equipo (máximo 10 minutos) + documento escrito con la investigación.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 3</div>
+                    <h4><i class="fas fa-search"></i> Análisis de Caso: Protección de Datos Personales</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Aplicar los conocimientos sobre regulación administrativa informática a un caso práctico.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li>Busca en el portal del <strong>INAI</strong> (Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales) un caso de resolución sobre protección de datos personales.</li>
+                                <li>Analiza el caso identificando:
+                                    <ul>
+                                        <li>Los hechos del caso</li>
+                                        <li>Los derechos ARCO involucrados</li>
+                                        <li>La resolución del INAI</li>
+                                        <li>Las obligaciones incumplidas según la LFPDPPP</li>
+                                    </ul>
+                                </li>
+                                <li>Elabora un <strong>resumen</strong> de una página.</li>
+                                <li>Propón medidas que la empresa o institución debió haber implementado para evitar la violación.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Resumen del caso analizado (1 página) + propuesta de medidas preventivas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    'actividades2': {
+        title: 'Actividades - Unidad II: Principios de Propiedad Intelectual',
+        type: 'activities',
+        content: `
+            <div class="activities-content">
+                <div class="activities-header">
+                    <h3><i class="fas fa-tasks"></i> Actividades de Aprendizaje</h3>
+                    <p>Unidad II: Principios de Propiedad Intelectual</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 1</div>
+                    <h4><i class="fas fa-lightbulb"></i> Análisis de Teorías de Propiedad Intelectual</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Comprender y comparar las diferentes teorías que justifican la existencia de los derechos de propiedad intelectual.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li>Investiga las <strong>cuatro teorías principales</strong> de la propiedad intelectual:
+                                    <ul>
+                                        <li>Teoría de los Derechos Naturales (Locke)</li>
+                                        <li>Teoría Utilitaria o del Incentivo</li>
+                                        <li>Teoría de la Justicia Distributiva</li>
+                                        <li>Teoría de la Personalidad (Kant/Hegel)</li>
+                                    </ul>
+                                </li>
+                                <li>Elabora un <strong>cuadro comparativo</strong> que incluya:
+                                    <ul>
+                                        <li>Fundamento filosófico de cada teoría</li>
+                                        <li>Figura de PI que mejor representa cada teoría</li>
+                                        <li>Ventajas y críticas</li>
+                                    </ul>
+                                </li>
+                                <li>Escribe una <strong>reflexión personal</strong> (media página) sobre cuál teoría consideras más aplicable a la protección de algoritmos de IA.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Cuadro comparativo + reflexión personal.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 2</div>
+                    <h4><i class="fas fa-users"></i> Valoración de Activos de PI en Empresas Tecnológicas</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Comprender cómo se valoran los activos de propiedad intelectual en empresas de tecnología.</p>
+                        
+                        <div class="activity-group-work">
+                            <p><i class="fas fa-info-circle"></i> <strong>Trabajo en equipos:</strong> Dividir la clase en tres grupos.</p>
+                        </div>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Tareas por equipo:</h5>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 1:</strong> Análisis de Google/Alphabet</h6>
+                                <ul>
+                                    <li>Investigar el <strong>valor de marca</strong> de Google según rankings como Interbrand o Brand Finance.</li>
+                                    <li>Identificar sus <strong>principales patentes</strong> en IA y tecnología.</li>
+                                    <li>Analizar cómo la PI contribuye al valor de la empresa.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 2:</strong> Análisis de Microsoft</h6>
+                                <ul>
+                                    <li>Investigar el <strong>portafolio de PI</strong> de Microsoft (marcas, patentes, software).</li>
+                                    <li>Analizar su <strong>estrategia de licenciamiento</strong> de software.</li>
+                                    <li>Estudiar la adquisición de LinkedIn y cómo valoraron sus activos de PI.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 3:</strong> Análisis de OpenAI</h6>
+                                <ul>
+                                    <li>Investigar cómo OpenAI protege sus <strong>modelos de IA</strong> (GPT, DALL-E).</li>
+                                    <li>Analizar su estrategia de <strong>secretos industriales vs. publicación</strong>.</li>
+                                    <li>Reflexionar sobre los desafíos de valorar activos de IA.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Presentación en clase (10 min por equipo) + informe escrito (2-3 páginas).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 3</div>
+                    <h4><i class="fas fa-globe"></i> Investigación: Tratados Internacionales de PI</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Conocer los principales tratados internacionales que México ha suscrito en materia de PI.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li>Investiga en el portal de la <strong>OMPI (www.wipo.int)</strong> los tratados de PI que México ha firmado.</li>
+                                <li>Selecciona <strong>3 tratados</strong> relevantes para la tecnología y la IA.</li>
+                                <li>Para cada tratado, elabora una ficha informativa que incluya:
+                                    <ul>
+                                        <li>Nombre completo y fecha de adhesión de México</li>
+                                        <li>Objetivo principal del tratado</li>
+                                        <li>Beneficios para innovadores mexicanos</li>
+                                        <li>Ejemplo práctico de aplicación</li>
+                                    </ul>
+                                </li>
+                                <li>Reflexiona sobre cómo estos tratados facilitan la protección internacional de tecnología mexicana.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Tres fichas informativas + reflexión (media página).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    'actividades3': {
+        title: 'Actividades - Unidad III: Legislación de la PI',
+        type: 'activities',
+        content: `
+            <div class="activities-content">
+                <div class="activities-header">
+                    <h3><i class="fas fa-tasks"></i> Actividades de Aprendizaje</h3>
+                    <p>Unidad III: Legislación de la Propiedad Intelectual</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 1</div>
+                    <h4><i class="fas fa-book"></i> Comparativa: LFDA vs. LFPPI</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Comprender las diferencias fundamentales entre la protección del Derecho de Autor y la Propiedad Industrial.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li>Consulta la <strong>Ley Federal del Derecho de Autor (LFDA)</strong> y la <strong>Ley Federal de Protección a la Propiedad Industrial (LFPPI)</strong> en el portal del Diario Oficial de la Federación.</li>
+                                <li>Elabora una <strong>tabla comparativa detallada</strong> que incluya:
+                                    <ul>
+                                        <li>Objeto de protección de cada ley</li>
+                                        <li>Requisitos para obtener protección</li>
+                                        <li>Duración de los derechos</li>
+                                        <li>Autoridad competente (INDAUTOR vs. IMPI)</li>
+                                        <li>Tipo de registro (constitutivo vs. declarativo)</li>
+                                        <li>Ejemplos de figuras protegidas</li>
+                                    </ul>
+                                </li>
+                                <li>Identifica <strong>3 casos</strong> donde una misma creación podría protegerse bajo ambas leyes (ej: software).</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Tabla comparativa completa + análisis de casos de doble protección.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 2</div>
+                    <h4><i class="fas fa-users"></i> Simulación de Competencia Desleal</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Identificar y analizar conductas de competencia desleal en el mercado tecnológico.</p>
+                        
+                        <div class="activity-group-work">
+                            <p><i class="fas fa-info-circle"></i> <strong>Trabajo en equipos:</strong> Dividir la clase en tres grupos.</p>
+                        </div>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Tareas por equipo:</h5>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 1:</strong> Caso de Confusión de Marcas</h6>
+                                <ul>
+                                    <li>Investigar un caso real de <strong>uso de marca similar</strong> en el sector tecnológico.</li>
+                                    <li>Analizar si existió confusión en el consumidor.</li>
+                                    <li>Identificar la resolución del IMPI o tribunal.</li>
+                                    <li>Preparar una simulación de alegatos para ambas partes.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 2:</strong> Caso de Violación de Secreto Industrial</h6>
+                                <ul>
+                                    <li>Investigar un caso de <strong>robo de secretos industriales</strong> (ej: Waymo vs. Uber, Apple vs. empleados).</li>
+                                    <li>Analizar las medidas de confidencialidad que fallaron.</li>
+                                    <li>Identificar las consecuencias legales.</li>
+                                    <li>Proponer medidas preventivas que debieron implementarse.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 3:</strong> Caso de Publicidad Engañosa</h6>
+                                <ul>
+                                    <li>Investigar un caso de <strong>publicidad engañosa o denigratoria</strong> entre competidores tecnológicos.</li>
+                                    <li>Analizar si las afirmaciones eran verificables.</li>
+                                    <li>Identificar la sanción impuesta por PROFECO o autoridad competente.</li>
+                                    <li>Discutir los límites de la publicidad comparativa lícita.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Presentación del caso (10 min) + documento de análisis (2 páginas).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 3</div>
+                    <h4><i class="fas fa-laptop"></i> Exploración de Portales: IMPI e INDAUTOR</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Familiarizarse con los servicios en línea de las autoridades de PI en México.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li><strong>Portal del IMPI (www.gob.mx/impi):</strong>
+                                    <ul>
+                                        <li>Accede a <strong>MARCANET</strong> y realiza una búsqueda de marca de tu elección.</li>
+                                        <li>Documenta el proceso con capturas de pantalla.</li>
+                                        <li>Identifica el estado de la marca (vigente, en trámite, cancelada).</li>
+                                        <li>Revisa la <strong>Gaceta de la PI</strong> y encuentra una solicitud reciente.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Portal de INDAUTOR (www.indautor.gob.mx):</strong>
+                                    <ul>
+                                        <li>Revisa los <strong>requisitos para registrar una obra</strong>.</li>
+                                        <li>Identifica los <strong>formatos oficiales</strong> disponibles.</li>
+                                        <li>Investiga el costo y tiempo de trámite para un programa de cómputo.</li>
+                                    </ul>
+                                </li>
+                                <li>Elabora una <strong>guía rápida</strong> (1-2 páginas) sobre cómo proteger un software ante ambas instituciones.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Capturas de pantalla de las búsquedas + Guía rápida de protección de software.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    'actividades4': {
+        title: 'Actividades - Unidad IV: Derecho de Autor y Conexos',
+        type: 'activities',
+        content: `
+            <div class="activities-content">
+                <div class="activities-header">
+                    <h3><i class="fas fa-tasks"></i> Actividades de Aprendizaje</h3>
+                    <p>Unidad IV: Derecho de Autor y Conexos</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 1</div>
+                    <h4><i class="fas fa-copyright"></i> Análisis de Derechos Morales y Patrimoniales</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Distinguir entre derechos morales y patrimoniales del autor en casos prácticos.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li>Lee los <strong>Artículos 18 a 30</strong> de la Ley Federal del Derecho de Autor sobre derechos morales y patrimoniales.</li>
+                                <li>Analiza los siguientes <strong>escenarios hipotéticos</strong> e identifica qué derechos están involucrados:
+                                    <ul>
+                                        <li><strong>Caso A:</strong> Un desarrollador crea un algoritmo y su empresa lo comercializa sin darle crédito.</li>
+                                        <li><strong>Caso B:</strong> Una editorial modifica el final de una novela sin consultar al autor.</li>
+                                        <li><strong>Caso C:</strong> Un músico quiere retirar una canción de plataformas de streaming.</li>
+                                        <li><strong>Caso D:</strong> Una universidad usa código de un estudiante para un proyecto comercial.</li>
+                                    </ul>
+                                </li>
+                                <li>Para cada caso, indica:
+                                    <ul>
+                                        <li>¿Qué derecho(s) moral(es) aplica(n)?</li>
+                                        <li>¿Qué derecho(s) patrimonial(es) aplica(n)?</li>
+                                        <li>¿Hubo violación? ¿Cuál sería el remedio legal?</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Análisis escrito de los 4 casos (1-2 páginas).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 2</div>
+                    <h4><i class="fas fa-users"></i> Creación de Marca y Diseño Industrial</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Aplicar los conocimientos sobre marcas y diseños industriales a un proyecto creativo.</p>
+                        
+                        <div class="activity-group-work">
+                            <p><i class="fas fa-info-circle"></i> <strong>Trabajo en equipos:</strong> Dividir la clase en tres grupos.</p>
+                        </div>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Tareas por equipo:</h5>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 1:</strong> Creación de Marca para App de IA</h6>
+                                <ul>
+                                    <li>Diseña una <strong>marca nominativa y figurativa</strong> para una aplicación de IA.</li>
+                                    <li>Realiza una búsqueda en <strong>MARCANET</strong> para verificar disponibilidad.</li>
+                                    <li>Identifica las <strong>clases de Niza</strong> aplicables.</li>
+                                    <li>Elabora un <strong>borrador de solicitud</strong> de registro de marca.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 2:</strong> Diseño de Interfaz Gráfica</h6>
+                                <ul>
+                                    <li>Diseña una <strong>interfaz gráfica de usuario (GUI)</strong> para una aplicación.</li>
+                                    <li>Analiza si puede protegerse como <strong>diseño industrial</strong>.</li>
+                                    <li>Investiga casos de registro de GUIs ante el IMPI.</li>
+                                    <li>Elabora la documentación necesaria para una solicitud.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 3:</strong> Diseño de Dispositivo IoT</h6>
+                                <ul>
+                                    <li>Diseña la <strong>apariencia externa</strong> de un dispositivo IoT (boceto).</li>
+                                    <li>Analiza qué elementos son protegibles como diseño industrial.</li>
+                                    <li>Distingue entre elementos funcionales y ornamentales.</li>
+                                    <li>Prepara un argumento de por qué el diseño cumple requisitos de novedad y originalidad.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Diseño visual + análisis de protegibilidad + borrador de documentación (por equipo).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 3</div>
+                    <h4><i class="fas fa-file-contract"></i> Análisis de Licencias de Software</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Comprender las diferentes licencias de software y sus implicaciones legales.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li>Investiga las características de las siguientes <strong>licencias de software</strong>:
+                                    <ul>
+                                        <li>MIT License</li>
+                                        <li>Apache License 2.0</li>
+                                        <li>GNU General Public License (GPL v3)</li>
+                                        <li>Creative Commons (CC BY, CC BY-NC, CC BY-SA)</li>
+                                        <li>Licencias propietarias (ej: Microsoft EULA)</li>
+                                    </ul>
+                                </li>
+                                <li>Elabora una <strong>tabla comparativa</strong> que incluya:
+                                    <ul>
+                                        <li>Permisos otorgados (uso, modificación, distribución)</li>
+                                        <li>Condiciones (atribución, copyleft, etc.)</li>
+                                        <li>Restricciones</li>
+                                        <li>Compatibilidad con uso comercial</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Caso práctico:</strong> Si vas a desarrollar una aplicación comercial de IA usando bibliotecas open source, ¿qué licencias serían compatibles y cuáles problemáticas? Justifica tu respuesta.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Tabla comparativa de licencias + análisis del caso práctico (1 página).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    
+    'actividades5': {
+        title: 'Actividades - Unidad V: PI y su Aplicación',
+        type: 'activities',
+        content: `
+            <div class="activities-content">
+                <div class="activities-header">
+                    <h3><i class="fas fa-tasks"></i> Actividades de Aprendizaje</h3>
+                    <p>Unidad V: PI y su Aplicación</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 1</div>
+                    <h4><i class="fas fa-search"></i> Auditoría de PI de un Proyecto de IA</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Realizar un ejercicio de identificación y clasificación de activos de PI en un proyecto tecnológico.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li>Imagina que estás desarrollando un <strong>asistente virtual con IA</strong> para atención al cliente. Identifica todos los posibles activos de PI involucrados:
+                                    <ul>
+                                        <li>Nombre y logo del producto (marca)</li>
+                                        <li>Código fuente (derecho de autor)</li>
+                                        <li>Algoritmos propietarios (¿patente o secreto?)</li>
+                                        <li>Base de datos de entrenamiento (derecho de autor/secreto)</li>
+                                        <li>Interfaz gráfica (diseño industrial)</li>
+                                        <li>Documentación técnica (derecho de autor)</li>
+                                    </ul>
+                                </li>
+                                <li>Para cada activo identificado, determina:
+                                    <ul>
+                                        <li>Tipo de protección más adecuada</li>
+                                        <li>Institución ante la cual registrar (si aplica)</li>
+                                        <li>Costo estimado y duración de la protección</li>
+                                        <li>Riesgos si no se protege</li>
+                                    </ul>
+                                </li>
+                                <li>Elabora un <strong>plan de protección de PI</strong> priorizado para el proyecto.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Inventario de activos de PI + Plan de protección priorizado (2-3 páginas).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 2</div>
+                    <h4><i class="fas fa-users"></i> Debate: IA y Autoría</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Analizar las implicaciones legales de las obras generadas por Inteligencia Artificial.</p>
+                        
+                        <div class="activity-group-work">
+                            <p><i class="fas fa-info-circle"></i> <strong>Trabajo en equipos:</strong> Dividir la clase en tres grupos para un debate.</p>
+                        </div>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Posiciones a debatir:</h5>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 1:</strong> A favor de proteger obras de IA</h6>
+                                <ul>
+                                    <li>Argumentar por qué las obras generadas por IA <strong>deberían tener protección</strong> de derechos de autor.</li>
+                                    <li>Proponer quién debería ser considerado "autor" (desarrollador, usuario, empresa).</li>
+                                    <li>Analizar el caso del Reino Unido y su modelo de "computer-generated works".</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 2:</strong> En contra de proteger obras de IA</h6>
+                                <ul>
+                                    <li>Argumentar por qué las obras de IA <strong>no deberían tener protección</strong>.</li>
+                                    <li>Defender el requisito de autoría humana como esencial.</li>
+                                    <li>Analizar los riesgos de saturar el sistema con millones de obras generadas automáticamente.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Equipo 3:</strong> Posición intermedia / Reguladores</h6>
+                                <ul>
+                                    <li>Proponer un <strong>modelo híbrido o nuevo</strong> de protección.</li>
+                                    <li>Actuar como "jueces" del debate, haciendo preguntas a ambos equipos.</li>
+                                    <li>Emitir una "resolución" fundamentada al final del debate.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Documento con argumentos preparados (por equipo) + resumen del debate en clase.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-number">Actividad 3</div>
+                    <h4><i class="fas fa-gavel"></i> Análisis de Caso de Infracción</h4>
+                    <div class="activity-description">
+                        <p><strong>Objetivo:</strong> Analizar un caso real de infracción a la propiedad intelectual relacionado con tecnología.</p>
+                        
+                        <div class="activity-tasks">
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <ol>
+                                <li>Selecciona <strong>uno de los siguientes casos</strong> e investígalo a profundidad:
+                                    <ul>
+                                        <li><strong>Oracle vs. Google</strong> (APIs y fair use)</li>
+                                        <li><strong>Apple vs. Samsung</strong> (patentes y diseños)</li>
+                                        <li><strong>Getty Images vs. Stability AI</strong> (entrenamiento de IA)</li>
+                                        <li><strong>Waymo vs. Uber</strong> (secretos industriales)</li>
+                                        <li><strong>Epic Games vs. Apple</strong> (mercados digitales)</li>
+                                    </ul>
+                                </li>
+                                <li>Elabora un <strong>análisis del caso</strong> que incluya:
+                                    <ul>
+                                        <li>Antecedentes y hechos relevantes</li>
+                                        <li>Derechos de PI involucrados</li>
+                                        <li>Argumentos de cada parte</li>
+                                        <li>Resolución del tribunal (si ya existe)</li>
+                                        <li>Implicaciones para la industria tecnológica</li>
+                                    </ul>
+                                </li>
+                                <li>Incluye tu <strong>opinión fundamentada</strong> sobre si la resolución fue justa.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="activity-deliverable">
+                            <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
+                            <p>Ensayo de análisis del caso (3-4 páginas) con fuentes citadas.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         `
