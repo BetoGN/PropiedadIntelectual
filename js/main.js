@@ -7,7 +7,7 @@
 // Cambiar a 'false' para ocultar una unidad
 // ============================================
 const UNIDAD_1_VISIBLE = true;  // Unidad I: Legislación Informática
-const UNIDAD_2_VISIBLE = true;  // Unidad II: Principios de Propiedad Intelectual
+const UNIDAD_2_VISIBLE = false;  // Unidad II: Principios de Propiedad Intelectual
 const UNIDAD_3_VISIBLE = true;  // Unidad III: Legislación de la PI
 const UNIDAD_4_VISIBLE = true;  // Unidad IV: Derecho de Autor y Conexos
 const UNIDAD_5_VISIBLE = true;  // Unidad V: PI y su Aplicación
