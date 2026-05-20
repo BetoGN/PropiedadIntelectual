@@ -13,25 +13,31 @@ const courseContent = {
         content: `
             <div class="content-section">
                 <h3><i class="fas fa-balance-scale"></i> Introducción al Derecho Informático</h3>
-                <p>La tecnología no existe en un vacío normativo, sino que se inscribe en el marco del <strong>Derecho</strong>, entendido como el conjunto de normas y principios que regulan las interacciones sociales para establecer un orden justo. La aplicación de estos principios a las tecnologías de la información da origen al <strong>Derecho Informático</strong>, una rama jurídica que se enfoca en regular las acciones, procesos, productos y relaciones jurídicas que emergen de la informática y sus diversas aplicaciones.</p>
+                <p>El desarrollo tecnológico no ocurre de manera aislada ni al margen de las normas sociales. Toda innovación, especialmente aquellas vinculadas con las tecnologías digitales, se encuentra inserta dentro del ámbito jurídico, entendido como el sistema de principios y disposiciones que organizan la convivencia social y buscan preservar condiciones de justicia y equilibrio.</p>
                 
-                <p>El Derecho Informático abarca ámbitos fundamentales como:</p>
+                <p>A partir de esta relación entre derecho y tecnología surge el <strong>Derecho Informático</strong>, disciplina jurídica orientada al estudio y regulación de los fenómenos derivados del uso de sistemas computacionales y tecnologías de información.</p>
+                
+                <p>Dentro de este campo se incluyen procesos relacionados con:</p>
                 <ul>
-                    <li>El procesamiento de datos personales y corporativos</li>
-                    <li>La transmisión de contenidos digitales</li>
-                    <li>La comunicación a distancia</li>
-                    <li>La inteligencia artificial y sus implicaciones legales</li>
+                    <li>El tratamiento automatizado de datos</li>
+                    <li>La circulación de contenidos digitales</li>
+                    <li>Las comunicaciones electrónicas</li>
+                    <li>Las aplicaciones de inteligencia artificial</li>
                 </ul>
                 
                 <div class="highlight-box">
-                    <h4><i class="fas fa-info-circle"></i> ¿Por qué es relevante?</h4>
-                    <p>Comprender los elementos primarios del derecho es un prerrequisito indispensable para analizar cualquier marco normativo tecnológico, especialmente en el campo de la Ingeniería en Inteligencia Artificial.</p>
+                    <h4><i class="fas fa-info-circle"></i> Importancia Fundamental</h4>
+                    <p>Conocer los fundamentos básicos del derecho resulta indispensable para comprender cualquier regulación vinculada con el entorno tecnológico contemporáneo.</p>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-gavel"></i> 1.1.1 La Norma Jurídica y el Derecho</h3>
-                <p>La <strong>norma jurídica</strong> es el enunciado formal que establece la conducta permitida, obligatoria o prohibida, y cuya inobservancia conlleva una sanción impuesta por el Estado. Las normas se clasifican típicamente en cuatro categorías esenciales que rigen la conducta en el entorno digital:</p>
+                <p>La <strong>norma jurídica</strong> puede definirse como una disposición formal creada para establecer conductas permitidas, obligatorias o prohibidas dentro de una sociedad. Su incumplimiento genera consecuencias legales que son aplicadas por el Estado mediante distintos mecanismos de sanción.</p>
+                
+                <p>En el contexto digital, estas normas adquieren especial relevancia debido al crecimiento constante de las interacciones tecnológicas y al impacto que tienen sobre la información y la seguridad de las personas.</p>
+                
+                <p>Generalmente, las normas jurídicas pueden agruparse en cuatro categorías principales:</p>
                 
                 <div class="info-cards-grid">
                     <div class="info-card">
@@ -39,8 +45,8 @@ const courseContent = {
                             <i class="fas fa-exclamation-circle"></i>
                             <h4>Normas Imperativas</h4>
                         </div>
-                        <p>Aquellas que obligan a realizar una acción o abstenerse de ella, sin que la voluntad de los particulares pueda modificarlas.</p>
-                        <p class="example"><strong>Ejemplo:</strong> La obligación legal de implementar medidas de seguridad específicas para proteger los datos personales.</p>
+                        <p>Son aquellas cuya observancia resulta obligatoria y no puede ser modificada por la voluntad de los particulares.</p>
+                        <p class="example"><strong>En tecnología:</strong> La obligación legal de implementar mecanismos de protección y seguridad para el resguardo de datos personales.</p>
                     </div>
                     
                     <div class="info-card">
@@ -48,8 +54,8 @@ const courseContent = {
                             <i class="fas fa-ban"></i>
                             <h4>Normas Prohibitivas</h4>
                         </div>
-                        <p>Impiden categóricamente una conducta determinada.</p>
-                        <p class="example"><strong>Ejemplo:</strong> La prohibición de acceder a sistemas informáticos protegidos sin la debida autorización.</p>
+                        <p>Se encargan de impedir determinadas conductas consideradas ilícitas o perjudiciales.</p>
+                        <p class="example"><strong>En informática:</strong> La prohibición de ingresar sin autorización a sistemas o plataformas protegidas.</p>
                     </div>
                     
                     <div class="info-card">
@@ -57,8 +63,8 @@ const courseContent = {
                             <i class="fas fa-handshake"></i>
                             <h4>Normas Dispositivas</h4>
                         </div>
-                        <p>Permiten a las partes regular una situación jurídica mediante su voluntad, operando solo en ausencia de un acuerdo explícito.</p>
-                        <p class="example"><strong>Ejemplo:</strong> Las cláusulas en contratos de software y licencias que las partes pueden negociar.</p>
+                        <p>Permiten que las partes regulen ciertas situaciones jurídicas mediante acuerdos propios, actuando únicamente cuando no existe una disposición expresa entre ellas.</p>
+                        <p class="example"><strong>Ejemplo:</strong> Contratos de software, licencias digitales y servicios tecnológicos.</p>
                     </div>
                     
                     <div class="info-card">
@@ -66,41 +72,43 @@ const courseContent = {
                             <i class="fas fa-check-circle"></i>
                             <h4>Normas Permisivas</h4>
                         </div>
-                        <p>Conceden una facultad o permiten una acción específica.</p>
-                        <p class="example"><strong>Ejemplo:</strong> El derecho a la autodeterminación informativa, que faculta a las personas a controlar la información recogida sobre ellas.</p>
+                        <p>Otorgan facultades o reconocen derechos específicos a las personas.</p>
+                        <p class="example"><strong>Ejemplo:</strong> El derecho a la autodeterminación informativa, mediante el cual los individuos pueden conocer y controlar el tratamiento de los datos personales.</p>
                     </div>
                 </div>
                 
                 <div class="highlight-box">
                     <h4><i class="fas fa-file-alt"></i> Legislación Aplicable</h4>
-                    <p>Un ejemplo práctico de la aplicación de la norma jurídica es la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong> en México y el <strong>Reglamento General de Protección de Datos (RGPD)</strong> de la Unión Europea, que imponen obligaciones imperativas sobre cómo deben recabarse y tratarse los datos personales.</p>
+                    <p>Un ejemplo concreto es la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong> en México y el <strong>Reglamento General de Protección de Datos (RGPD)</strong> de la Unión Europea, que establecen obligaciones precisas respecto a la forma en que deben obtenerse, almacenarse y utilizarse los datos personales.</p>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-users"></i> 1.1.2 Sujetos y Objetos del Derecho</h3>
-                <p>Para que una norma jurídica se aplique, deben existir <strong>sujetos</strong> y <strong>objetos</strong> claramente definidos.</p>
+                <p>La aplicación de una norma jurídica requiere la existencia de <strong>sujetos</strong> y <strong>objetos</strong> claramente identificables, ya que son los elementos sobre los cuales recaen los derechos y obligaciones establecidos por la ley.</p>
                 
                 <div class="two-column-grid">
                     <div class="column-box">
                         <h4><i class="fas fa-user-tie"></i> Sujetos del Derecho</h4>
-                        <p>Son los entes (personas físicas o morales/jurídicas) que tienen la capacidad de ser titulares de derechos y obligaciones. En el ámbito digital, estos pueden ser:</p>
+                        <p>Corresponden a las personas físicas o morales que poseen capacidad jurídica para adquirir derechos y asumir obligaciones.</p>
+                        <p>En el entorno digital, esta categoría incluye desde:</p>
                         <ul>
-                            <li>El usuario individual de una red social</li>
-                            <li>El desarrollador de un algoritmo de IA</li>
-                            <li>Grandes corporaciones tecnológicas</li>
-                            <li>El propio Estado (como regulador y como entidad que posee datos)</li>
+                            <li>Usuarios de plataformas electrónicas</li>
+                            <li>Desarrolladores de inteligencia artificial</li>
+                            <li>Empresas tecnológicas</li>
+                            <li>Instituciones gubernamentales</li>
                         </ul>
                     </div>
                     
                     <div class="column-box">
                         <h4><i class="fas fa-cube"></i> Objetos del Derecho</h4>
-                        <p>Son los bienes, valores o intereses sobre los cuales recaen las normas. En el Derecho Informático, el objeto se expande más allá de lo tangible para incluir:</p>
+                        <p>Son los bienes, intereses o valores protegidos jurídicamente. Dentro del Derecho Informático, estos objetos abarcan:</p>
                         <ul>
-                            <li>La información (datos personales, secretos industriales)</li>
-                            <li>El software y código fuente</li>
-                            <li>El espectro radioeléctrico</li>
-                            <li>Los sistemas informáticos mismos</li>
+                            <li>Bases de datos</li>
+                            <li>Software y códigos fuente</li>
+                            <li>Secretos industriales</li>
+                            <li>Información personal</li>
+                            <li>Sistemas informáticos</li>
                         </ul>
                     </div>
                 </div>
@@ -108,7 +116,9 @@ const courseContent = {
             
             <div class="content-section">
                 <h3><i class="fas fa-file-signature"></i> 1.1.3 El Contrato</h3>
-                <p>Un <strong>contrato</strong> es la manifestación de voluntad entre dos o más partes que, al generar derechos y obligaciones recíprocas, establece un marco legal para una relación específica. En la Ingeniería en Inteligencia Artificial, la <strong>contratación informática</strong> es omnipresente.</p>
+                <p>El contrato representa un acuerdo de voluntad entre dos o más partes mediante el cual se crean derechos y obligaciones recíprocas. Su finalidad es establecer las condiciones legales que regularán una relación determinada.</p>
+                
+                <p>En el ámbito de la Ingeniería en Inteligencia Artificial, los contratos tienen una presencia constante debido a la naturaleza colaborativa y tecnológica de muchos proyectos.</p>
                 
                 <div class="table-responsive">
                     <table class="content-table">
@@ -123,46 +133,47 @@ const courseContent = {
                             <tr>
                                 <td><strong>Contratos Civiles</strong></td>
                                 <td>Regulan relaciones entre particulares. Pueden ser unilaterales o bilaterales.</td>
-                                <td>Contrato de licencia de software oneroso</td>
+                                <td>Contrato de licencia de software</td>
                             </tr>
                             <tr>
                                 <td><strong>Contratos Mercantiles</strong></td>
-                                <td>Aplican a actos de comercio entre comerciantes.</td>
-                                <td>Contrato de suministro de servicio de nube o Big Data</td>
+                                <td>Se aplican a operaciones comerciales relacionadas con servicios tecnológicos.</td>
+                                <td>Suministro de plataformas en la nube o servicios de big data</td>
                             </tr>
                             <tr>
                                 <td><strong>Contratos Laborales</strong></td>
-                                <td>Definen la relación entre el trabajador y la empresa.</td>
-                                <td>Contrato por obra determinada para desarrollo de módulo de IA</td>
+                                <td>Determinan la relación jurídica entre empresas y profesionales especializados.</td>
+                                <td>Ingenieros de IA contratados para desarrollar soluciones específicas</td>
                             </tr>
                             <tr>
-                                <td><strong>Contratos Públicos</strong></td>
-                                <td>Una de las partes es una institución pública.</td>
-                                <td>Licitación para implementar sistema de IA gubernamental</td>
+                                <td><strong>Contratos Privados y Públicos</strong></td>
+                                <td>Dependen de si el acuerdo es entre particulares o con instituciones públicas.</td>
+                                <td>Contratos con gobierno para sistemas de IA</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 
                 <div class="highlight-box">
-                    <h4><i class="fas fa-lightbulb"></i> Punto Clave</h4>
-                    <p>La validez y el cumplimiento de estos contratos son fundamentales para la <strong>transferencia de propiedad intelectual</strong> y la <strong>asignación de responsabilidades</strong> en el desarrollo de sistemas complejos de IA.</p>
+                    <h4><i class="fas fa-lightbulb"></i> Importancia Clave</h4>
+                    <p>La correcta elaboración y cumplimiento de estos contratos resulta esencial para definir responsabilidades, regular el uso de tecnología y establecer la titularidad de la propiedad intelectual en proyectos complejos.</p>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-skull-crossbones"></i> 1.1.4 El Delito</h3>
-                <p>Un <strong>delito</strong> es una acción u omisión que contraviene lo estipulado en la ley penal y que es susceptible de ser castigada por las autoridades. Su etimología latina, <em>delinquere</em>, denota el acto de apartarse del camino señalado por la ley.</p>
+                <p>El <strong>delito</strong> consiste en una conducta u omisión que infringe lo establecido por la legislación penal y que puede ser sancionada por las autoridades correspondientes. Su origen etimológico proviene del término latino <em>delinquere</em>, relacionado con la idea de apartarse de aquello que marca la ley.</p>
                 
-                <p>En la era digital, la tipificación de conductas ilícitas ha dado lugar a los <strong>delitos informáticos o cibernéticos</strong>, los cuales se cometen utilizando medios digitales, siendo la computadora tanto el instrumento como, en ocasiones, el fin de la acción criminal.</p>
+                <p>Con el crecimiento de las tecnologías digitales surgieron nuevas formas de conducta ilícita conocidas como <strong>delitos informáticos o cibernéticos</strong>, donde los sistemas computacionales funcionan como herramienta principal o incluso como objetivo del acto delictivo.</p>
                 
                 <div class="warning-box">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Delitos Tipificados en el Código Penal Federal</h4>
+                    <h4><i class="fas fa-exclamation-triangle"></i> Delitos Tipificados en México</h4>
+                    <p>En México, el Código Penal Federal y otras disposiciones especializadas contemplan diversas conductas relacionadas con el uso indebido de tecnologías digitales:</p>
                     <ul>
-                        <li><strong>Acceso no autorizado:</strong> Ingresar sin permiso a sistemas o equipos de informática protegidos, o exceder la autorización concedida.</li>
-                        <li><strong>Modificación o destrucción de información:</strong> Alterar, dañar o provocar la pérdida de información contenida en sistemas o bases de datos.</li>
-                        <li><strong>Fraude informático:</strong> Engañar o aprovechar el error para obtener un lucro indebido a través de medios informáticos (phishing, falsificación de tarjetas).</li>
-                        <li><strong>Uso de información confidencial:</strong> Utilizar indebidamente información sensible en provecho propio o ajeno, con agravantes para funcionarios públicos.</li>
+                        <li><strong>Acceso no autorizado:</strong> Consiste en ingresar a sistemas informáticos protegidos sin permiso o excediendo las facultades autorizadas previamente.</li>
+                        <li><strong>Modificación o destrucción de información:</strong> Implica alterar, dañar o provocar la pérdida de datos contenidos en equipos, sistemas o bases de información.</li>
+                        <li><strong>Fraude informático:</strong> Se presenta cuando una persona obtiene beneficios económicos mediante engaños realizados a través de herramientas digitales, como ocurre en casos de phishing o falsificación de tarjetas bancarias.</li>
+                        <li><strong>Uso de información confidencial:</strong> Hace referencia al aprovechamiento indebido de datos sensibles para beneficio propio o de terceros, situación que puede agravarse cuando intervienen funcionarios públicos.</li>
                     </ul>
                 </div>
             </div>
@@ -174,33 +185,35 @@ const courseContent = {
         content: `
             <div class="content-section">
                 <h3><i class="fas fa-laptop-code"></i> Introducción a la Regulación Informática</h3>
-                <p>La <strong>regulación jurídica en materia informática</strong> es esencial para garantizar un entorno digital confiable, protegiendo los derechos de los usuarios y la integridad de los sistemas. El derecho informático abarca aspectos cruciales para el desarrollo de la inteligencia artificial, entre ellos el derecho a la información, la confidencialidad y la seguridad.</p>
+                <p>La <strong>regulación jurídica en materia informática</strong> cumple una función indispensable dentro de las sociedades digitales actuales, ya que permite mantener condiciones de seguridad, confianza y protección para quienes utilizan tecnologías y sistemas de información.</p>
+                
+                <p>A medida que las herramientas digitales se integran en prácticamente todos los sectores, también aumenta la necesidad de contar con marcos normativos capaces de responder a los riesgos asociados al manejo de datos y a la interacción en entornos virtuales.</p>
+                
+                <p>El Derecho Informático aborda estas problemáticas, incluyendo aspectos vinculados con la protección de la información, la privacidad y la seguridad tecnológica, elementos especialmente relevantes en el desarrollo y operación de sistemas de inteligencia artificial.</p>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-info-circle"></i> 1.2.1 Derecho a la Información</h3>
-                <p>El <strong>Derecho a la Información</strong> es una prerrogativa fundamental que faculta a toda persona a buscar, recibir y difundir información. En el contexto digital, una de sus vertientes más importantes es el <strong>Derecho de Acceso a la Información Pública</strong>.</p>
+                <p>El <strong>Derecho a la Información</strong> constituye una garantía fundamental mediante la cual toda persona puede acceder, buscar, recibir y difundir información de distinta naturaleza. Dentro del contexto digital, este derecho adquiere una dimensión aún más amplia debido a la velocidad con la que circulan los datos y al papel que desempeñan las plataformas tecnológicas en la comunicación contemporánea.</p>
                 
                 <div class="highlight-box">
-                    <h4><i class="fas fa-door-open"></i> Características del Derecho a la Información</h4>
+                    <h4><i class="fas fa-door-open"></i> Derecho de Acceso a la Información Pública</h4>
+                    <p>Una de las expresiones más importantes de este derecho es el <strong>Derecho de Acceso a la Información Pública</strong>, el cual permite consultar documentos, registros y datos que se encuentran bajo resguardo de instituciones gubernamentales.</p>
+                    <p>Gracias a este mecanismo es posible:</p>
                     <ul>
-                        <li>Permite examinar datos y registros en poder de entidades públicas</li>
-                        <li>Es clave para la transparencia gubernamental</li>
-                        <li>Fundamental para la rendición de cuentas en una sociedad democrática</li>
-                        <li>Incluye el derecho a difundir información veraz</li>
+                        <li>Fortalecer la transparencia institucional</li>
+                        <li>Facilitar la rendición de cuentas en una sociedad democrática</li>
+                        <li>Permitir que los ciudadanos evalúen el desempeño de las autoridades</li>
+                        <li>Facilitar la participación informada en asuntos de interés colectivo</li>
                     </ul>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-user-secret"></i> 1.2.2 Confidencialidad</h3>
-                <p>La <strong>confidencialidad</strong> es el principio que asegura que la información solo sea accesible por aquellos individuos, entidades o procesos que estén debidamente autorizados. En la Ingeniería en IA, este principio se aplica rigurosamente a:</p>
-                <ul>
-                    <li>Los datos personales de los usuarios</li>
-                    <li>La propiedad intelectual de la compañía</li>
-                    <li>Los secretos comerciales</li>
-                    <li>Los algoritmos propietarios</li>
-                </ul>
+                <p>La <strong>confidencialidad</strong> se basa en el principio de que la información únicamente debe estar disponible para aquellas personas, entidades o procesos que cuentan con autorización para acceder a ella.</p>
+                
+                <p>En áreas relacionadas con la Ingeniería en Inteligencia Artificial, este aspecto adquiere especial importancia debido a la gran cantidad de datos sensibles y recursos tecnológicos que suelen manejarse, incluyendo información personal, modelos algorítmicos y secretos comerciales.</p>
                 
                 <div class="info-cards-grid">
                     <div class="info-card">
@@ -208,7 +221,7 @@ const courseContent = {
                             <i class="fas fa-key"></i>
                             <h4>Controles de Acceso</h4>
                         </div>
-                        <p>Uso de cifrados, contraseñas y esquemas de privilegios para que el usuario solo acceda a lo estrictamente necesario para sus funciones.</p>
+                        <p>Incluyen mecanismos como contraseñas, cifrado de información y niveles de privilegios que limitan el acceso únicamente a los recursos necesarios para cada usuario.</p>
                     </div>
                     
                     <div class="info-card">
@@ -216,7 +229,7 @@ const courseContent = {
                             <i class="fas fa-file-contract"></i>
                             <h4>Políticas de Confidencialidad</h4>
                         </div>
-                        <p>Establecimiento de instrucciones claras sobre el manejo interno de la información por parte de los empleados.</p>
+                        <p>Son lineamientos internos que establecen la manera adecuada en que empleados y colaboradores deben tratar la información dentro de una organización.</p>
                     </div>
                     
                     <div class="info-card">
@@ -224,43 +237,45 @@ const courseContent = {
                             <i class="fas fa-handshake"></i>
                             <h4>Acuerdos de Confidencialidad (NDA)</h4>
                         </div>
-                        <p>Contratos firmados con terceros (empleados, socios, inversores) para garantizar la no divulgación de datos sensibles.</p>
+                        <p>Consisten en contratos celebrados con trabajadores, socios comerciales o inversionistas con el propósito de evitar la divulgación de información sensible o estratégica.</p>
                     </div>
                 </div>
                 
                 <div class="highlight-box">
                     <h4><i class="fas fa-shield-alt"></i> Legislación de Datos Personales</h4>
-                    <p>La legislación de datos personales es la manifestación legal más clara de este principio, buscando proteger la <strong>privacidad</strong>, <strong>dignidad</strong> y <strong>autonomía</strong> de las personas, otorgándoles control sobre su información.</p>
+                    <p>La legislación relacionada con datos personales representa una de las expresiones legales más relevantes de este principio, ya que busca proteger la <strong>privacidad</strong>, la <strong>dignidad</strong> y la <strong>autonomía</strong> de las personas, garantizando que mantengan cierto control sobre el uso de su información.</p>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-lock"></i> 1.2.3 Seguridad</h3>
-                <p>La <strong>seguridad</strong> en el ámbito informático se refiere a la protección de los sistemas y la información contra amenazas. Legalmente, la regulación se enfoca en tres aspectos fundamentales esenciales para cualquier sistema de IA:</p>
+                <p>En el ámbito informático, la <strong>seguridad</strong> se refiere al conjunto de medidas destinadas a proteger sistemas, redes e información frente a amenazas, ataques o accesos indebidos.</p>
+                
+                <p>Desde la perspectiva jurídica, la regulación en esta materia pone atención en diversos elementos esenciales para garantizar el funcionamiento adecuado de los sistemas tecnológicos y, particularmente, de las aplicaciones basadas en inteligencia artificial.</p>
                 
                 <div class="three-pillars">
                     <div class="pillar">
                         <div class="pillar-icon"><i class="fas fa-shield-virus"></i></div>
                         <h4>Ciberseguridad</h4>
-                        <p>Protección de la infraestructura tecnológica y los datos críticos, como lo establece la <strong>Estrategia Nacional de Ciberseguridad</strong> en México.</p>
+                        <p>Comprende la protección de infraestructuras tecnológicas, redes y datos críticos frente a riesgos digitales, tal como se contempla en la Estrategia Nacional de Ciberseguridad en México.</p>
                     </div>
                     
                     <div class="pillar">
                         <div class="pillar-icon"><i class="fas fa-database"></i></div>
                         <h4>Integridad de los Datos</h4>
-                        <p>Garantizar que los datos y la información sean precisos y completos, no habiendo sido alterados o destruidos de forma no autorizada.</p>
+                        <p>Busca asegurar que la información permanezca exacta, completa y libre de alteraciones no autorizadas que puedan afectar su confiabilidad.</p>
                     </div>
                     
                     <div class="pillar">
                         <div class="pillar-icon"><i class="fas fa-server"></i></div>
                         <h4>Disponibilidad</h4>
-                        <p>Asegurar que los usuarios autorizados tengan acceso a la información y a los sistemas cuando lo requieran.</p>
+                        <p>Garantiza que los usuarios autorizados puedan acceder a sistemas e información cuando sea necesario para el desarrollo de sus actividades.</p>
                     </div>
                 </div>
                 
                 <div class="warning-box">
-                    <h4><i class="fas fa-exclamation-circle"></i> Obligación Legal</h4>
-                    <p>Las <strong>políticas de seguridad</strong> definen los permisos (lectura, modificación) que tiene un usuario sobre la información o servicios. Las vulnerabilidades de seguridad que afecten significativamente los derechos de los titulares de datos deben ser <strong>informadas de inmediato</strong> por el responsable.</p>
+                    <h4><i class="fas fa-exclamation-circle"></i> Obligaciones Legales</h4>
+                    <p>Las <strong>políticas de seguridad</strong> establecen criterios específicos relacionados con permisos de acceso, lectura y modificación de información dentro de un sistema. Asimismo, cuando ocurre una vulneración que compromete de forma significativa los derechos de los titulares de datos, los responsables tienen la obligación de notificarlo oportunamente para evitar mayores afectaciones.</p>
                 </div>
             </div>
         `
@@ -271,17 +286,21 @@ const courseContent = {
         content: `
             <div class="content-section">
                 <h3><i class="fas fa-broadcast-tower"></i> Importancia de las Telecomunicaciones</h3>
-                <p>La <strong>Regulación Jurídica en Materia de Telecomunicaciones</strong> es vital, ya que la Inteligencia Artificial se sustenta en la transmisión masiva de datos a través de redes y el uso del espectro radioeléctrico. En México, esta materia se rige principalmente por la <strong>Ley Federal de Telecomunicaciones y Radiodifusión (LFTR)</strong>.</p>
+                <p>La <strong>Regulación Jurídica en Materia de Telecomunicaciones</strong> tiene una importancia central dentro del desarrollo tecnológico actual, particularmente porque gran parte de las aplicaciones de Inteligencia Artificial dependen de la transferencia constante de datos mediante redes de comunicación y del aprovechamiento del espectro radioeléctrico.</p>
+                
+                <p>Sin infraestructura de telecomunicaciones eficiente, muchas herramientas digitales simplemente no podrían operar de forma adecuada.</p>
+                
+                <p>En México, el marco normativo principal en esta área se encuentra establecido en la <strong>Ley Federal de Telecomunicaciones y Radiodifusión (LFTR)</strong>.</p>
                 
                 <div class="highlight-box">
                     <h4><i class="fas fa-landmark"></i> Rectoría del Estado</h4>
-                    <p>El Estado ejerce la rectoría sobre las telecomunicaciones y mantiene el dominio sobre el <strong>espectro radioeléctrico</strong> y las <strong>posiciones orbitales</strong>. El espectro radioeléctrico y las redes públicas de telecomunicaciones son consideradas <strong>vías generales de comunicación</strong> y son de jurisdicción federal.</p>
+                    <p>El Estado mexicano conserva la rectoría sobre las telecomunicaciones y mantiene el control jurídico del <strong>espectro radioeléctrico</strong> y de las <strong>posiciones orbitales</strong>. Tanto el espectro como las redes públicas de telecomunicaciones son considerados <strong>vías generales de comunicación</strong>, razón por la cual permanecen bajo jurisdicción federal.</p>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-satellite-dish"></i> El Espectro Radioeléctrico</h3>
-                <p>El uso, aprovechamiento y explotación de las bandas de frecuencia del espectro se otorga mediante <strong>concesiones</strong>, un acto administrativo que confiere el derecho a explotar estas bandas bajo los términos establecidos en la ley.</p>
+                <p>El aprovechamiento y explotación de las bandas de frecuencia se autoriza a través de <strong>concesiones</strong> otorgadas por el Estado. Estas concesiones constituyen actos administrativos mediante los cuales se concede el derecho de utilizar determinadas frecuencias bajo las condiciones previstas por la legislación aplicable.</p>
                 
                 <div class="info-cards-grid">
                     <div class="info-card">
@@ -289,7 +308,7 @@ const courseContent = {
                             <i class="fas fa-wifi"></i>
                             <h4>Administración del Espectro</h4>
                         </div>
-                        <p>Regulación y administración eficiente del espectro radioeléctrico como recurso escaso del Estado.</p>
+                        <p>Regulación y administración del espectro radioeléctrico como recurso fundamental del Estado.</p>
                     </div>
                     
                     <div class="info-card">
@@ -297,7 +316,7 @@ const courseContent = {
                             <i class="fas fa-chart-line"></i>
                             <h4>Fomento a la Competencia</h4>
                         </div>
-                        <p>Requisitos y promoción de la competencia efectiva en las redes de telecomunicaciones.</p>
+                        <p>Requisitos y mecanismos destinados a fomentar la competencia dentro de las redes de telecomunicaciones.</p>
                     </div>
                     
                     <div class="info-card">
@@ -305,23 +324,14 @@ const courseContent = {
                             <i class="fas fa-user-shield"></i>
                             <h4>Derechos de los Usuarios</h4>
                         </div>
-                        <p>Protección de los derechos de los usuarios y garantía de la calidad de los servicios prestados.</p>
+                        <p>Protección de los derechos de los usuarios, así como la supervisión de la calidad de los servicios ofrecidos.</p>
                     </div>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-building"></i> Instituto Federal de Telecomunicaciones (IFT)</h3>
-                <p>El <strong>Instituto Federal de Telecomunicaciones (IFT)</strong> es el órgano autónomo encargado de regular y promover la competencia en esta materia. Sus funciones principales incluyen:</p>
-                
-                <ul>
-                    <li>Otorgar concesiones para el uso del espectro radioeléctrico</li>
-                    <li>Regular los servicios de telecomunicaciones y radiodifusión</li>
-                    <li>Promover la competencia efectiva en el sector</li>
-                    <li>Resolver controversias entre operadores</li>
-                    <li>Establecer tarifas de interconexión</li>
-                    <li>Vigilar el cumplimiento de obligaciones de los concesionarios</li>
-                </ul>
+                <p>El <strong>Instituto Federal de Telecomunicaciones (IFT)</strong> es el organismo autónomo responsable de regular este sector y promover condiciones de competencia entre los distintos participantes de la industria.</p>
                 
                 <div class="highlight-box">
                     <h4><i class="fas fa-robot"></i> Relevancia para la IA</h4>
@@ -336,11 +346,13 @@ const courseContent = {
         content: `
             <div class="content-section">
                 <h3><i class="fas fa-file-alt"></i> Marco Administrativo</h3>
-                <p>La <strong>Regulación Administrativa en Materia Informática</strong> se relaciona con las leyes que rigen la operación de las entidades públicas y privadas en el manejo de la información y los datos, con énfasis en la transparencia y la protección de datos personales.</p>
+                <p>La <strong>Regulación Administrativa en Materia Informática</strong> comprende el conjunto de disposiciones legales que orientan la actuación de instituciones públicas y privadas en relación con el manejo de información y datos personales.</p>
+                
+                <p>Su finalidad principal consiste en garantizar prácticas responsables en el tratamiento de la información, dando especial atención a la transparencia institucional y a la protección de la privacidad de las personas.</p>
                 
                 <div class="highlight-box">
                     <h4><i class="fas fa-scroll"></i> Fundamento Constitucional</h4>
-                    <p>Esta regulación se fundamenta en principios constitucionales, destacando el <strong>Artículo 16 Constitucional</strong> que protege la vida privada y los datos personales de toda persona.</p>
+                    <p>Este marco regulatorio tiene sustento en principios constitucionales, particularmente en el <strong>Artículo 16 Constitucional</strong>, el cual reconoce la protección de la vida privada y de los datos personales como derechos fundamentales.</p>
                 </div>
             </div>
             
@@ -354,13 +366,8 @@ const courseContent = {
                             <h4>Ley General de Transparencia y Acceso a la Información Pública (LGTAIP)</h4>
                         </div>
                         <div class="law-card-body">
-                            <p>Esta ley tiene como objetivos fundamentales:</p>
-                            <ul>
-                                <li>Asegurar que todo solicitante tenga acceso a la información pública mediante procedimientos sencillos y expeditos</li>
-                                <li>Transparentar la gestión pública mediante la difusión de información oportuna, verificable y comprensible</li>
-                                <li>Promover la rendición de cuentas de los sujetos obligados</li>
-                                <li>Garantizar el derecho de acceso a la información de cualquier persona</li>
-                            </ul>
+                            <p>Esta legislación garantiza el acceso de cualquier persona a la información pública mediante procedimientos accesibles y transparentes.</p>
+                            <p>Asimismo, promueve la difusión de información verificable y oportuna sobre las actividades gubernamentales.</p>
                         </div>
                     </div>
                     
@@ -370,13 +377,7 @@ const courseContent = {
                             <h4>Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados (LGPDPPSO)</h4>
                         </div>
                         <div class="law-card-body">
-                            <p>Esta ley regula el tratamiento de datos personales por parte de las autoridades y entidades públicas:</p>
-                            <ul>
-                                <li>Obliga a establecer medidas de seguridad de nivel alto</li>
-                                <li>Garantiza la integridad, disponibilidad y confidencialidad de la información</li>
-                                <li>Protege los derechos ARCO de los titulares</li>
-                                <li>Establece sanciones por incumplimiento</li>
-                            </ul>
+                            <p>Regula el tratamiento de datos personales realizado por instituciones y autoridades públicas, estableciendo la obligación de implementar medidas de seguridad orientadas a proteger la integridad, disponibilidad y confidencialidad de la información.</p>
                         </div>
                     </div>
                 </div>
@@ -384,7 +385,9 @@ const courseContent = {
             
             <div class="content-section">
                 <h3><i class="fas fa-university"></i> Instituto Nacional de Transparencia (INAI)</h3>
-                <p>El <strong>Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI)</strong> es el organismo garante de estos derechos. Su función principal es conocer y resolver los recursos de inconformidad interpuestos por particulares.</p>
+                <p>El <strong>Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI)</strong> funciona como organismo garante de estos derechos, aunque actualmente enfrenta distintos retos derivados de cambios y ajustes institucionales.</p>
+                
+                <p>Entre sus principales atribuciones se encuentra la resolución de recursos de inconformidad presentados por particulares cuando una autoridad niega información pública, la clasifica como reservada o limita el ejercicio de los derechos ARCO.</p>
                 
                 <div class="table-responsive">
                     <table class="content-table">
@@ -398,8 +401,8 @@ const courseContent = {
                         <tbody>
                             <tr>
                                 <td><strong>Instituciones Públicas</strong></td>
-                                <td>Publicar información actualizada y resguardar datos personales</td>
-                                <td>Clasificar información como reservada o confidencial cuando proceda</td>
+                                <td>Mantener información actualizada, transparente y correctamente resguardada</td>
+                                <td>Clasificar información como reservada cuando sea procedente</td>
                             </tr>
                             <tr>
                                 <td><strong>Ciudadanos</strong></td>
@@ -417,12 +420,12 @@ const courseContent = {
                 
                 <div class="highlight-box arco-box">
                     <h4><i class="fas fa-user-cog"></i> Derechos ARCO</h4>
-                    <p>Los derechos ARCO son fundamentales para la autodeterminación informativa:</p>
+                    <p>Los derechos de <strong>Acceso, Rectificación, Cancelación y Oposición (ARCO)</strong> respecto de datos personales son fundamentales para la autodeterminación informativa:</p>
                     <ul>
-                        <li><strong>A</strong>cceso: Conocer qué datos personales se tienen sobre uno</li>
-                        <li><strong>R</strong>ectificación: Corregir datos inexactos o incompletos</li>
-                        <li><strong>C</strong>ancelación: Solicitar la eliminación de datos cuando sea procedente</li>
-                        <li><strong>O</strong>posición: Oponerse al tratamiento de datos para fines específicos</li>
+                        <li><strong>Acceso:</strong> Conocer qué datos personales se tienen sobre uno</li>
+                        <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos</li>
+                        <li><strong>Cancelación:</strong> Solicitar la eliminación de datos cuando sea procedente</li>
+                        <li><strong>Oposición:</strong> Oponerse al tratamiento de datos para fines específicos</li>
                     </ul>
                 </div>
             </div>
@@ -434,58 +437,51 @@ const courseContent = {
         content: `
             <div class="content-section">
                 <h3><i class="fas fa-gavel"></i> Marco Penal Informático</h3>
-                <p>La <strong>Regulación Penal en Materia Informática</strong> es la vertiente del derecho que define y sanciona las conductas delictivas cometidas utilizando sistemas informáticos. La creciente sofisticación de los sistemas de IA y la dependencia en los datos hacen que esta regulación sea fundamental.</p>
+                <p>La <strong>Regulación Penal en Materia Informática</strong> corresponde al área del derecho encargada de identificar, tipificar y sancionar aquellas conductas ilícitas realizadas mediante sistemas computacionales o tecnologías digitales.</p>
+                
+                <p>El crecimiento acelerado de las herramientas tecnológicas, junto con la expansión de la inteligencia artificial y el manejo masivo de datos, ha provocado que este campo jurídico adquiera cada vez mayor relevancia. Actualmente, muchas actividades cotidianas dependen de plataformas digitales, lo que también incrementa los riesgos asociados al uso indebido de la información y de los sistemas informáticos.</p>
                 
                 <div class="warning-box">
                     <h4><i class="fas fa-exclamation-triangle"></i> Importancia para el Ingeniero en IA</h4>
-                    <p>El ingeniero en IA debe conocer estas tipificaciones, ya que su expertise lo sitúa en una posición de <strong>alta responsabilidad</strong>, pudiendo ser tanto víctima como potencial sujeto activo de estas conductas si no actúa con la debida diligencia y ética profesional.</p>
+                    <p>En este contexto, el ingeniero en Inteligencia Artificial ocupa una posición particularmente sensible debido al nivel de acceso y conocimiento técnico que posee sobre sistemas digitales y tratamiento de datos. Por esa razón, resulta indispensable que actúe con responsabilidad, ética profesional y apego al marco legal, ya que su participación puede ser determinante tanto en la prevención como en la posible comisión de conductas ilícitas relacionadas con el entorno tecnológico.</p>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-balance-scale-right"></i> Delitos Tipificados en el Código Penal Federal</h3>
-                <p>Las leyes penales en México, principalmente el <strong>Código Penal Federal</strong>, establecen penas de prisión y multas por diversos delitos informáticos:</p>
+                <p>En México, las disposiciones penales relacionadas con delitos informáticos se encuentran principalmente en el Código Penal Federal, aunque también existen otras normas complementarias que contemplan sanciones económicas y penas privativas de libertad para distintas conductas ilícitas.</p>
                 
                 <div class="crime-cards">
                     <div class="crime-card">
                         <div class="crime-icon"><i class="fas fa-door-open"></i></div>
                         <h4>Acceso y Modificación Ilegales</h4>
-                        <p>Acceder sin autorización, modificar, destruir o provocar pérdida de información contenida en sistemas protegidos.</p>
-                        <div class="crime-penalty">
-                            <span class="penalty-label">Pena:</span> 3 meses a 2 años de prisión y multa
-                        </div>
+                        <p>Comprende el ingreso no autorizado a sistemas protegidos, así como la alteración, destrucción o pérdida de información almacenada en plataformas digitales o equipos informáticos.</p>
                     </div>
                     
                     <div class="crime-card">
                         <div class="crime-icon"><i class="fas fa-file-invoice"></i></div>
                         <h4>Uso de Datos Confidenciales</h4>
-                        <p>Obtener y utilizar información sensible para provecho propio o de un tercero sin autorización.</p>
-                        <div class="crime-penalty">
-                            <span class="penalty-label">Pena:</span> 6 meses a 4 años de prisión
-                        </div>
+                        <p>Se refiere a la obtención y utilización indebida de información sensible con fines personales o para beneficiar a terceros de manera ilegal.</p>
                     </div>
                     
                     <div class="crime-card">
                         <div class="crime-icon"><i class="fas fa-credit-card"></i></div>
                         <h4>Fraude y Falsificación</h4>
-                        <p>Falsificar tarjetas de crédito o débito, o acceder indebidamente a sistemas financieros para realizar operaciones ilícitas.</p>
-                        <div class="crime-penalty">
-                            <span class="penalty-label">Pena:</span> 3 a 9 años de prisión
-                        </div>
+                        <p>Incluye acciones como la falsificación de tarjetas bancarias o el acceso ilícito a sistemas financieros con el propósito de realizar operaciones fraudulentas.</p>
                     </div>
                 </div>
             </div>
             
             <div class="content-section">
                 <h3><i class="fas fa-plus-circle"></i> Agravantes</h3>
-                <p>La pena se agrava significativamente en los siguientes casos:</p>
+                <p>Las sanciones previstas por la ley pueden aumentar cuando la persona responsable posee conocimientos técnicos especializados o experiencia profesional en el manejo de sistemas informáticos. Del mismo modo, las penas suelen agravarse cuando la información obtenida es utilizada con fines de lucro o para causar perjuicios a terceros.</p>
                 
                 <div class="aggravating-factors">
                     <div class="factor">
                         <i class="fas fa-user-graduate"></i>
                         <div>
-                            <h5>Conocimiento Técnico</h5>
-                            <p>Si el responsable es un <strong>técnico o especialista</strong> en el manejo de los sistemas afectados.</p>
+                            <h5>Conocimiento Técnico Especializado</h5>
+                            <p>Si el responsable posee expertise técnica en sistemas informáticos o es profesional especializado en la materia.</p>
                         </div>
                     </div>
                     
@@ -493,7 +489,7 @@ const courseContent = {
                         <i class="fas fa-money-bill-wave"></i>
                         <div>
                             <h5>Fines de Lucro</h5>
-                            <p>Si la información obtenida se usa con <strong>fines económicos</strong> o para obtener un beneficio indebido.</p>
+                            <p>Si la información obtenida se usa con fines económicos o para obtener un beneficio indebido.</p>
                         </div>
                     </div>
                     
@@ -501,7 +497,7 @@ const courseContent = {
                         <i class="fas fa-university"></i>
                         <div>
                             <h5>Función Pública</h5>
-                            <p>Si el responsable es un <strong>funcionario público</strong> que aprovecha su cargo.</p>
+                            <p>Si el responsable es un funcionario público que aprovecha su cargo para cometer el delito.</p>
                         </div>
                     </div>
                     
@@ -509,38 +505,8 @@ const courseContent = {
                         <i class="fas fa-users"></i>
                         <div>
                             <h5>Afectación Masiva</h5>
-                            <p>Si el delito afecta a un <strong>gran número de personas</strong> o sistemas críticos.</p>
+                            <p>Si el delito afecta a un gran número de personas o a sistemas críticos de infraestructura.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="content-section">
-                <h3><i class="fas fa-shield-alt"></i> Recomendaciones para el Profesional en IA</h3>
-                <div class="recommendations-grid">
-                    <div class="recommendation">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Actuar siempre con la debida diligencia y ética profesional</p>
-                    </div>
-                    <div class="recommendation">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Documentar todas las autorizaciones de acceso a sistemas</p>
-                    </div>
-                    <div class="recommendation">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Respetar los acuerdos de confidencialidad</p>
-                    </div>
-                    <div class="recommendation">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Reportar vulnerabilidades de forma responsable</p>
-                    </div>
-                    <div class="recommendation">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Mantenerse actualizado sobre la legislación vigente</p>
-                    </div>
-                    <div class="recommendation">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Implementar medidas de seguridad robustas en los sistemas que se desarrollen</p>
                     </div>
                 </div>
             </div>
@@ -4142,111 +4108,138 @@ const courseContent = {
                 
                 <div class="activity-card">
                     <div class="activity-number">Actividad 1</div>
-                    <h4><i class="fas fa-balance-scale"></i> Clasificación de Delitos Informáticos</h4>
+                    <h4><i class="fas fa-balance-scale"></i> Clasificación de Delitos</h4>
                     <div class="activity-description">
-                        <p><strong>Objetivo:</strong> Identificar y clasificar los diferentes tipos de delitos informáticos según el Código Penal Federal.</p>
+                        <p><strong>Objetivo:</strong> Investigar y comprender la clasificación y tipología de los delitos informáticos dentro del marco legal mexicano, especialmente su relevancia en la práctica profesional de la Ingeniería en Inteligencia Artificial.</p>
+                        
+                        <div class="activity-explanation">
+                            <h5><i class="fas fa-info-circle"></i> Explicación Preliminar</h5>
+                            <p>Los delitos informáticos son conductas ilícitas realizadas mediante o contra sistemas computacionales. Dentro del Código Penal Federal Mexicano, se clasifican en diferentes categorías según su naturaleza: acceso no autorizado, modificación de información, fraude informático y uso de datos confidenciales. Comprender esta clasificación es esencial porque como profesional en IA, debes reconocer qué conductas están tipificadas penalmente y cómo los acuerdos agravantes (conocimiento técnico, fines de lucro, etc.) pueden aumentar significativamente las penas.</p>
+                        </div>
                         
                         <div class="activity-tasks">
-                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
+                            <h5><i class="fas fa-clipboard-list"></i> Tareas a Realizar:</h5>
                             <ol>
-                                <li>Investiga en el <strong>Código Penal Federal</strong> los artículos relacionados con delitos informáticos (Título Noveno, Capítulo II).</li>
-                                <li>Elabora una <strong>tabla comparativa</strong> que incluya:
-                                    <ul>
-                                        <li>Tipo de delito</li>
-                                        <li>Conducta tipificada</li>
-                                        <li>Sanción aplicable</li>
-                                        <li>Ejemplo práctico</li>
-                                    </ul>
-                                </li>
-                                <li>Identifica al menos <strong>5 tipos diferentes</strong> de delitos informáticos.</li>
-                                <li>Presenta tus hallazgos en clase y discute la relevancia de cada tipo de delito en el contexto de la Inteligencia Artificial.</li>
+                                <li><strong>Clasificación de delitos:</strong> Investiga en el Código Penal Federal los delitos informáticos y clasifícalos según su naturaleza (acceso, modificación, fraude, etc.).</li>
+                                <li><strong>Tipos de delitos:</strong> Detalla al menos 4 tipos diferentes de delitos informáticos, sus conductas tipificadas y ejemplos concretos.</li>
                             </ol>
                         </div>
                         
                         <div class="activity-deliverable">
                             <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
-                            <p>Tabla comparativa de delitos informáticos (formato digital o en cuaderno).</p>
+                            <p>Documento que incluya la clasificación y los tipos de delitos investigados, presentado en cuaderno o formato digital.</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="activity-card">
                     <div class="activity-number">Actividad 2</div>
-                    <h4><i class="fas fa-users"></i> Investigación sobre la LFTR y el Espectro Radioeléctrico</h4>
+                    <h4><i class="fas fa-users"></i> Investigación Colaborativa sobre Telecomunicaciones</h4>
                     <div class="activity-description">
-                        <p><strong>Objetivo:</strong> Comprender la estructura y alcance de la Ley Federal de Telecomunicaciones y Radiodifusión (LFTR) y el papel del IFT.</p>
+                        <p><strong>Objetivo:</strong> Comprender los tres pilares fundamentales de la regulación de telecomunicaciones en México: el espectro radioeléctrico, las redes de telecomunicaciones y los derechos de los usuarios.</p>
                         
                         <div class="activity-group-work">
-                            <p><i class="fas fa-info-circle"></i> <strong>Trabajo en equipos:</strong> Dividir la clase en tres grupos.</p>
+                            <p><i class="fas fa-info-circle"></i> <strong>Trabajo en equipos:</strong> Dividir la clase en tres grupos, cada uno responsable de un eje temático.</p>
                         </div>
                         
                         <div class="activity-tasks">
-                            <h5><i class="fas fa-clipboard-list"></i> Tareas por equipo:</h5>
+                            <h5><i class="fas fa-clipboard-list"></i> Tareas de Investigación:</h5>
                             
                             <div class="team-task">
-                                <h6><strong>Equipo 1:</strong> Estructura de la LFTR</h6>
+                                <h6><strong>Grupo 1: Espectro Radioeléctrico (Administración y Regulación)</strong></h6>
                                 <ul>
-                                    <li>Investigar sobre la estructura general de la LFTR.</li>
-                                    <li>Escribir en tu cuaderno el <strong>inciso LX del Artículo 15</strong> de la LFTR.</li>
-                                    <li>Analizar el <strong>Artículo 3° Constitucional</strong> en lo referente a telecomunicaciones y radiodifusión.</li>
-                                    <li>Explicar la relación entre ambos ordenamientos.</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="team-task">
-                                <h6><strong>Equipo 2:</strong> Concesiones del Espectro Radioeléctrico</h6>
-                                <ul>
+                                    <li>Investigar sobre la estructura de la <strong>LFTR</strong> (Ley Federal de Telecomunicaciones y Radiodifusión).</li>
+                                    <li>Escribir en tu cuaderno el <strong>inciso LX del Artículo 15</strong> de la LFTR y explicar su contenido.</li>
+                                    <li>Analizar lo que establece el <strong>Artículo 3° Constitucional</strong> respecto a telecomunicaciones y radiodifusión.</li>
                                     <li>Investigar sobre los <strong>planes de concesión del espectro radioeléctrico</strong> en México.</li>
                                     <li>Identificar los <strong>últimos concursos públicos</strong> realizados por el IFT para asignación de frecuencias.</li>
-                                    <li>Analizar quiénes han sido los principales concesionarios y en qué bandas.</li>
-                                    <li>Reflexionar sobre la importancia del espectro para servicios de IA y 5G.</li>
                                 </ul>
                             </div>
                             
                             <div class="team-task">
-                                <h6><strong>Equipo 3:</strong> Resoluciones del IFT</h6>
+                                <h6><strong>Grupo 2: Redes de Telecomunicaciones (Requisitos y Competencia)</strong></h6>
                                 <ul>
-                                    <li>Investigar <strong>casos de resoluciones del IFT</strong> en materia de sanciones por incumplimiento de la LFTR.</li>
-                                    <li>Analizar al menos <strong>3 casos reales</strong> de sanciones impuestas.</li>
-                                    <li>Identificar las conductas sancionadas y las multas aplicadas.</li>
-                                    <li>Reflexionar sobre las implicaciones para empresas de tecnología.</li>
+                                    <li>Investigar sobre los requisitos y mecanismos para <strong>fomentar la competencia</strong> dentro de las redes de telecomunicaciones.</li>
+                                    <li>Analizar casos de <strong>resoluciones del IFT</strong> en materia de sanciones por incumplimiento de la LFTR.</li>
+                                    <li>Identificar al menos <strong>3 casos reales</strong> de sanciones impuestas a operadores, incluyendo las conductas sancionadas y multas aplicadas.</li>
+                                    <li>Reflexionar sobre las implicaciones de estas sanciones para las empresas de telecomunicaciones y tecnología.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="team-task">
+                                <h6><strong>Grupo 3: Derechos de los Usuarios (Protección y Calidad de Servicios)</strong></h6>
+                                <ul>
+                                    <li>Investigar sobre los <strong>derechos de los usuarios</strong> en telecomunicaciones según la LFTR.</li>
+                                    <li>Analizar los requisitos de <strong>calidad de servicios</strong> que deben cumplir los operadores.</li>
+                                    <li>Buscar ejemplos de <strong>acciones de protección</strong> implementadas por el IFT para garantizar los derechos de los usuarios.</li>
+                                    <li>Reflexionar sobre cómo la protección de derechos de usuarios se relaciona con servicios basados en IA.</li>
                                 </ul>
                             </div>
                         </div>
                         
                         <div class="activity-deliverable">
                             <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
-                            <p>Presentación por equipo (máximo 10 minutos) + documento escrito con la investigación.</p>
+                            <p>Cada grupo presenta un análisis breve (máximo 10 minutos) con ejemplos reales de su tema asignado. Documento escrito que resuma los hallazgos de investigación.</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="activity-card">
                     <div class="activity-number">Actividad 3</div>
-                    <h4><i class="fas fa-search"></i> Análisis de Caso: Protección de Datos Personales</h4>
+                    <h4><i class="fas fa-sitemap"></i> Mapa Conceptual: Protección de Datos y Transparencia</h4>
                     <div class="activity-description">
-                        <p><strong>Objetivo:</strong> Aplicar los conocimientos sobre regulación administrativa informática a un caso práctico.</p>
+                        <p><strong>Objetivo:</strong> Crear un mapa conceptual que integre los tres pilares de la regulación administrativa informática: constitucional, de transparencia y de protección de datos.</p>
                         
                         <div class="activity-tasks">
-                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones:</h5>
-                            <ol>
-                                <li>Busca en el portal del <strong>INAI</strong> (Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales) un caso de resolución sobre protección de datos personales.</li>
-                                <li>Analiza el caso identificando:
-                                    <ul>
-                                        <li>Los hechos del caso</li>
-                                        <li>Los derechos ARCO involucrados</li>
-                                        <li>La resolución del INAI</li>
-                                        <li>Las obligaciones incumplidas según la LFPDPPP</li>
-                                    </ul>
-                                </li>
-                                <li>Elabora un <strong>resumen</strong> de una página.</li>
-                                <li>Propón medidas que la empresa o institución debió haber implementado para evitar la violación.</li>
-                            </ol>
+                            <h5><i class="fas fa-clipboard-list"></i> Instrucciones para el Mapa Conceptual:</h5>
+                            <p>Elabora un mapa conceptual que relacione los siguientes elementos:</p>
+                            
+                            <div class="concept-elements">
+                                <h6><i class="fas fa-link"></i> Elementos a Incluir:</h6>
+                                <ul>
+                                    <li><strong>Artículo 16 Constitucional:</strong> Protección de la vida privada y de los datos personales</li>
+                                    <li><strong>LGTAIP (2015, reformada 2021):</strong> Ley General de Transparencia y Acceso a la Información Pública</li>
+                                    <li><strong>LGPDPPSO (2017):</strong> Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-requirements">
+                                <h6><i class="fas fa-tasks"></i> Indicaciones para el Mapa:</h6>
+                                <ol>
+                                    <li><strong>Obligaciones de las instituciones públicas:</strong>
+                                        <ul>
+                                            <li>Publicar información actualizada</li>
+                                            <li>Resguardar datos personales</li>
+                                            <li>Garantizar acceso a la información</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Derechos de los ciudadanos:</strong>
+                                        <ul>
+                                            <li>Acceder a información pública</li>
+                                            <li>Protección de datos personales (derechos ARCO)</li>
+                                            <li>Recurso de revisión ante el INAI</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Papel del INAI:</strong>
+                                        <ul>
+                                            <li>Función como organismo garante</li>
+                                            <li>Resolución de conflictos y recursos de inconformidad</li>
+                                            <li>Proceso actual de reconfiguración legal e institucional</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Retos del Sistema:</strong>
+                                        <ul>
+                                            <li>Plantea qué desafíos enfrenta el sistema en ausencia plena del INAI como garante</li>
+                                            <li>Analiza cómo estas limitaciones afectan la protección de datos personales y el acceso a información pública</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
                         
                         <div class="activity-deliverable">
                             <h5><i class="fas fa-file-alt"></i> Entregable:</h5>
-                            <p>Resumen del caso analizado (1 página) + propuesta de medidas preventivas.</p>
+                            <p>Mapa conceptual visual (en papel o digital) que integre los elementos anteriores con conexiones claras que muestren las relaciones entre constitución, leyes y organismos. Incluir explicación breve de cada conexión.</p>
                         </div>
                     </div>
                 </div>
